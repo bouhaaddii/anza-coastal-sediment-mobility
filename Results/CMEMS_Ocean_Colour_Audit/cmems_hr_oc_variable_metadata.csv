@@ -1,0 +1,3 @@
+requested_name,netcdf_name,dimensions,units,long_name,standard_name,attributes_json
+SPM,SPM,"time,latitude,longitude",g m-3,Suspended Particulate Matter derived from MSI L2R using HR-OC L2W processor,mass_concentration_of_suspended_matter_in_sea_water,"{""long_name"": ""Suspended Particulate Matter derived from MSI L2R using HR-OC L2W processor"", ""standard_name"": ""mass_concentration_of_suspended_matter_in_sea_water"", ""units"": ""g m-3"", ""valid_min"": 0.0}"
+TUR,TUR,"time,latitude,longitude",FNU,Turbidity derived from MSI L2R using HR-OC L2W processor,sea_water_turbidity,"{""long_name"": ""Turbidity derived from MSI L2R using HR-OC L2W processor"", ""standard_name"": ""sea_water_turbidity"", ""units"": ""FNU"", ""valid_min"": 0.0}"

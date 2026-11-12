@@ -1,0 +1,18 @@
+{
+  "query_date": "2026-11-11",
+  "station_catalogue_endpoint": "https://services.data.shom.fr/maregraphie/service/tidegauges",
+  "station_name_query": "AGADIR",
+  "station_returned_by_current_catalogue": false,
+  "interpretation": "No station named Agadir was returned by the current public SHOM/REFMAR station-list endpoint during this check. This does not prove that no observations exist in Moroccan port, hydrographic, or other archives.",
+  "archive_inventory": {
+    "url": "https://www.refmar.shom.fr/en/summary-documentsdata-relative-toagadir-maroc",
+    "visible_historical_entries": "The page lists paper tide-gauge documents for Agadir including records from 1920, 1936-1937, 1942, 1954, 1956, and 1959.",
+    "2022_observed_series_identified": false,
+    "note": "The archive page describes possible hourly digital levels held by Shom, but the current station API query did not identify an Agadir station for direct download. The inventory may evolve."
+  },
+  "data_download_service": {
+    "url": "https://data.shom.fr/donnees/refmar/download",
+    "availability_note": "The service provides free observations for listed gauges; the download workflow requests station, dates, source type, and user contact details. It cannot be used here without an Agadir station identifier and a listed data window."
+  },
+  "study_consequence": "Do not describe GOT5.6 as validated by an Agadir tide gauge. Continue to label it as a modeled tide estimate unless local observations are supplied from another Moroccan source."
+}

@@ -1,0 +1,216 @@
+/* DATA DESCRIPTION:
+Citation:	Holz, Christine; Stuut, Jan-Berend W; Henrich, Rüdiger (2004): Grain-size analysis of surface sediments, continental margin off NW Africa [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.207974, 
+	Supplement to: Holz, C et al. (2004): Terrigenous sedimentation processes along the continental margin off NW-Africa: implications from grain-size analysis of surface sediments. Sedimentology, 51, 1145-1154, https://doi.org/10.1111/j.1365-3091.2004.00665.x
+Abstract:	The terrigenous fraction of seabed sediments recovered along the north-west African continental margin illustrates spatial variability in grain size attributed to different transport mechanisms. Three subpopulations are determined from the grain-size analyses (n = 78) of the carbonate-free silt fraction applying an end-member modelling algorithm (G. J. Weltje, 1997). The two coarsest end-members are interpreted as representing aeolian dust, and the fine-grained end-member is related to fluvial supply. The end-member model thus allows aeolian fallout to be distinguished from fluvial-sourced mud in this area. The relative contributions of the end-members show distinct regional variations that can be related to different transport processes and pathways. Understanding present-day sediment dispersal and mixing is important for a better understanding of older sedimentary records and palaeoclimate reconstructions in the region.
+Related to:	Holz, Christine (2005): Climate-induced variability of fluvial and aeolian sediment supply and gravity-driven sediment transport off Northwest Africa [dissertation]. Staats- und Universitätsbibliothek Bremen, Germany, urn:nbn:de:gbv:46-diss000012051
+Project(s):	Center for Marine Environmental Sciences (MARUM) (URI: https://www.marum.de/en/)
+Coverage:	MEDIAN LATITUDE: 26.850711 * MEDIAN LONGITUDE: -14.523492 * SOUTH-BOUND LATITUDE: 17.195000 * WEST-BOUND LONGITUDE: -18.261700 * NORTH-BOUND LATITUDE: 33.298300 * EAST-BOUND LONGITUDE: -9.390000
+	DATE/TIME START: 1982-01-22T00:00:00 * DATE/TIME END: 2001-04-12T11:11:00
+	MINIMUM DEPTH, sediment/rock: 0 m * MAXIMUM DEPTH, sediment/rock: 0 m
+Event(s):	GeoB4024-3 * LATITUDE: 27.678333 * LONGITUDE: -13.431667 * DATE/TIME: 1996-02-04T00:00:00 * ELEVATION: -95.0 m * RECOVERY: 0.31 m * CAMPAIGN: VH96/1-3 * BASIS: Victor Hensen * METHOD/DEVICE: Giant box corer (GKG) (URI: http://en.wikipedia.org/wiki/Box_corer)
+	GeoB4025-2 * LATITUDE: 27.748333 * LONGITUDE: -13.488333 * DATE/TIME: 1996-02-04T00:00:00 * ELEVATION: -504.0 m * CAMPAIGN: VH96/1-3 * BASIS: Victor Hensen * METHOD/DEVICE: Giant box corer (GKG) (URI: http://en.wikipedia.org/wiki/Box_corer) * COMMENT: no sample
+	GeoB4026-1 * LATITUDE: 27.808333 * LONGITUDE: -13.543333 * DATE/TIME: 1996-02-04T00:00:00 * ELEVATION: -990.0 m * RECOVERY: 0.28 m * CAMPAIGN: VH96/1-3 * BASIS: Victor Hensen * METHOD/DEVICE: Giant box corer (GKG) (URI: http://en.wikipedia.org/wiki/Box_corer)
+	GeoB4029-2 * LATITUDE: 28.180000 * LONGITUDE: -13.263333 * DATE/TIME: 1996-02-15T00:00:00 * ELEVATION: -680.0 m * RECOVERY: 0.26 m * CAMPAIGN: VH96/1-4 * BASIS: Victor Hensen * METHOD/DEVICE: Giant box corer (GKG) (URI: http://en.wikipedia.org/wiki/Box_corer)
+	GeoB4031-1 * LATITUDE: 28.128333 * LONGITUDE: -13.188333 * DATE/TIME: 1996-02-15T00:00:00 * ELEVATION: -100.0 m * RECOVERY: 0.16 m * CAMPAIGN: VH96/1-4 * BASIS: Victor Hensen * METHOD/DEVICE: Giant box corer (GKG) (URI: http://en.wikipedia.org/wiki/Box_corer)
+	GeoB4038-2 * LATITUDE: 28.676667 * LONGITUDE: -13.036667 * DATE/TIME: 1996-02-16T00:00:00 * ELEVATION: -695.0 m * RECOVERY: 0.28 m * CAMPAIGN: VH96/1-4 * BASIS: Victor Hensen * METHOD/DEVICE: Giant box corer (GKG) (URI: http://en.wikipedia.org/wiki/Box_corer)
+	GeoB4040-2 * LATITUDE: 29.193333 * LONGITUDE: -13.335000 * DATE/TIME: 1996-02-17T00:00:00 * ELEVATION: -1000.0 m * RECOVERY: 0.28 m * CAMPAIGN: VH96/1-4 * BASIS: Victor Hensen * METHOD/DEVICE: Giant box corer (GKG) (URI: http://en.wikipedia.org/wiki/Box_corer)
+	GeoB4057-2 * LATITUDE: 28.583333 * LONGITUDE: -13.735000 * DATE/TIME: 1996-02-19T00:00:00 * ELEVATION: -1000.0 m * RECOVERY: 0.22 m * CAMPAIGN: VH96/1-4 * BASIS: Victor Hensen * METHOD/DEVICE: Giant box corer (GKG) (URI: http://en.wikipedia.org/wiki/Box_corer)
+	GeoB4060-2 * LATITUDE: 28.125000 * LONGITUDE: -13.848333 * DATE/TIME: 1996-02-19T00:00:00 * ELEVATION: -1000.0 m * RECOVERY: 0.31 m * CAMPAIGN: VH96/1-4 * BASIS: Victor Hensen * METHOD/DEVICE: Giant box corer (GKG) (URI: http://en.wikipedia.org/wiki/Box_corer)
+	GeoB4210-2 * LATITUDE: 30.300000 * LONGITUDE: -10.980000 * DATE/TIME: 1996-12-08T14:41:00 * ELEVATION: -1959.0 m * RECOVERY: 0.16 m * LOCATION: Agadir Canyon * CAMPAIGN: M37/1 * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB4212-3 * LATITUDE: 29.603333 * LONGITUDE: -10.950000 * DATE/TIME: 1996-12-09T08:15:00 * ELEVATION: -1256.0 m * RECOVERY: 0.3 m * LOCATION: Agadir Canyon * CAMPAIGN: M37/1 * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB4213-1 * LATITUDE: 29.696667 * LONGITUDE: -11.078333 * DATE/TIME: 1996-12-09T11:18:00 * ELEVATION: -1547.0 m * RECOVERY: 0.2 m * LOCATION: Agadir Canyon * CAMPAIGN: M37/1 * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB4215-1 * LATITUDE: 30.036667 * LONGITUDE: -11.553333 * DATE/TIME: 1996-12-10T03:22:00 * ELEVATION: -2106.0 m * RECOVERY: 0.33 m * LOCATION: Agadir Canyon * CAMPAIGN: M37/1 * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB4216-2 * LATITUDE: 30.631667 * LONGITUDE: -12.396667 * DATE/TIME: 1996-12-10T15:09:00 * ELEVATION: -2325.0 m * RECOVERY: 0.27 m * LOCATION: Agadir Canyon * CAMPAIGN: M37/1 * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC) * COMMENT: 4 big tubes, 4 small tubes filled
+	GeoB4223-1 * LATITUDE: 29.018333 * LONGITUDE: -12.466667 * DATE/TIME: 1996-12-14T05:40:00 * ELEVATION: -777.0 m * RECOVERY: 0.35 m * LOCATION: Agadir Canyon * CAMPAIGN: M37/1 * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB4225-3 * LATITUDE: 29.275000 * LONGITUDE: -11.781667 * DATE/TIME: 1996-12-14T17:40:00 * ELEVATION: -1281.0 m * RECOVERY: 0.3 m * LOCATION: Agadir Canyon * CAMPAIGN: M37/1 * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC) * COMMENT: 3 big tubes empty
+	GeoB4226-1 * LATITUDE: 29.320000 * LONGITUDE: -11.833333 * DATE/TIME: 1996-12-14T19:27:00 * ELEVATION: -1400.0 m * RECOVERY: 0.35 m * LOCATION: Agadir Canyon * CAMPAIGN: M37/1 * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB4228-1 * LATITUDE: 29.470000 * LONGITUDE: -12.990000 * DATE/TIME: 1996-12-15T07:16:00 * ELEVATION: -1633.0 m * RECOVERY: 0.35 m * LOCATION: Agadir Canyon * CAMPAIGN: M37/1 * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB4229-2 * LATITUDE: 29.181667 * LONGITUDE: -12.638333 * DATE/TIME: 1996-12-15T17:34:00 * ELEVATION: -1422.0 m * RECOVERY: 0.31 m * LOCATION: Agadir Canyon * CAMPAIGN: M37/1 * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB4230-1 * LATITUDE: 29.128333 * LONGITUDE: -12.596667 * DATE/TIME: 1996-12-15T19:09:00 * ELEVATION: -1316.0 m * RECOVERY: 0.3 m * LOCATION: Agadir Canyon * CAMPAIGN: M37/1 * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB4231-2 * LATITUDE: 29.088333 * LONGITUDE: -12.555000 * DATE/TIME: 1996-12-15T22:47:00 * ELEVATION: -1207.0 m * RECOVERY: 0.31 m * LOCATION: Agadir Canyon * CAMPAIGN: M37/1 * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC) * COMMENT: 3 big tubes empty
+	GeoB4232-1 * LATITUDE: 29.021667 * LONGITUDE: -13.386667 * DATE/TIME: 1996-12-16T08:19:00 * ELEVATION: -1161.0 m * RECOVERY: 0.13 m * LOCATION: Agadir Canyon * CAMPAIGN: M37/1 * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB4233-2 * LATITUDE: 28.975000 * LONGITUDE: -13.330000 * DATE/TIME: 1996-12-16T14:06:00 * ELEVATION: -1303.0 m * RECOVERY: 0.34 m * LOCATION: Agadir Canyon * CAMPAIGN: M37/1 * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB4235-1 * LATITUDE: 28.856667 * LONGITUDE: -13.180000 * DATE/TIME: 1996-12-16T18:31:00 * ELEVATION: -1244.0 m * RECOVERY: 0.31 m * LOCATION: Agadir Canyon * CAMPAIGN: M37/1 * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB4236-2 * LATITUDE: 28.783333 * LONGITUDE: -13.095000 * DATE/TIME: 1996-12-16T22:00:00 * ELEVATION: -1030.0 m * RECOVERY: 0.14 m * LOCATION: Agadir Canyon * CAMPAIGN: M37/1 * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB4237-1 * LATITUDE: 28.728333 * LONGITUDE: -13.016667 * DATE/TIME: 1996-12-16T23:44:00 * ELEVATION: -800.0 m * RECOVERY: 0.13 m * LOCATION: Agadir Canyon * CAMPAIGN: M37/1 * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB4238-2 * LATITUDE: 28.451667 * LONGITUDE: -13.635000 * DATE/TIME: 1996-12-17T08:13:00 * ELEVATION: -1185.0 m * RECOVERY: 0.26 m * LOCATION: Agadir Canyon * CAMPAIGN: M37/1 * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB4239-1 * LATITUDE: 28.493333 * LONGITUDE: -13.180000 * DATE/TIME: 1996-12-17T11:12:00 * ELEVATION: -881.0 m * RECOVERY: 0.12 m * LOCATION: Agadir Canyon * CAMPAIGN: M37/1 * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB5529-1 * LATITUDE: 29.690000 * LONGITUDE: -17.698300 * DATE/TIME: 1998-10-09T16:15:00 * ELEVATION: -4166.0 m * RECOVERY: 0.09 m * CAMPAIGN: M42/4b * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC) * COMMENT: all tubes filled, 9cm
+	GeoB5531-1 * LATITUDE: 29.080000 * LONGITUDE: -17.925000 * DATE/TIME: 1998-10-10T09:15:00 * ELEVATION: -3301.0 m * CAMPAIGN: M42/4b * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC) * COMMENT: no core recovery
+	GeoB5532-2 * LATITUDE: 27.471700 * LONGITUDE: -17.933300 * DATE/TIME: 1998-10-11T10:17:00 * ELEVATION: -3150.0 m * RECOVERY: 0.16 m * CAMPAIGN: M42/4b * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC) * COMMENT: all tubes filled, core recovery 16 cm
+	GeoB5533-1 * LATITUDE: 27.681700 * LONGITUDE: -17.693300 * DATE/TIME: 1998-10-11T15:54:00 * ELEVATION: -3251.0 m * RECOVERY: 0.3 m * CAMPAIGN: M42/4b * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC) * COMMENT: 9 tubes filled
+	GeoB5534-2 * LATITUDE: 27.868300 * LONGITUDE: -17.130000 * DATE/TIME: 1998-10-12T02:44:00 * ELEVATION: -2832.0 m * RECOVERY: 0.3 m * CAMPAIGN: M42/4b * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC) * COMMENT: 10 tubes filled
+	GeoB5535-1 * LATITUDE: 27.843300 * LONGITUDE: -16.453300 * DATE/TIME: 1998-10-12T09:58:00 * ELEVATION: -2690.0 m * RECOVERY: 0.35 m * CAMPAIGN: M42/4b * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC) * COMMENT: core recovery 35 cm
+	GeoB5536-3 * LATITUDE: 27.536700 * LONGITUDE: -16.135000 * DATE/TIME: 1998-10-12T20:42:00 * ELEVATION: -3456.0 m * RECOVERY: 0.24 m * CAMPAIGN: M42/4b * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC) * COMMENT: all tubes filled, core recovery 24 cm
+	GeoB5537-2 * LATITUDE: 27.535000 * LONGITUDE: -15.401700 * DATE/TIME: 1998-10-13T04:58:00 * ELEVATION: -2362.0 m * RECOVERY: 0.22 m * CAMPAIGN: M42/4b * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC) * COMMENT: all tubes filled, core recovery 22 cm
+	GeoB5538-2 * LATITUDE: 27.536700 * LONGITUDE: -15.116700 * DATE/TIME: 1998-10-13T13:09:00 * ELEVATION: -2537.0 m * RECOVERY: 0.13 m * CAMPAIGN: M42/4b * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC) * COMMENT: all tubes filled core recovery 13 cm
+	GeoB5539-2 * LATITUDE: 27.536700 * LONGITUDE: -14.355000 * DATE/TIME: 1998-10-13T20:08:00 * ELEVATION: -2202.0 m * RECOVERY: 0.15 m * CAMPAIGN: M42/4b * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC) * COMMENT: 9 tubes filled, cor recovery 15 cm
+	GeoB5540-3 * LATITUDE: 27.535000 * LONGITUDE: -14.175000 * DATE/TIME: 1998-10-14T03:38:00 * ELEVATION: -2035.0 m * RECOVERY: 0.15 m * CAMPAIGN: M42/4b * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC) * COMMENT: all tubes filled, core recovery 15 cm
+	GeoB5541-2 * LATITUDE: 27.536700 * LONGITUDE: -13.995000 * DATE/TIME: 1998-10-14T07:11:00 * ELEVATION: -1748.0 m * RECOVERY: 0.3 m * CAMPAIGN: M42/4b * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC) * COMMENT: all tubes filled
+	GeoB5542-3 * LATITUDE: 27.536700 * LONGITUDE: -13.846700 * DATE/TIME: 1998-10-14T17:36:00 * ELEVATION: -1431.0 m * RECOVERY: 0.3 m * CAMPAIGN: M42/4b * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC) * COMMENT: all tubes filled
+	GeoB5546-3 * LATITUDE: 27.536700 * LONGITUDE: -13.736700 * DATE/TIME: 1998-10-15T12:39:00 * ELEVATION: -1071.0 m * RECOVERY: 0.3 m * CAMPAIGN: M42/4b * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC) * COMMENT: all tubes filled
+	GeoB5547-2 * LATITUDE: 27.760000 * LONGITUDE: -13.710000 * DATE/TIME: 1998-10-15T15:56:00 * ELEVATION: -1310.0 m * RECOVERY: 0.18 m * CAMPAIGN: M42/4b * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC) * COMMENT: all tubes filled, core recovery 18 cm
+	GeoB5548-3 * LATITUDE: 27.991700 * LONGITUDE: -13.518300 * DATE/TIME: 1998-10-15T21:41:00 * ELEVATION: -1162.0 m * RECOVERY: 0.16 m * CAMPAIGN: M42/4b * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC) * COMMENT: all tubes filled, core recovery 16 cm
+	GeoB5549-2 * LATITUDE: 27.978300 * LONGITUDE: -13.695000 * DATE/TIME: 1998-10-16T01:20:00 * ELEVATION: -1454.0 m * RECOVERY: 0.24 m * CAMPAIGN: M42/4b * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC) * COMMENT: all tubes filled, core recovery 24 cm
+	GeoB5550-3 * LATITUDE: 27.951700 * LONGITUDE: -15.015000 * DATE/TIME: 1998-10-16T09:18:00 * ELEVATION: -1738.0 m * RECOVERY: 0.2 m * CAMPAIGN: M42/4b * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC) * COMMENT: all tubes filled, core recovery 20 cm
+	GeoB5551-2 * LATITUDE: 27.876700 * LONGITUDE: -14.915000 * DATE/TIME: 1998-10-16T18:14:00 * ELEVATION: -1885.0 m * RECOVERY: 0.32 m * CAMPAIGN: M42/4b * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC) * COMMENT: all tubes filled, core recovery 32 cm
+	GeoB5553-2 * LATITUDE: 28.276700 * LONGITUDE: -14.645000 * DATE/TIME: 1998-10-17T11:45:00 * ELEVATION: -3397.0 m * RECOVERY: 0.13 m * CAMPAIGN: M42/4b * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC) * COMMENT: core recovery 13 cm
+	GeoB5555-2 * LATITUDE: 29.266700 * LONGITUDE: -13.956700 * DATE/TIME: 1998-10-18T08:06:00 * ELEVATION: -2837.0 m * RECOVERY: 0.29 m * CAMPAIGN: M42/4b * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC) * COMMENT: core recovery 29 cm
+	GeoB5556-3 * LATITUDE: 29.265000 * LONGITUDE: -14.110000 * DATE/TIME: 1998-10-18T15:41:00 * ELEVATION: -3170.0 m * CAMPAIGN: M42/4b * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB5557-2 * LATITUDE: 29.045000 * LONGITUDE: -14.165000 * DATE/TIME: 1998-10-18T20:00:00 * ELEVATION: -2949.0 m * RECOVERY: 0.05 m * CAMPAIGN: M42/4b * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC) * COMMENT: 5 cm core recovery with coarse sand underneath
+	GeoB5558-2 * LATITUDE: 28.745000 * LONGITUDE: -14.353300 * DATE/TIME: 1998-10-19T00:37:00 * ELEVATION: -2471.0 m * RECOVERY: 0.32 m * CAMPAIGN: M42/4b * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC) * COMMENT: 32 cm core recovery
+	GeoB5559-1 * LATITUDE: 31.645000 * LONGITUDE: -13.186700 * DATE/TIME: 1998-10-20T13:35:00 * ELEVATION: -3178.0 m * CAMPAIGN: M42/4b * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB5560-2 * LATITUDE: 31.610000 * LONGITUDE: -13.118300 * DATE/TIME: 1998-10-21T05:45:00 * ELEVATION: -3944.0 m * CAMPAIGN: M42/4b * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB5561-1 * LATITUDE: 32.703300 * LONGITUDE: -12.935000 * DATE/TIME: 1998-10-21T11:40:00 * ELEVATION: -3500.0 m * RECOVERY: 0.12 m * CAMPAIGN: M42/4b * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC) * COMMENT: core recovery 12 cm
+	GeoB5565-3 * LATITUDE: 33.298300 * LONGITUDE: -9.390000 * DATE/TIME: 1998-10-22T23:13:00 * ELEVATION: -791.0 m * RECOVERY: 0.18 m * CAMPAIGN: M42/4b * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC) * COMMENT: core recovery 18 cm
+	GeoB5566-2 * LATITUDE: 33.273300 * LONGITUDE: -9.605000 * DATE/TIME: 1998-10-23T02:34:00 * ELEVATION: -2785.0 m * RECOVERY: 0.15 m * CAMPAIGN: M42/4b * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC) * COMMENT: core recovery 15 cm
+	GeoB6005-1 * LATITUDE: 30.880000 * LONGITUDE: -10.896700 * DATE/TIME: 1999-10-18T06:10:00 * ELEVATION: -1781.0 m * RECOVERY: 0.32 m * CAMPAIGN: M45/5a * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB6006-2 * LATITUDE: 30.868300 * LONGITUDE: -10.630000 * DATE/TIME: 1999-10-18T12:09:00 * ELEVATION: -1282.0 m * RECOVERY: 0.14 m * CAMPAIGN: M45/5a * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB6007-1 * LATITUDE: 30.851700 * LONGITUDE: -10.266700 * DATE/TIME: 1999-10-18T14:53:00 * ELEVATION: -899.0 m * RECOVERY: 0.25 m * CAMPAIGN: M45/5a * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB6008-2 * LATITUDE: 30.845000 * LONGITUDE: -10.098300 * DATE/TIME: 1999-10-18T17:59:00 * ELEVATION: -355.0 m * RECOVERY: 0.33 m * CAMPAIGN: M45/5a * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB6009-1 * LATITUDE: 30.681700 * LONGITUDE: -10.275000 * DATE/TIME: 1999-10-18T19:49:00 * ELEVATION: -579.0 m * RECOVERY: 0.24 m * CAMPAIGN: M45/5a * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB6010-1 * LATITUDE: 30.250000 * LONGITUDE: -10.083300 * DATE/TIME: 1999-10-19T05:15:00 * ELEVATION: -406.0 m * RECOVERY: 0.15 m * CAMPAIGN: M45/5a * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB6011-2 * LATITUDE: 30.315000 * LONGITUDE: -10.288300 * DATE/TIME: 1999-10-19T08:54:00 * ELEVATION: -993.0 m * RECOVERY: 0.13 m * CAMPAIGN: M45/5a * BASIS: Meteor (1986) (URI: https://en.wikipedia.org/wiki/RV_Meteor_(1986)) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB7408-2 (215) * LATITUDE: 20.291700 * LONGITUDE: -18.248300 * DATE/TIME: 2001-04-06T08:32:00 * ELEVATION: -1935.0 m * RECOVERY: 0.28 m * CAMPAIGN: POS272 * BASIS: Poseidon (URI: https://www2.bsh.de/aktdat/dod/fahrtplanung/Poseidon.htm) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB7409-1 (216) * LATITUDE: 20.393300 * LONGITUDE: -18.018300 * DATE/TIME: 2001-04-06T14:07:00 * ELEVATION: -1216.0 m * RECOVERY: 0.2 m * CAMPAIGN: POS272 * BASIS: Poseidon (URI: https://www2.bsh.de/aktdat/dod/fahrtplanung/Poseidon.htm) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB7410-1 (217) * LATITUDE: 20.450000 * LONGITUDE: -17.850000 * DATE/TIME: 2001-04-06T18:25:00 * ELEVATION: -643.0 m * RECOVERY: 0.28 m * CAMPAIGN: POS272 * BASIS: Poseidon (URI: https://www2.bsh.de/aktdat/dod/fahrtplanung/Poseidon.htm) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB7413-2 (220) * LATITUDE: 20.646700 * LONGITUDE: -17.845000 * DATE/TIME: 2001-04-07T07:03:00 * ELEVATION: -508.0 m * RECOVERY: 0.2 m * CAMPAIGN: POS272 * BASIS: Poseidon (URI: https://www2.bsh.de/aktdat/dod/fahrtplanung/Poseidon.htm) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB7414-1 (221) * LATITUDE: 20.718300 * LONGITUDE: -18.000000 * DATE/TIME: 2001-04-07T10:36:00 * ELEVATION: -1014.0 m * RECOVERY: 0.2 m * CAMPAIGN: POS272 * BASIS: Poseidon (URI: https://www2.bsh.de/aktdat/dod/fahrtplanung/Poseidon.htm) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB7415-1 (222) * LATITUDE: 20.805000 * LONGITUDE: -18.261700 * DATE/TIME: 2001-04-07T15:30:00 * ELEVATION: -1906.0 m * RECOVERY: 0.31 m * CAMPAIGN: POS272 * BASIS: Poseidon (URI: https://www2.bsh.de/aktdat/dod/fahrtplanung/Poseidon.htm) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB7417-1 (224) * LATITUDE: 21.796700 * LONGITUDE: -17.478300 * DATE/TIME: 2001-04-08T11:37:00 * ELEVATION: -726.0 m * RECOVERY: 0.24 m * CAMPAIGN: POS272 * BASIS: Poseidon (URI: https://www2.bsh.de/aktdat/dod/fahrtplanung/Poseidon.htm) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB7418-1 (225) * LATITUDE: 21.843300 * LONGITUDE: -17.586700 * DATE/TIME: 2001-04-08T14:24:00 * ELEVATION: -1150.0 m * RECOVERY: 0.23 m * CAMPAIGN: POS272 * BASIS: Poseidon (URI: https://www2.bsh.de/aktdat/dod/fahrtplanung/Poseidon.htm) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB7419-1 (226) * LATITUDE: 21.885000 * LONGITUDE: -17.771700 * DATE/TIME: 2001-04-08T17:25:00 * ELEVATION: -1537.0 m * RECOVERY: 0.34 m * CAMPAIGN: POS272 * BASIS: Poseidon (URI: https://www2.bsh.de/aktdat/dod/fahrtplanung/Poseidon.htm) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB7420-1 (227) * LATITUDE: 24.165000 * LONGITUDE: -16.788300 * DATE/TIME: 2001-04-09T16:39:00 * ELEVATION: -676.0 m * RECOVERY: 0.09 m * CAMPAIGN: POS272 * BASIS: Poseidon (URI: https://www2.bsh.de/aktdat/dod/fahrtplanung/Poseidon.htm) * METHOD/DEVICE: MultiCorer (MUC) * COMMENT: living sponges on corals in tubes,
+	GeoB7423-2 (230) * LATITUDE: 24.338300 * LONGITUDE: -17.070000 * DATE/TIME: 2001-04-10T07:41:00 * ELEVATION: -1624.0 m * RECOVERY: 0.19 m * CAMPAIGN: POS272 * BASIS: Poseidon (URI: https://www2.bsh.de/aktdat/dod/fahrtplanung/Poseidon.htm) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB7424-1 (231) * LATITUDE: 24.210000 * LONGITUDE: -16.843300 * DATE/TIME: 2001-04-10T12:17:00 * ELEVATION: -1063.0 m * RECOVERY: 0.09 m * CAMPAIGN: POS272 * BASIS: Poseidon (URI: https://www2.bsh.de/aktdat/dod/fahrtplanung/Poseidon.htm) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB7425-2 (232) * LATITUDE: 25.920000 * LONGITUDE: -16.085000 * DATE/TIME: 2001-04-11T08:03:00 * ELEVATION: -1810.0 m * RECOVERY: 0.21 m * CAMPAIGN: POS272 * BASIS: Poseidon (URI: https://www2.bsh.de/aktdat/dod/fahrtplanung/Poseidon.htm) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB7426-1 (233) * LATITUDE: 25.986700 * LONGITUDE: -15.866700 * DATE/TIME: 2001-04-11T12:24:00 * ELEVATION: -1487.0 m * RECOVERY: 0.05 m * CAMPAIGN: POS272 * BASIS: Poseidon (URI: https://www2.bsh.de/aktdat/dod/fahrtplanung/Poseidon.htm) * METHOD/DEVICE: MultiCorer (MUC) * COMMENT: only one tube filled
+	GeoB7427-1 (234) * LATITUDE: 26.031700 * LONGITUDE: -15.703300 * DATE/TIME: 2001-04-11T14:24:00 * ELEVATION: -1101.0 m * RECOVERY: 0.15 m * CAMPAIGN: POS272 * BASIS: Poseidon (URI: https://www2.bsh.de/aktdat/dod/fahrtplanung/Poseidon.htm) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB7428-1 (235) * LATITUDE: 26.105000 * LONGITUDE: -15.476700 * DATE/TIME: 2001-04-11T18:04:00 * ELEVATION: -918.0 m * RECOVERY: 0.13 m * CAMPAIGN: POS272 * BASIS: Poseidon (URI: https://www2.bsh.de/aktdat/dod/fahrtplanung/Poseidon.htm) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB7430-2 (237) * LATITUDE: 26.383300 * LONGITUDE: -15.150000 * DATE/TIME: 2001-04-12T07:32:00 * ELEVATION: -1170.0 m * RECOVERY: 0.13 m * CAMPAIGN: POS272 * BASIS: Poseidon (URI: https://www2.bsh.de/aktdat/dod/fahrtplanung/Poseidon.htm) * METHOD/DEVICE: MultiCorer (MUC)
+	GeoB7431-1 (238) * LATITUDE: 26.476700 * LONGITUDE: -15.258300 * DATE/TIME: 2001-04-12T11:11:00 * ELEVATION: -1951.0 m * RECOVERY: 0.34 m * CAMPAIGN: POS272 * BASIS: Poseidon (URI: https://www2.bsh.de/aktdat/dod/fahrtplanung/Poseidon.htm) * METHOD/DEVICE: MultiCorer (MUC)
+	GIK16010-1 * LATITUDE: 25.284000 * LONGITUDE: -16.222000 * DATE/TIME: 1982-01-22T00:00:00 * ELEVATION: -1502.0 m * LOCATION: Atlantic Ocean * CAMPAIGN: M60 (SUBTROPEX 82) * BASIS: Meteor (1964) (URI: https://de.wikipedia.org/wiki/Meteor_(Schiff,_1964)) * METHOD/DEVICE: van Veen Grab (VGRAB)
+	GIK16012-2 * LATITUDE: 25.395000 * LONGITUDE: -16.245000 * DATE/TIME: 1982-01-22T00:00:00 * ELEVATION: -811.0 m * LOCATION: Atlantic Ocean * CAMPAIGN: M60 (SUBTROPEX 82) * BASIS: Meteor (1964) (URI: https://de.wikipedia.org/wiki/Meteor_(Schiff,_1964)) * METHOD/DEVICE: Giant box corer (GKG) (URI: http://en.wikipedia.org/wiki/Box_corer)
+	GIK16015-1 * LATITUDE: 25.333333 * LONGITUDE: -16.153333 * DATE/TIME: 1982-01-22T00:00:00 * ELEVATION: -411.0 m * LOCATION: Atlantic Ocean * CAMPAIGN: M60 (SUBTROPEX 82) * BASIS: Meteor (1964) (URI: https://de.wikipedia.org/wiki/Meteor_(Schiff,_1964)) * METHOD/DEVICE: Giant box corer (GKG) (URI: http://en.wikipedia.org/wiki/Box_corer)
+	GIK16016-1 * LATITUDE: 21.144000 * LONGITUDE: -18.032000 * DATE/TIME: 1982-01-22T00:00:00 * ELEVATION: -1476.0 m * LOCATION: Atlantic Ocean * CAMPAIGN: M60 (SUBTROPEX 82) * BASIS: Meteor (1964) (URI: https://de.wikipedia.org/wiki/Meteor_(Schiff,_1964)) * METHOD/DEVICE: van Veen Grab (VGRAB)
+	GIK16017-1 * LATITUDE: 21.245000 * LONGITUDE: -17.803000 * DATE/TIME: 1982-01-22T00:00:00 * ELEVATION: -794.0 m * RECOVERY: 0.27 m * LOCATION: Atlantic Ocean * CAMPAIGN: M60 (SUBTROPEX 82) * BASIS: Meteor (1964) (URI: https://de.wikipedia.org/wiki/Meteor_(Schiff,_1964)) * METHOD/DEVICE: Giant box corer (GKG) (URI: http://en.wikipedia.org/wiki/Box_corer)
+	GIK16019-1 * LATITUDE: 21.250000 * LONGITUDE: -17.691667 * DATE/TIME: 1982-01-22T00:00:00 * ELEVATION: -509.0 m * RECOVERY: 0.4 m * LOCATION: Atlantic Ocean * CAMPAIGN: M60 (SUBTROPEX 82) * BASIS: Meteor (1964) (URI: https://de.wikipedia.org/wiki/Meteor_(Schiff,_1964)) * METHOD/DEVICE: Giant box corer (GKG) (URI: http://en.wikipedia.org/wiki/Box_corer)
+	GIK16021-1 * LATITUDE: 17.195000 * LONGITUDE: -17.015000 * DATE/TIME: 1982-01-22T00:00:00 * ELEVATION: -1514.0 m * LOCATION: Atlantic Ocean * CAMPAIGN: M60 (SUBTROPEX 82) * BASIS: Meteor (1964) (URI: https://de.wikipedia.org/wiki/Meteor_(Schiff,_1964)) * METHOD/DEVICE: van Veen Grab (VGRAB)
+	GIK16022-1 * LATITUDE: 17.301667 * LONGITUDE: -16.760000 * DATE/TIME: 1982-01-22T00:00:00 * ELEVATION: -415.0 m * RECOVERY: 0.35 m * LOCATION: Atlantic Ocean * CAMPAIGN: M60 (SUBTROPEX 82) * BASIS: Meteor (1964) (URI: https://de.wikipedia.org/wiki/Meteor_(Schiff,_1964)) * METHOD/DEVICE: Giant box corer (GKG) (URI: http://en.wikipedia.org/wiki/Box_corer)
+	GIK16024-1 * LATITUDE: 17.293333 * LONGITUDE: -16.866667 * DATE/TIME: 1982-01-22T00:00:00 * ELEVATION: -805.0 m * RECOVERY: 0.35 m * LOCATION: Atlantic Ocean * CAMPAIGN: M60 (SUBTROPEX 82) * BASIS: Meteor (1964) (URI: https://de.wikipedia.org/wiki/Meteor_(Schiff,_1964)) * METHOD/DEVICE: Giant box corer (GKG) (URI: http://en.wikipedia.org/wiki/Box_corer)
+	GIK16025-1 * LATITUDE: 17.310000 * LONGITUDE: -16.888333 * DATE/TIME: 1982-01-22T00:00:00 * ELEVATION: -1190.0 m * RECOVERY: 0.4 m * LOCATION: Atlantic Ocean * CAMPAIGN: M60 (SUBTROPEX 82) * BASIS: Meteor (1964) (URI: https://de.wikipedia.org/wiki/Meteor_(Schiff,_1964)) * METHOD/DEVICE: Giant box corer (GKG) (URI: http://en.wikipedia.org/wiki/Box_corer)
+	GIK16028-1 * LATITUDE: 17.278333 * LONGITUDE: -16.448333 * DATE/TIME: 1982-01-22T00:00:00 * ELEVATION: -89.0 m * RECOVERY: 0.4 m * LOCATION: Atlantic Ocean * CAMPAIGN: M60 (SUBTROPEX 82) * BASIS: Meteor (1964) (URI: https://de.wikipedia.org/wiki/Meteor_(Schiff,_1964)) * METHOD/DEVICE: Giant box corer (GKG) (URI: http://en.wikipedia.org/wiki/Box_corer)
+	GIK16029-1 * LATITUDE: 25.440000 * LONGITUDE: -16.315000 * DATE/TIME: 1982-01-22T00:00:00 * ELEVATION: -1202.0 m * LOCATION: Atlantic Ocean * CAMPAIGN: M60 (SUBTROPEX 82) * BASIS: Meteor (1964) (URI: https://de.wikipedia.org/wiki/Meteor_(Schiff,_1964)) * METHOD/DEVICE: Giant box corer (GKG) (URI: http://en.wikipedia.org/wiki/Box_corer)
+	GIK16031-1 * LATITUDE: 21.238333 * LONGITUDE: -17.935000 * DATE/TIME: 1982-01-22T00:00:00 * ELEVATION: -1203.0 m * LOCATION: Atlantic Ocean * CAMPAIGN: M60 (SUBTROPEX 82) * BASIS: Meteor (1964) (URI: https://de.wikipedia.org/wiki/Meteor_(Schiff,_1964)) * METHOD/DEVICE: Giant box corer (GKG) (URI: http://en.wikipedia.org/wiki/Box_corer)
+	GIK16035-1 * LATITUDE: 25.028333 * LONGITUDE: -16.613333 * DATE/TIME: 1982-01-22T00:00:00 * ELEVATION: -1222.0 m * LOCATION: Atlantic Ocean * CAMPAIGN: M60 (SUBTROPEX 82) * BASIS: Meteor (1964) (URI: https://de.wikipedia.org/wiki/Meteor_(Schiff,_1964)) * METHOD/DEVICE: Giant box corer (GKG) (URI: http://en.wikipedia.org/wiki/Box_corer)
+Parameter(s):	Event label (Event)
+	Latitude of event (Latitude)
+	Longitude of event (Longitude)
+	Elevation of event [m] (Elevation)
+	DEPTH, sediment/rock [m] (Depth sed) * GEOCODE
+	Sand [%] (Sand) * PI: Holz, Christine (cholz@uni-bremen.de) * METHOD/DEVICE: Grain size, sieving
+	Silt [%] (Silt) * PI: Holz, Christine (cholz@uni-bremen.de) * METHOD/DEVICE: Atterberg settling tubes
+	Size fraction < 0.002 mm, clay [%] (<2 µm) * PI: Holz, Christine (cholz@uni-bremen.de) * METHOD/DEVICE: Atterberg settling tubes
+	End member [%] (EM) * PI: Holz, Christine (cholz@uni-bremen.de) * METHOD/DEVICE: Calculated * COMMENT: EM1
+	End member [%] (EM) * PI: Holz, Christine (cholz@uni-bremen.de) * METHOD/DEVICE: Calculated * COMMENT: EM2
+	End member [%] (EM) * PI: Holz, Christine (cholz@uni-bremen.de) * METHOD/DEVICE: Calculated * COMMENT: EM3
+License:	Creative Commons Attribution 3.0 Unported (CC-BY-3.0) (URI: https://creativecommons.org/licenses/by/3.0/)
+Size:	519 data points
+*/
+Event	Latitude	Longitude	Elevation [m]	Depth sed [m]	Sand [%] (Grain size, sieving)	Silt [%] (Atterberg settling tubes)	<2 µm [%] (Atterberg settling tubes)	EM [%] (EM1, Calculated)	EM [%] (EM2, Calculated)	EM [%] (EM3, Calculated)
+GIK16010-1	25.2840	-16.2220	-1502.0	0	38.26	44.39	17.35	12.9	63.6	23.5
+GIK16012-2	25.3950	-16.2450	-811.0	0	65.63	26.22	8.15	52.4	37.2	10.4
+GIK16015-1	25.3333	-16.1533	-411.0	0	93.13	6.87	0.00			
+GIK16016-1	21.1440	-18.0320	-1476.0	0	29.23	53.71	17.06	37.6	60.4	2.0
+GIK16017-1	21.2450	-17.8030	-794.0	0	45.30	45.69	9.01	85.2	9.1	5.7
+GIK16019-1	21.2500	-17.6917	-509.0	0	77.71	18.84	3.44	97.6	0.0	2.4
+GIK16021-1	17.1950	-17.0150	-1514.0	0	27.53	45.16	27.31	3.6	76.9	19.4
+GIK16022-1	17.3017	-16.7600	-415.0	0	74.62	18.80	6.58	84.7	0.0	15.3
+GIK16024-1	17.2933	-16.8667	-805.0	0	36.97	47.56	15.47	58.9	33.8	7.3
+GIK16025-1	17.3100	-16.8883	-1190.0	0	22.45	53.19	24.37	32.5	57.5	10.1
+GIK16028-1	17.2783	-16.4483	-89.0	0	84.60	10.85	4.54	20.3	73.1	6.6
+GIK16029-1	25.4400	-16.3150	-1202.0	0	65.92	20.87	13.20			
+GIK16031-1	21.2383	-17.9350	-1203.0	0	44.91	43.46	11.64	55.2	38.4	6.5
+GIK16035-1	25.0283	-16.6133	-1222.0	0	23.64	53.91	22.45	21.7	62.9	15.4
+GeoB4024-3	27.6783	-13.4317	-95.0	0	94.82	5.18	0.00			
+GeoB4025-2	27.7483	-13.4883	-504.0	0	53.85	32.45	13.70	33.6	34.7	31.7
+GeoB4026-1	27.8083	-13.5433	-990.0	0	13.99	53.07	32.94			
+GeoB4029-2	28.1800	-13.2633	-680.0	0	53.12	36.93	9.96	37.8	39.9	22.3
+GeoB4031-1	28.1283	-13.1883	-100.0	0	91.15	8.23	0.62			
+GeoB4038-2	28.6767	-13.0367	-695.0	0	18.68	52.28	29.03	0.0	66.7	33.3
+GeoB4040-2	29.1933	-13.3350	-1000.0	0	49.22	39.01	11.77	6.4	57.3	36.2
+GeoB4057-2	28.5833	-13.7350	-1000.0	0	21.30	49.54	29.16	0.0	44.9	55.1
+GeoB4060-2	28.1250	-13.8483	-1000.0	0	41.91	35.92	22.17	11.4	48.4	40.2
+GeoB4210-2	30.3000	-10.9800	-1959.0	0	13.22	38.03	48.75	7.6	1.1	91.3
+GeoB4212-3	29.6033	-10.9500	-1256.0	0	22.56	55.88	21.56			
+GeoB4213-1	29.6967	-11.0783	-1547.0	0	37.07	31.63	31.29	8.1	19.5	72.5
+GeoB4215-1	30.0367	-11.5533	-2106.0	0	51.26	25.04	23.70			
+GeoB4216-2	30.6317	-12.3967	-2325.0	0	57.29	31.09	11.62			
+GeoB4223-1	29.0183	-12.4667	-777.0	0	12.59	51.38	36.03	1.4	51.5	47.1
+GeoB4225-3	29.2750	-11.7817	-1281.0	0	27.59	37.77	34.64	7.5	32.5	60.0
+GeoB4226-1	29.3200	-11.8333	-1400.0	0	32.71	34.08	33.21	2.6	32.8	64.6
+GeoB4228-1	29.4700	-12.9900	-1633.0	0	38.08	38.71	23.21			
+GeoB4229-2	29.1817	-12.6383	-1422.0	0	26.47	47.36	26.17			
+GeoB4230-1	29.1283	-12.5967	-1316.0	0	20.58	41.18	38.24	0.9	31.9	67.2
+GeoB4231-2	29.0883	-12.5550	-1207.0	0	23.45	44.03	32.52			
+GeoB4232-1	29.0217	-13.3867	-1161.0	0	35.51	40.15	24.34	6.8	39.3	53.9
+GeoB4233-2	28.9750	-13.3300	-1303.0	0	25.30	46.13	28.57	2.2	33.1	64.7
+GeoB4235-1	28.8567	-13.1800	-1244.0	0	17.27	44.48	38.26	1.2	31.7	67.0
+GeoB4236-2	28.7833	-13.0950	-1030.0	0	19.25	44.32	36.43	0.1	44.5	55.5
+GeoB4237-1	28.7283	-13.0167	-800.0	0	15.16	56.39	28.46			
+GeoB4238-2	28.4517	-13.6350	-1185.0	0	25.22	42.16	32.62	0.8	43.9	55.3
+GeoB4239-1	28.4933	-13.1800	-881.0	0	18.77	47.00	34.23	0.2	53.7	46.1
+GeoB5529-1	29.6900	-17.6983	-4166.0	0	4.32	61.18	34.50	0.0	57.5	42.5
+GeoB5531-1	29.0800	-17.9250	-3301.0	0	21.53	55.80	22.66	0.0	45.1	54.9
+GeoB5532-2	27.4717	-17.9333	-3150.0	0	23.21	51.58	25.22	9.2	47.9	42.9
+GeoB5533-1	27.6817	-17.6933	-3251.0	0	20.27	50.67	29.06	1.6	48.7	49.7
+GeoB5534-2	27.8683	-17.1300	-2832.0	0	15.26	54.49	30.25	2.7	48.2	49.1
+GeoB5535-1	27.8433	-16.4533	-2690.0	0	33.11	46.10	20.80	6.7	53.3	40.0
+GeoB5536-3	27.5367	-16.1350	-3456.0	0	7.04	58.89	34.06	0.0	41.1	58.9
+GeoB5537-2	27.5350	-15.4017	-2362.0	0	30.83	42.83	26.34	1.9	47.0	51.1
+GeoB5538-2	27.5367	-15.1167	-2537.0	0	27.85	38.27	33.88	6.2	40.6	53.2
+GeoB5539-2	27.5367	-14.3550	-2202.0	0	11.44	44.41	44.15			
+GeoB5540-3	27.5350	-14.1750	-2035.0	0	7.85	44.33	47.83	6.9	27.8	65.3
+GeoB5541-2	27.5367	-13.9950	-1748.0	0	6.96	49.13	43.91	4.9	31.9	63.2
+GeoB5542-3	27.5367	-13.8467	-1431.0	0	8.19	45.50	46.31	0.4	37.3	62.3
+GeoB5546-3	27.5367	-13.7367	-1071.0	0	6.24	63.02	30.73	2.0	55.7	42.3
+GeoB5547-2	27.7600	-13.7100	-1310.0	0	7.64	49.17	43.19	3.9	27.8	68.4
+GeoB5548-3	27.9917	-13.5183	-1162.0	0	8.11	54.80	37.09	0.0	39.1	60.9
+GeoB5549-2	27.9783	-13.6950	-1454.0	0	11.58	46.19	42.22	4.3	32.6	63.1
+GeoB5550-3	27.9517	-15.0150	-1738.0	0	15.34	43.41	41.25	1.3	30.4	68.2
+GeoB5551-2	27.8767	-14.9150	-1885.0	0	17.67	45.15	37.18	0.0	40.2	59.8
+GeoB5553-2	28.2767	-14.6450	-3397.0	0	24.92	46.07	29.01	0.0	41.3	58.7
+GeoB5555-2	29.2667	-13.9567	-2837.0	0	22.48	52.14	25.38	0.0	48.8	51.2
+GeoB5556-3	29.2650	-14.1100	-3170.0	0	17.10	59.32	23.58	0.0	57.8	42.2
+GeoB5557-2	29.0450	-14.1650	-2949.0	0	42.77	39.33	17.90	0.0	80.1	19.9
+GeoB5558-2	28.7450	-14.3533	-2471.0	0	39.40	38.42	22.17	0.0	48.5	51.5
+GeoB5559-1	31.6450	-13.1867	-3178.0	0	30.60	36.65	32.75			
+GeoB5560-2	31.6100	-13.1183	-3944.0	0	32.92	32.07	35.01			
+GeoB5561-1	32.7033	-12.9350	-3500.0	0	31.17	57.82	11.00	0.0	20.7	79.3
+GeoB5565-3	33.2983	-9.3900	-791.0	0	23.58	43.91	32.51	5.1	16.1	78.8
+GeoB5566-2	33.2733	-9.6050	-2785.0	0	9.92	42.12	47.96	5.9	0.0	94.1
+GeoB6005-1	30.8800	-10.8967	-1781.0	0	5.94	44.34	49.71	2.9	0.0	97.1
+GeoB6006-2	30.8683	-10.6300	-1282.0	0	9.90	49.40	40.70	1.9	8.9	89.1
+GeoB6007-1	30.8517	-10.2667	-899.0	0	1.58	62.53	35.89	0.0	11.3	88.7
+GeoB6008-2	30.8450	-10.0983	-355.0	0	0.46	42.36	57.17	0.0	18.2	81.8
+GeoB6009-1	30.6817	-10.2750	-579.0	0	7.28	54.24	38.48	6.9	30.0	63.0
+GeoB6010-1	30.2500	-10.0833	-406.0	0	56.97	34.98	8.05	73.4	9.7	17.0
+GeoB6011-2	30.3150	-10.2883	-993.0	0	13.83	46.36	39.81	1.0	36.7	62.4
+GeoB7408-2	20.2917	-18.2483	-1935.0	0	18.48	55.01	26.51	8.9	75.6	15.5
+GeoB7409-1	20.3933	-18.0183	-1216.0	0	26.69	57.54	15.77	29.6	63.9	6.5
+GeoB7410-1	20.4500	-17.8500	-643.0	0	52.43	38.17	9.40	59.8	35.9	4.3
+GeoB7413-2	20.6467	-17.8450	-508.0	0	77.49	18.95	3.56	62.0	34.7	3.3
+GeoB7414-1	20.7183	-18.0000	-1014.0	0	45.37	46.07	8.57	31.7	68.3	0.0
+GeoB7415-1	20.8050	-18.2617	-1906.0	0	5.84	66.80	27.36			
+GeoB7417-1	21.7967	-17.4783	-726.0	0	69.86	22.17	7.96			
+GeoB7418-1	21.8433	-17.5867	-1150.0	0	26.89	54.08	19.03	37.9	54.7	7.4
+GeoB7419-1	21.8850	-17.7717	-1537.0	0	9.24	62.15	28.62	8.9	75.6	15.5
+GeoB7420-1	24.1650	-16.7883	-676.0	0	48.53	35.77	15.70	28.2	53.1	18.8
+GeoB7423-2	24.3383	-17.0700	-1624.0	0	21.34	47.10	31.56	0.0	58.4	41.6
+GeoB7424-1	24.2100	-16.8433	-1063.0	0	53.17	32.91	13.92	30.7	59.7	9.7
+GeoB7425-2	25.9200	-16.0850	-1810.0	0	25.28	47.02	27.70			
+GeoB7426-1	25.9867	-15.8667	-1487.0	0	76.69	20.20	3.10			
+GeoB7427-1	26.0317	-15.7033	-1101.0	0	26.17	53.21	20.63	11.8	68.2	20.0
+GeoB7428-1	26.1050	-15.4767	-918.0	0	49.59	33.70	16.71	6.6	76.3	17.1
+GeoB7430-2	26.3833	-15.1500	-1170.0	0	32.62	46.99	20.38	12.1	65.1	22.8
+GeoB7431-1	26.4767	-15.2583	-1951.0	0	25.77	45.17	29.05	0.0	57.0	43.0

@@ -1,0 +1,7 @@
+date_utc,variable,method,method_label,paired_cells,minimum_soundings_per_cell,spatial_blocks_500m,association_estimate,block_bootstrap_95ci_low,block_bootstrap_95ci_high,bootstrap_replicates
+2022-11-10,SPM,spatial_spearman_unadjusted,Unadjusted spatial Spearman,179,5,13,-0.8656665202017031,-0.9361671547167459,-0.572896426181281,500
+2022-11-10,SPM,partial_spearman_depth,Partial Spearman controlling local depth,179,5,13,-0.29614520279073014,-0.5642083462431834,-0.05854514007375601,500
+2022-11-10,SPM,partial_spearman_depth_and_linear_xy,Partial Spearman controlling depth and linear XY trend,179,5,13,-0.18725174829759517,-0.4895577776799509,0.20288197393999796,500
+2022-11-10,TUR,spatial_spearman_unadjusted,Unadjusted spatial Spearman,179,5,13,-0.8656665202017031,-0.93695423481573,-0.576459756103303,500
+2022-11-10,TUR,partial_spearman_depth,Partial Spearman controlling local depth,179,5,13,-0.29614520279073014,-0.5408423411856086,-0.058950148195551846,500
+2022-11-10,TUR,partial_spearman_depth_and_linear_xy,Partial Spearman controlling depth and linear XY trend,179,5,13,-0.18725174829759517,-0.46639656739401286,0.18215992324012242,500

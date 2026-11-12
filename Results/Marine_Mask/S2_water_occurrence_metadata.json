@@ -1,0 +1,43 @@
+{
+  "status": "exploratory multi-scene SCL-water occurrence; not a surveyed coastline",
+  "scene_count": 11,
+  "scene_names": [
+    "S2A_MSIL2A_20221105T112241_N0510_R037_T29RMP_20240805T221124",
+    "S2B_MSIL2A_20221107T111149_N0510_R137_T29RMP_20240730T192003",
+    "S2B_MSIL2A_20221110T112209_N0510_R037_T29RMP_20240801T233757",
+    "S2A_MSIL2A_20221115T112331_N0510_R037_T29RMP_20240801T082240",
+    "S2B_MSIL2A_20221120T112259_N0510_R037_T29RMP_20240803T010647",
+    "S2A_MSIL2A_20221122T111401_N0510_R137_T29RMP_20240802T055354",
+    "S2A_MSIL2A_20221125T112411_N0510_R037_T29RMP_20240731T171804",
+    "S2B_MSIL2A_20221217T111359_N0510_R137_T29RMP_20240808T115644",
+    "S2B_MSIL2A_20221220T112409_N0510_R037_T29RMP_20240808T201312",
+    "S2A_MSIL2A_20230302T110951_N0510_R137_T29RMP_20240824T003831",
+    "S2B_MSIL2A_20230310T112119_N0510_R037_T29RMP_20240824T043512"
+  ],
+  "missing_scene_products": [],
+  "formula": "clear observations with SCL water / all clear observations",
+  "minimum_clear_observations_for_stability_class": 5,
+  "stable_non_water_threshold": 0.2,
+  "stable_water_threshold": 0.8,
+  "classes": {
+    "0": "Insufficient clear observations",
+    "1": "Stable non-water",
+    "2": "Variable water fringe",
+    "3": "Stable water"
+  },
+  "limitations": [
+    "Sentinel-2 SCL water class is not a surveyed shoreline and can omit foam, turbid water, wet sand, or mixed coastal pixels.",
+    "Scene-to-scene variation mixes tide, wave run-up, seasonal waterline changes, and classification error.",
+    "No tidal normalization, local gauge validation, or charted coastline comparison was performed.",
+    "Use the stable-water core and variable fringe as a screening diagnostic only; do not use them as an authoritative mesh boundary.",
+    "The bathymetric survey horizontal transformation has a reported 7 m operation accuracy; the drawn extent is approximate."
+  ],
+  "outputs": [
+    "S2_water_occurrence_10m.tif",
+    "S2_clear_observation_count_10m.tif",
+    "S2_water_stability_class_10m.tif",
+    "S2_water_stability_summary.csv",
+    "S2_water_scene_summary.csv",
+    "Figure_S2_water_occurrence.png/.pdf"
+  ]
+}

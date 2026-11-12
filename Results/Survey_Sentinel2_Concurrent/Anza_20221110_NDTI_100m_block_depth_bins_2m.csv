@@ -1,0 +1,12 @@
+depth_bin_lower_m_local_zero,depth_bin_upper_m_local_zero,block_count,sounding_count_in_blocks,median_block_depth_m,median_of_block_median_ndti,block_ndti_p25,block_ndti_p75,note
+0.0,2.0,27,1621,1.025,-0.26313552260398865,-0.32879655808210373,-0.19671479240059853,"Unweighted summary across occupied 100 m blocks; IQR is spatial dispersion, not a confidence interval."
+2.0,4.0,19,1693,3.18,-0.44286492466926575,-0.4574279636144638,-0.41959596425294876,"Unweighted summary across occupied 100 m blocks; IQR is spatial dispersion, not a confidence interval."
+4.0,6.0,13,1165,5.225,-0.48762941360473633,-0.5059524178504944,-0.47719648480415344,"Unweighted summary across occupied 100 m blocks; IQR is spatial dispersion, not a confidence interval."
+6.0,8.0,17,1639,6.8,-0.49949900805950165,-0.5296154022216797,-0.49384403228759766,"Unweighted summary across occupied 100 m blocks; IQR is spatial dispersion, not a confidence interval."
+8.0,10.0,25,2279,8.79,-0.5010440051555634,-0.5133333206176758,-0.48628735542297363,"Unweighted summary across occupied 100 m blocks; IQR is spatial dispersion, not a confidence interval."
+10.0,12.0,18,1661,10.85,-0.48783690482378006,-0.5071552880108356,-0.4558508135378361,"Unweighted summary across occupied 100 m blocks; IQR is spatial dispersion, not a confidence interval."
+12.0,14.0,23,2230,13.06,-0.47083741426467896,-0.4923121780157089,-0.4378284141421318,"Unweighted summary across occupied 100 m blocks; IQR is spatial dispersion, not a confidence interval."
+14.0,16.0,24,2330,15.05,-0.43215226382017136,-0.4651479907333851,-0.4136296510696411,"Unweighted summary across occupied 100 m blocks; IQR is spatial dispersion, not a confidence interval."
+16.0,18.0,28,2724,16.924999999999997,-0.38958654552698135,-0.40761370584368706,-0.36973440274596214,"Unweighted summary across occupied 100 m blocks; IQR is spatial dispersion, not a confidence interval."
+18.0,20.0,32,2976,18.985,-0.35742657631635666,-0.37015625461935997,-0.34985262900590897,"Unweighted summary across occupied 100 m blocks; IQR is spatial dispersion, not a confidence interval."
+20.0,22.0,38,2666,21.17,-0.3386424407362938,-0.3509485423564911,-0.328389972448349,"Unweighted summary across occupied 100 m blocks; IQR is spatial dispersion, not a confidence interval."

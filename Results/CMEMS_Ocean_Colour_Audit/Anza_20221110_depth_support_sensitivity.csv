@@ -1,0 +1,19 @@
+minimum_soundings_per_cell,variable,method,method_label,paired_cells,spatial_blocks_500m,association_estimate
+1,SPM,spatial_spearman_unadjusted,Unadjusted spatial Spearman,182,13,-0.8692744625178281
+1,SPM,partial_spearman_depth,Partial Spearman controlling local depth,182,13,-0.3050068651857653
+1,SPM,partial_spearman_depth_and_linear_xy,Partial Spearman controlling depth and linear XY trend,182,13,-0.1970118775445503
+1,TUR,spatial_spearman_unadjusted,Unadjusted spatial Spearman,182,13,-0.8692744625178281
+1,TUR,partial_spearman_depth,Partial Spearman controlling local depth,182,13,-0.3050068651857653
+1,TUR,partial_spearman_depth_and_linear_xy,Partial Spearman controlling depth and linear XY trend,182,13,-0.1970118775445503
+5,SPM,spatial_spearman_unadjusted,Unadjusted spatial Spearman,179,13,-0.8656665202017031
+5,SPM,partial_spearman_depth,Partial Spearman controlling local depth,179,13,-0.29614520279073014
+5,SPM,partial_spearman_depth_and_linear_xy,Partial Spearman controlling depth and linear XY trend,179,13,-0.18725174829759517
+5,TUR,spatial_spearman_unadjusted,Unadjusted spatial Spearman,179,13,-0.8656665202017031
+5,TUR,partial_spearman_depth,Partial Spearman controlling local depth,179,13,-0.29614520279073014
+5,TUR,partial_spearman_depth_and_linear_xy,Partial Spearman controlling depth and linear XY trend,179,13,-0.18725174829759517
+10,SPM,spatial_spearman_unadjusted,Unadjusted spatial Spearman,173,13,-0.8644237499478519
+10,SPM,partial_spearman_depth,Partial Spearman controlling local depth,173,13,-0.30382015502848925
+10,SPM,partial_spearman_depth_and_linear_xy,Partial Spearman controlling depth and linear XY trend,173,13,-0.18473727167940573
+10,TUR,spatial_spearman_unadjusted,Unadjusted spatial Spearman,173,13,-0.8644237499478519
+10,TUR,partial_spearman_depth,Partial Spearman controlling local depth,173,13,-0.30382015502848925
+10,TUR,partial_spearman_depth_and_linear_xy,Partial Spearman controlling depth and linear XY trend,173,13,-0.18473727167940573

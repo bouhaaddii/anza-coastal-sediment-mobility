@@ -1,0 +1,5 @@
+class_code,class_label,pixel_count,area_km2,fraction_of_raster
+0,Insufficient clear observations,792,0.0792,0.0013268376366207188
+1,Stable non-water,156664,15.6664,0.2624592064438741
+2,Variable water fringe,2312,0.2312,0.0038732937069029063
+3,Stable water,437140,43.714,0.7323406622126023

@@ -1,0 +1,12 @@
+.venv/
+.venv_before_move/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+Data/Sentinel2/Products/
+Data/Sentinel2/SAFE/
+Data/Tide_Model/GOT5.5/
+Data/Tide_Model/GOT5.5_testdata.zip
+*.bak

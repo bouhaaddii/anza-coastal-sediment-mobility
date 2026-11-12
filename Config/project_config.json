@@ -1,0 +1,75 @@
+{
+  "project_name": "Agadir sediment hydrodynamics study",
+  "site_name": "Anza / Agadir Bay, Morocco",
+  "site_bbox_wgs84": [
+    -9.7104167,
+    30.4104167,
+    -9.640625,
+    30.4895833
+  ],
+  "bbox_note": "Approximate working box taken from the extent of the already downloaded EMODnet extract. It is not a surveyed marine polygon; verify and replace before calculating water-only observability or building a model mesh.",
+  "sentinel2": {
+    "stac_url": "https://stac.dataspace.copernicus.eu/v1/search",
+    "collection": "sentinel-2-l2a",
+    "start_datetime": "2022-10-01T00:00:00Z",
+    "end_datetime": "2023-03-31T23:59:59Z",
+    "max_cloud_cover_pct": 100
+  },
+  "copernicus_marine": {
+    "start_datetime": "2022-10-01T00:00:00",
+    "end_datetime": "2023-03-31T23:00:00",
+    "wave_dataset_id": "cmems_mod_ibi_wav_my_0.027deg_PT1H-i",
+    "wave_variables": [
+      "VHM0",
+      "VTPK",
+      "VMDR"
+    ],
+    "current_dataset_id": "cmems_mod_ibi_phy-cur_my_0.027deg_PT1H-m",
+    "current_variables": [
+      "uo",
+      "vo"
+    ],
+    "minimum_depth_m": 0,
+    "maximum_depth_m": 1,
+    "current_3d": {
+      "product_id": "IBI_MULTIYEAR_PHY_005_002",
+      "dataset_id": "cmems_mod_ibi_phy-cur_my_0.027deg_P1D-m",
+      "variables": [
+        "uo",
+        "vo"
+      ],
+      "minimum_depth_m": 0,
+      "maximum_depth_m": 30,
+      "temporal_resolution": "daily mean",
+      "doi": "10.48670/moi-00029"
+    },
+    "doi_wave": "10.48670/moi-00030",
+    "doi_physics": "10.48670/moi-00029"
+  },
+  "tide_model": {
+    "name": "GOT5.6",
+    "point_wgs84": [
+      -9.67156,
+      30.45265
+    ],
+    "point_note": "Representative point used in the preceding project from the transformed median of the Anza survey XYZ. Confirm its coastal wet-node context on the site map before interpreting values.",
+    "maximum_wet_node_distance_km": 10,
+    "within_day_sampling_minutes": 10
+  },
+  "local_bathymetry_source_folder": "Data/Local_Bathymetry/Anza_Agadir",
+  "local_bathymetry_files": [
+    "Anza_Agadir_bathy_points.txt",
+    "Anza_Agadir_bathy_points_normalized.csv",
+    "Anza_Agadir_bathy_points_candidate_utm29.csv"
+  ],
+  "survey_date": "2022-11-10",
+  "vertical_reference": "Hydrographic zero of the Port of Agadir; site-local reference",
+  "reported_2024_zh_to_ngm_m": -2.159,
+  "reported_2024_zh_to_ngm_source": "IHO EAtHC18 Morocco National Report (May 2024); applicability to the 2022 Anza survey realization is unverified",
+  "reported_2024_zh_to_ngm_applied": false,
+  "horizontal_reference": "EPSG:26192 — Merchich / Sud Maroc; Lambert Zone 2 / Clarke 1880",
+  "horizontal_reference_status": "Confirmed by the user from the Anza survey DWG; X/easting then Y/northing; registered EPSG operation applied to XY.",
+  "horizontal_transform_reported_accuracy_m": 7.0,
+  "horizontal_reference_note": "The registered EPSG operation reports 7 m accuracy, not a local control-point residual. Original XYZ remains unchanged; Z stays relative to the Port of Agadir hydrographic zero. The geodetic ΔZ parameter is not a hydrographic-datum tie.",
+  "vertical_reference_note": "IHO EAtHC18 (May 2024) reports Port of Agadir ZH = -2.159 m relative to NGM. This candidate offset is not applied because its applicability to the 2022 survey realization has not been established. Keep all raw and derived Z values in local ZH unless a dated survey/datum record verifies the tie."
+}

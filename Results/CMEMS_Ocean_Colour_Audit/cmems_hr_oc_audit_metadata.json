@@ -1,0 +1,88 @@
+{
+  "input_file": "E:\\Agadir_Sediment_Hydrodynamics_Study\\Data\\Copernicus_Marine\\Ocean_Colour_HR\\Anza_CMEMS_HR_OC_SPM_TUR_L3_20221101_20230331.nc",
+  "file_size_bytes": 5532834,
+  "dataset_dimensions": {
+    "time": 151,
+    "latitude": 86,
+    "longitude": 53
+  },
+  "coordinate_names": {
+    "time": "time",
+    "latitude": "latitude",
+    "longitude": "longitude"
+  },
+  "time_range_utc": [
+    "2022-11-01T00:00:00+00:00",
+    "2023-03-31T00:00:00+00:00"
+  ],
+  "time_steps": 151,
+  "longitude_range": [
+    -9.709656084656055,
+    -9.640873015872986
+  ],
+  "latitude_range": [
+    30.410648148148148,
+    30.48935185185185
+  ],
+  "data_variables": [
+    "SPM",
+    "TUR"
+  ],
+  "requested_variables": {
+    "SPM": "SPM",
+    "TUR": "TUR"
+  },
+  "quality_flag_variables_detected": [],
+  "quality_interpretation": "The downloaded subset requested only SPM and TUR and contains no separate per-pixel quality variable. This does not establish that the HR-OC processing chain applied no quality screening; consult the official QUID.",
+  "global_attributes": {
+    "Conventions": "CF-1.7",
+    "TileSize": "1485:1260",
+    "cmd_data_type": "Grid",
+    "cmems_dataset": "cmems_obs_oc_ibi_bgc_tur-spm-chl_nrt_l3-hr-mosaic_P1D-m",
+    "cmems_product_id": "OCEANCOLOUR_IBI_BGC_HR_L3_NRT_009_204",
+    "contact": "https://marine.copernicus.eu/",
+    "creator_email": "hr-oc-servicedesk@brockmann-consult.de",
+    "creator_name": "BC, RBINS, and VITO for CMEMS",
+    "creator_url": "https://www.brockmann-consult.de/",
+    "date_created": "20210813T072118Z",
+    "geospatial_lat_max": "48.0",
+    "geospatial_lat_min": "26.0",
+    "geospatial_lat_resolution": "9.25925925925926E-4",
+    "geospatial_lat_units": "degrees_north",
+    "geospatial_lon_max": "3.197442310920451E-14",
+    "geospatial_lon_min": "-19.99999999999997",
+    "geospatial_lon_resolution": "0.001322751322751323",
+    "geospatial_lon_units": "degrees_east",
+    "geospatial_vertical_max": "0",
+    "geospatial_vertical_min": "0",
+    "history": "Calvalus 2.21 mosaic generation; Acolite 20210203; C2RCC 8.0cv; Idepix 8.0cv; HROC L2W 20201223; Calvalus 2.21 aggregation",
+    "id": "20200101_P1D_CMEMS_HROC_L3_tur-spm-chl_IBI__100m-v01.0.nc",
+    "institution": "Brockmann Consult GmbH, RBINS, VITO for CMEMS, Mercator Ocean",
+    "keywords": "ocean color, water quality, reflectance, Copernicus CMEMS",
+    "keywords_vocabulary": "NASA Global Change Master Directory (GCMD) Science keywords",
+    "license": "CMEMS data license",
+    "naming_authority": "org.esa-cci",
+    "platform": "Sentinel-2",
+    "product_version": "v01.0",
+    "project": "CMEMS High Resolution Ocean Colour",
+    "references": "https://marine.copernicus.eu/",
+    "region": "IBI",
+    "sensor": "MSI",
+    "source": "Sentinel-2 MSI L1C",
+    "spatial_resolution": "100m",
+    "standard_name_vocabulary": "NetCDF Climate and Forecast (CF) Metadata Convention",
+    "start_date": "01-JAN-2020 00:00:00.000000",
+    "stop_date": "01-JAN-2020 00:00:00.000000",
+    "summary": "The HR-OC product has been processed from Sentinel-2 MSI L1C by pixel identification, atmospheric correction, in-water retrieval, spatio-temporal aggregation, and tiling. It covers six European coastal regions.",
+    "tile": "",
+    "time_coverage_duration": "P1D",
+    "time_coverage_resolution": "P1D",
+    "time_coverage_start": "20200101T000000Z",
+    "time_coverage_stop": "20200101T235959Z",
+    "title": "CMEMS HR-OC Iberian Sea transparency (spm, tur) and geophysical (chl) daily observations mosaic",
+    "tracking_id": "ee042e6a-4d78-4ae8-afbf-7144a20a570a",
+    "copernicusmarine_version": "2.5.1"
+  },
+  "interpretation_limit": "CMEMS SPM/TUR are satellite-derived products from Sentinel-2/MSI; they are not local in-situ observations or independent validation.",
+  "spatial_note": "The downloaded rectangular subset may include land and invalid water pixels. Finite-data fractions are not water-only coverage fractions."
+}

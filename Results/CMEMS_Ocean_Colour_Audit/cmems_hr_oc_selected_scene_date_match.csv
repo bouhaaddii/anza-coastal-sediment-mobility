@@ -1,0 +1,12 @@
+product_name,acquisition_utc,acquisition_day_utc,cmems_daily_product_available,note
+S2A_MSIL2A_20221105T112241_N0510_R037_T29RMP_20240805T221124,2022-11-05T11:22:41.024Z,2022-11-05,True,Same calendar day does not prove the CMEMS composite used this exact Sentinel-2 granule.
+S2B_MSIL2A_20221107T111149_N0510_R137_T29RMP_20240730T192003,2022-11-07T11:11:49.024Z,2022-11-07,True,Same calendar day does not prove the CMEMS composite used this exact Sentinel-2 granule.
+S2B_MSIL2A_20221110T112209_N0510_R037_T29RMP_20240801T233757,2022-11-10T11:22:09.024Z,2022-11-10,True,Same calendar day does not prove the CMEMS composite used this exact Sentinel-2 granule.
+S2A_MSIL2A_20221115T112331_N0510_R037_T29RMP_20240801T082240,2022-11-15T11:23:31.024Z,2022-11-15,True,Same calendar day does not prove the CMEMS composite used this exact Sentinel-2 granule.
+S2B_MSIL2A_20221120T112259_N0510_R037_T29RMP_20240803T010647,2022-11-20T11:22:59.024Z,2022-11-20,True,Same calendar day does not prove the CMEMS composite used this exact Sentinel-2 granule.
+S2A_MSIL2A_20221122T111401_N0510_R137_T29RMP_20240802T055354,2022-11-22T11:14:01.024Z,2022-11-22,True,Same calendar day does not prove the CMEMS composite used this exact Sentinel-2 granule.
+S2A_MSIL2A_20221125T112411_N0510_R037_T29RMP_20240731T171804,2022-11-25T11:24:11.024Z,2022-11-25,True,Same calendar day does not prove the CMEMS composite used this exact Sentinel-2 granule.
+S2B_MSIL2A_20221217T111359_N0510_R137_T29RMP_20240808T115644,2022-12-17T11:13:59.024Z,2022-12-17,True,Same calendar day does not prove the CMEMS composite used this exact Sentinel-2 granule.
+S2B_MSIL2A_20221220T112409_N0510_R037_T29RMP_20240808T201312,2022-12-20T11:24:09.025Z,2022-12-20,True,Same calendar day does not prove the CMEMS composite used this exact Sentinel-2 granule.
+S2A_MSIL2A_20230302T110951_N0510_R137_T29RMP_20240824T003831,2023-03-02T11:09:51.024000Z,2023-03-02,True,Same calendar day does not prove the CMEMS composite used this exact Sentinel-2 granule.
+S2B_MSIL2A_20230310T112119_N0510_R037_T29RMP_20240824T043512,2023-03-10T11:21:19.025000Z,2023-03-10,True,Same calendar day does not prove the CMEMS composite used this exact Sentinel-2 granule.

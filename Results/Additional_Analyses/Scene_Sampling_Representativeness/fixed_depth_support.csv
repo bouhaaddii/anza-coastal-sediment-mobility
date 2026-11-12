@@ -1,0 +1,7 @@
+D50_scenario_mm_not_measured,forcing_case,all_weather_dates_n,common_depth_bins_n,common_depth_min_m,common_depth_max_m,depth_support_rule
+0.1,wave_only,182,40,3.5,23,>=12 valid forcing hours on every modeled date
+0.1,waves_plus_daily_currents,182,40,3.5,23,>=12 valid forcing hours on every modeled date
+0.25,wave_only,182,40,3.5,23,>=12 valid forcing hours on every modeled date
+0.25,waves_plus_daily_currents,182,40,3.5,23,>=12 valid forcing hours on every modeled date
+1,wave_only,182,40,3.5,23,>=12 valid forcing hours on every modeled date
+1,waves_plus_daily_currents,182,40,3.5,23,>=12 valid forcing hours on every modeled date

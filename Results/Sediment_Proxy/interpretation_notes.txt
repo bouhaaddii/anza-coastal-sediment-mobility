@@ -1,0 +1,8 @@
+Sentinel-2 relative turbidity proxy — interpretation notes
+
+NDTI = (B04 red surface reflectance - B03 green surface reflectance) / (B04 + B03).
+The calculation is limited to clear pixels labelled as water by SCL class 6 and with finite, non-negative red/green reflectance.
+NDTI is reported as a unitless relative optical proxy. No in-situ suspended matter concentration (MES/TSS) calibration is available, so do not report NDTI as mg/L or as a validated sediment concentration.
+The SCL water mask is not a verified marine polygon. The approximate bounding box includes land, and no sunglint, foam, adjacency-effect, or atmospheric-residual correction is applied here.
+The IBI wave/current fields provide regional context and do not resolve the surf zone. Scene-level associations are descriptive and are not evidence of sediment transport or causality.
+Scenes selected: 11; scenes summarized: 11; scenes skipped for missing products: 0.

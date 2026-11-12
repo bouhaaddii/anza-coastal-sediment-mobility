@@ -1,0 +1,9 @@
+Interpretation notes — Anza survey sampling diagnostic
+
+The diagnostic uses 24,508 source soundings and plan-confirmed XY coordinates transformed from EPSG:26192 to WGS 84 / UTM zone 29N.
+Nearest-neighbour spacing is a within-survey point-density diagnostic: median 10.00 m; P95 10.00 m.
+Nearest-neighbour spacing often measures along-track spacing and does not by itself estimate cross-track line spacing or justify a raster cell size.
+The map is a point display, not an interpolated bathymetric surface. No points were removed, no interpolation was run, and no mesh was created.
+Histogram bin counts follow the Freedman–Diaconis estimate and are capped at 120 bins; every valid sounding remains included.
+Z values are copied unchanged and remain relative to the hydrographic zero of the Port of Agadir.
+The registered horizontal transformation reports 7 m accuracy; this is not a local control-point residual. Check alignment against DWG control points before claiming sub-10 m absolute co-registration with satellite pixels.

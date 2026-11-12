@@ -1,0 +1,31 @@
+{
+  "survey_date": "2022-11-10",
+  "survey_local_time_window_reported_by_user": "10:33–15:16",
+  "survey_time_window_timezone_assumption": "Africa/Casablanca local civil time, UTC+01:00 on 2022-11-10; individual sounding times were not supplied",
+  "sentinel_product": "S2B_MSIL2A_20221110T112209_N0510_R037_T29RMP_20240801T233757",
+  "granule_sensing_time_utc_from_MTD_TL_xml": "2022-11-10T11:32:56.305721+00:00",
+  "granule_sensing_time_local": "2022-11-10T12:32:56.305721+01:00",
+  "granule_sensing_time_within_reported_window": true,
+  "temporal_interpretation": "The granule acquisition falls within the reported survey window if the supplied survey times are local. No point-specific observation timestamps are available, so individual soundings are same-day/window context, not proven simultaneous measurements.",
+  "horizontal_reference": "EPSG:32629 candidate coordinates from EPSG:26192; registered operation accuracy 7 m, not local control residual",
+  "vertical_reference": "Local Agadir port hydrographic zero; Z retained as supplied; no transformation to tide, LAT, or MSL",
+  "satellite_index": "NDTI=(B04-B03)/(B04+B03), clear SCL class-6 water pixels only; uncalibrated",
+  "point_sampling": "Containing 10 m Sentinel-2 pixel; 3x3 valid-water neighborhood median is supplied only as co-registration sensitivity",
+  "block_aggregation": "100 m squares, descriptive aggregation to reduce point-level spatial pseudoreplication; not a mesh resolution recommendation",
+  "block_spearman_rho": 0.369418831800384,
+  "block_depth_summary": "Median-of-block NDTI and interquartile spatial dispersion in occupied 2 m depth bins; descriptive only.",
+  "limits": [
+    "A valid SCL-water coincidence is not a formal shoreline or wet/dry accuracy score because the survey zero is local and the overpass water level is not tied to it.",
+    "The NDTI-depth relation can reflect bottom influence, water-column optics, glint, foam, and spatial co-registration; it is not a suspended-sediment calibration.",
+    "The 7 m reported transformation accuracy is comparable to a 10 m pixel; interpret exact-pixel sampling with the 3x3 sensitivity output.",
+    "No sediment concentration, transport flux, causal relationship, or inferential p-value is computed."
+  ],
+  "outputs": [
+    "Anza_20221110_survey_NDTI_point_matchups.csv",
+    "Anza_20221110_NDTI_by_local_depth_bin.csv",
+    "Anza_20221110_NDTI_depth_100m_blocks.csv",
+    "Anza_20221110_NDTI_100m_block_depth_bins_2m.csv",
+    "Figure_Anza_same_day_survey_NDTI.png/.pdf",
+    "Anza_20221110_interpretation_FR.txt"
+  ]
+}

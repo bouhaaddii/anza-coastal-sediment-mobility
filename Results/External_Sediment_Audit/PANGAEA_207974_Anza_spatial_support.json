@@ -1,0 +1,42 @@
+{
+  "source_doi": "10.1594/PANGAEA.207974",
+  "source_url": "https://doi.pangaea.de/10.1594/PANGAEA.207974?format=textfile",
+  "downloaded_at_utc": "2026-11-12T12:48:27.825455+00:00",
+  "site_reference": {
+    "name": "Anza / Agadir",
+    "longitude": -9.67552,
+    "latitude": 30.45
+  },
+  "rows_parsed": 96,
+  "rows_with_numeric_coordinates": 96,
+  "nearest_sample_distance_km": 45.0072634223805,
+  "median_sample_distance_km": 514.9170986742903,
+  "sample_counts_within_km": {
+    "1": 0,
+    "2": 0,
+    "5": 0,
+    "10": 0,
+    "25": 0,
+    "50": 1,
+    "100": 5
+  },
+  "latitude_column": "Latitude",
+  "longitude_column": "Longitude",
+  "all_parsed_columns": [
+    "Event",
+    "Latitude",
+    "Longitude",
+    "Elevation [m]",
+    "Depth sed [m]",
+    "Sand [%] (Grain size, sieving)",
+    "Silt [%] (Atterberg settling tubes)",
+    "<2 µm [%] (Atterberg settling tubes)",
+    "EM [%] (EM1, Calculated)",
+    "EM [%] (EM2, Calculated)",
+    "EM [%] (EM3, Calculated)",
+    "_latitude_deg",
+    "_longitude_deg"
+  ],
+  "interpretation": "Regional/offshore context only; not local Anza D50 or validation without matching habitat, sedimentology, depth, and sample position.",
+  "license_reported_by_PANGAEA": "CC-BY-3.0"
+}

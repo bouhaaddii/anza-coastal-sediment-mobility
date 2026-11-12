@@ -1,0 +1,15 @@
+metric,value,unit
+point_count,24508,count
+nearest_neighbor_min,9.998775775008196,m
+nearest_neighbor_p05,9.998775775011795,m
+nearest_neighbor_p25,9.99880672875299,m
+nearest_neighbor_median,9.99880672875299,m
+nearest_neighbor_p75,9.998806728798538,m
+nearest_neighbor_p90,9.998806728812976,m
+nearest_neighbor_p95,9.999775297481836,m
+nearest_neighbor_p99,9.999806248120088,m
+nearest_neighbor_max,9.999806248178269,m
+z_min,-22.82,m relative to Port of Agadir hydrographic zero
+z_median,-12.72,m relative to Port of Agadir hydrographic zero
+z_max,3.69,m relative to Port of Agadir hydrographic zero
+candidate_transformer_reported_accuracy,7.0,m

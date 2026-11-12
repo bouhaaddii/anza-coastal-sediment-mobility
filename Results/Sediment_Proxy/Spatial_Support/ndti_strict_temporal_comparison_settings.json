@@ -1,0 +1,20 @@
+{
+  "selected_scenes": 11,
+  "fixed_core_pixels": 437140,
+  "strict_all_scene_common_pixels": 50128,
+  "strict_common_share_of_core": 0.11467264491924783,
+  "strict_domain_definition": "class-3 stable-water core from Script 14 intersected with valid NDTI pixels from every selected scene",
+  "median_definition": "unweighted per-pixel median within each spatial domain and acquisition date",
+  "uncertainty_bands": "25th\u201375th percentile across pixels; spatially autocorrelated and not confidence intervals",
+  "limitations": [
+    "NDTI is an uncalibrated unitless optical proxy, not suspended-sediment concentration.",
+    "The strict all-scene domain may be small and is spatially selected by scene availability; report its size and location.",
+    "Pixel-level quantiles describe spatial spread and are not inferential confidence intervals because pixels are spatially dependent.",
+    "No causal wave response, sediment flux, or statistical significance is estimated."
+  ],
+  "outputs": [
+    "ndti_strict_temporal_comparison.csv",
+    "S2_strict_common_support_all_scenes_10m.tif",
+    "Figure_NDTI_strict_temporal_comparison.png/.pdf"
+  ]
+}

@@ -1,0 +1,13 @@
+Anza bathymetry point audit
+Source file: .\Data\Local_Bathymetry\Anza_Agadir\Anza_Agadir_bathy_points.txt
+Normalized copy: .\Data\Local_Bathymetry\Anza_Agadir\Anza_Agadir_bathy_points_normalized.csv
+Records parsed: 24508
+Malformed rows: 0
+Repeated XY rows after the first occurrence: 0
+X min/max (source units): 88860.249 / 90710.249
+Y min/max (source units): 390327.239 / 392207.239
+Z min/max (m as documented): -22.820 / 3.690
+Z median (m): -12.720
+Horizontal coordinate system: not transformed; confirm the survey projection/EPSG and axis convention from the plan before mapping.
+Vertical reference: hydrographic zero of the Port of Agadir, a local reference. No absolute datum conversion was performed.
+No outliers were deleted; no gridding, interpolation, vertical adjustment, mesh generation, or hydrodynamic simulation was performed.

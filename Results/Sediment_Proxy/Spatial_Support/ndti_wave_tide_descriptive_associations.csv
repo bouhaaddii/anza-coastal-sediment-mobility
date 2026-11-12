@@ -1,0 +1,5 @@
+predictor,predictor_label,paired_scene_count,spearman_rho_descriptive_only,p_value,interpretation
+ibi_preceding_24h_max_hs_m,Maximum Hs in preceding 24 h (m),11,-0.4000000000000001,NOT_COMPUTED,"Exploratory association only; 11 scenes, seasonal confounding, regional forcing grid, uncalibrated optical proxy."
+ibi_wave_hs_at_acquisition_m,Hs at acquisition (m),11,0.059361349447039004,NOT_COMPUTED,"Exploratory association only; 11 scenes, seasonal confounding, regional forcing grid, uncalibrated optical proxy."
+ibi_surface_current_speed_m_s,Regional surface-current speed (m s⁻¹),11,0.27272727272727276,NOT_COMPUTED,"Exploratory association only; 11 scenes, seasonal confounding, regional forcing grid, uncalibrated optical proxy."
+got56_tide_anomaly_from_utc_day_mean_m,GOT5.6 modeled tide anomaly (m),11,0.08181818181818183,NOT_COMPUTED,"Exploratory association only; 11 scenes, seasonal confounding, regional forcing grid, uncalibrated optical proxy."

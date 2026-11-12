@@ -1,0 +1,27 @@
+{
+  "input": "E:\\Agadir_Sediment_Hydrodynamics_Study\\Results\\Sediment_Mobility_Scenarios\\mobility_daily_by_depth_grain_datum_scenario.csv.gz",
+  "output_period_utc": [
+    "2022-10-01",
+    "2023-03-31"
+  ],
+  "daily_support_threshold_hours": 12,
+  "monthly_support_threshold_days": 10,
+  "grain_size_scenarios_mm": [
+    0.1,
+    0.25,
+    1.0
+  ],
+  "datum_cases": [
+    "ZH_unadjusted",
+    "IHO_2024_candidate_offset_sensitivity"
+  ],
+  "bootstrap_block_lengths_days": [
+    3,
+    7
+  ],
+  "bootstrap_replicates_per_block_length": 500,
+  "bootstrap_seed": 361904,
+  "uncertainty_scope": "conditional temporal sampling variability only; excludes model structure and input-data uncertainty",
+  "spatial_forcing_note": "Regional wave and daily current forcing is not resolved across the survey; modeled spatial patterns are mainly depth-conditioned.",
+  "source_inputs_modified": false
+}

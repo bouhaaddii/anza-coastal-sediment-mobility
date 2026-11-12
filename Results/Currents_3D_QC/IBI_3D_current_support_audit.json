@@ -1,0 +1,106 @@
+{
+  "input_file": "E:\\Agadir_Sediment_Hydrodynamics_Study\\Data\\Copernicus_Marine\\Currents_3D\\IBI_currents_3D_daily_Anza_0_30m_20221001_20230331.nc",
+  "product": "IBI multi-year physics reanalysis; daily mean currents",
+  "dataset_id": "cmems_mod_ibi_phy-cur_my_0.027deg_P1D-m",
+  "doi": "10.48670/moi-00029",
+  "variables": {
+    "uo": {
+      "easting": "longitude",
+      "latitude_max": "56.08294177f",
+      "latitude_min": "26.16535726f",
+      "long_name": "Eastward velocity",
+      "longitude_max": "5.084567f",
+      "longitude_min": "-19.0828411f",
+      "northing": "latitude",
+      "standard_name": "eastward_sea_water_velocity",
+      "unit_long": "Meters per second",
+      "units": "m s-1",
+      "z_max": "5727.917f",
+      "z_min": "0.4940254f"
+    },
+    "vo": {
+      "easting": "longitude",
+      "latitude_max": "56.08294177f",
+      "latitude_min": "26.16535726f",
+      "long_name": "Northward velocity",
+      "longitude_max": "5.084567f",
+      "longitude_min": "-19.0828411f",
+      "northing": "latitude",
+      "standard_name": "northward_sea_water_velocity",
+      "unit_long": "Meters per second",
+      "units": "m s-1",
+      "z_max": "5727.917f",
+      "z_min": "0.4940254f"
+    }
+  },
+  "dimensions": {
+    "time": 182,
+    "depth": 15,
+    "latitude": 3,
+    "longitude": 2
+  },
+  "time_range": [
+    "2022-10-01T00:00:00.000000000",
+    "2023-03-31T00:00:00.000000000"
+  ],
+  "depth_coordinate": "depth",
+  "depth_units": "m",
+  "depth_positive_attribute": "down",
+  "available_depth_levels_m_positive_down": [
+    0.4940253794193268,
+    1.5413753986358643,
+    2.6456685066223145,
+    3.8194947242736816,
+    5.078223705291748,
+    6.440614223480225,
+    7.92956018447876,
+    9.572997093200684,
+    11.40500259399414,
+    13.467138290405273,
+    15.810072898864746,
+    18.495559692382812,
+    21.59881591796875,
+    25.211408615112305,
+    29.44472885131836
+  ],
+  "survey_wet_point_count": 23170,
+  "survey_median_lon_lat": [
+    -9.671899617000001,
+    30.452591435
+  ],
+  "nearest_wet_model_node_lon_lat": [
+    -9.69366455078125,
+    30.443265914916992
+  ],
+  "nearest_wet_node_distance_km": 2.3298667246672906,
+  "model_bottom_depth_variable": null,
+  "model_bottom_depth_value": null,
+  "closest_levels_for_target_local_depths": [
+    {
+      "local_survey_depth_m": 2,
+      "closest_available_current_level_m": 1.5413753986358643,
+      "vertical_offset_m": -0.45862460136413574
+    },
+    {
+      "local_survey_depth_m": 5,
+      "closest_available_current_level_m": 5.078223705291748,
+      "vertical_offset_m": 0.07822370529174805
+    },
+    {
+      "local_survey_depth_m": 10,
+      "closest_available_current_level_m": 9.572997093200684,
+      "vertical_offset_m": -0.4270029067993164
+    },
+    {
+      "local_survey_depth_m": 15,
+      "closest_available_current_level_m": 15.810072898864746,
+      "vertical_offset_m": 0.8100728988647461
+    },
+    {
+      "local_survey_depth_m": 20,
+      "closest_available_current_level_m": 18.495559692382812,
+      "vertical_offset_m": -1.5044403076171875
+    }
+  ],
+  "interpretation_warning": "A wet grid point and depth levels do not prove near-bed current support for the surf zone. Daily regional currents (~3 km grid) must not be treated as observed local bed currents. Compare model bathymetry, local depths, and vertical offsets before using combined shear equations."
+}

@@ -1,0 +1,21 @@
+{
+  "Anza": {
+    "survey_date": "2022-11-10",
+    "z_unit_m": "m",
+    "horizontal_reference": "Lambert Zone 2; Clarke 1880; title-block translations ΔX=-31 m, ΔY=-146 m, ΔZ=-47 m",
+    "horizontal_reference_status": "Confirmed by the user from the Anza DWG; X/easting then Y/northing; EPSG:26192 registered operation applied from local coordinates to WGS 84",
+    "horizontal_transform_reported_accuracy_m": 7.0,
+    "horizontal_control_point_residuals": "Not independently assessed; the reported EPSG operation accuracy is not a local survey residual",
+    "vertical_reference": "Hydrographic zero of the Port of Agadir, Morocco",
+    "vertical_reference_status": "site-local reference; no tie to the Ras El Ma local zero is applied or established in this study",
+    "reported_2024_vertical_tie": {
+      "source": "IHO Eastern Atlantic Hydrographic Commission, Morocco National Report, EAtHC18, May 2024",
+      "reported_value": "Port of Agadir hydrographic zero (ZH) = -2.159 m relative to NGM",
+      "source_file": "References/Vertical_Datum/Morocco_National_Report_EAtHC18_2024.pdf",
+      "source_url": "https://iho.int/uploads/user/Inter-Regional%20Coordination/RHC/EAtHC/EAtHC18/EAtHC18_2024_06.8A_EN_Morocco%20National%20Report_Presentation.pdf",
+      "applicability_to_2022_survey": "Not established; the report documents the value in 2024 and does not confirm the datum realization used for the 2022 survey",
+      "conversion_status": "Not applied to source or candidate Z values"
+    }
+  },
+  "interpretation_note": "Anza elevations are referenced to the hydrographic zero of the Port of Agadir; Ras El Ma elevations are referenced to the hydrographic zero of the Port of Ras Kebdana. These are separate local vertical references. The 2024 IHO report lists an Agadir ZH-to-NGM value of -2.159 m, but its applicability to the 2022 survey realization is unverified, so it is recorded only as a candidate tie and not applied. The report's Nador value must not be substituted for the Ras Kebdana zero. The title-block ΔZ geodetic translation is not a tie between the port zeros and was not applied to the survey elevations."
+}

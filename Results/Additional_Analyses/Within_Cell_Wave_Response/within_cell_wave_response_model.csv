@@ -1,0 +1,6 @@
+outcome,model,predictor,standardized_beta_log_spm_per_1sd_predictor,effect_pct_per_1sd_predictor,block_bootstrap_95ci_low,block_bootstrap_95ci_high,bootstrap_replicates_valid,observations_n,cells_n,dates_n,spatial_blocks_n,within_r2
+HR-OC SPM,Wave + temporal trend,log_hs24_max_z,0.12559750546958448,13.38257177799208,-0.044926787050152434,0.3209238320025334,500,5530,174,33,15,0.0745393064078449
+HR-OC SPM,Wave + temporal trend,time_z,-0.027393819529020213,,-0.20417109128071464,0.16994046169998794,500,5530,174,33,15,0.0745393064078449
+HR-OC SPM,Wave + tide anomaly + temporal trend,log_hs24_max_z,0.1369385155922655,14.675763863856456,-0.044028325643877354,0.33083185869451265,500,5530,174,33,15,0.13516194535319803
+HR-OC SPM,Wave + tide anomaly + temporal trend,tide_anomaly_z,-0.1163413921483784,,-0.24618973281670695,0.04377734228049103,500,5530,174,33,15,0.13516194535319803
+HR-OC SPM,Wave + tide anomaly + temporal trend,time_z,-0.03315786578969791,,-0.2000851548560799,0.13819194329940365,500,5530,174,33,15,0.13516194535319803

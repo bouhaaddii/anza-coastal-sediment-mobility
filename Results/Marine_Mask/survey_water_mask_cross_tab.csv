@@ -1,0 +1,9 @@
+water_class_code,water_class_label,z_sign_group,point_count
+0,Insufficient observations,below_local_zero,40
+0,Insufficient observations,at_or_above_local_zero,60
+1,Stable non-water,below_local_zero,0
+1,Stable non-water,at_or_above_local_zero,32
+2,Variable water fringe,below_local_zero,5
+2,Variable water fringe,at_or_above_local_zero,352
+3,Stable water,below_local_zero,23125
+3,Stable water,at_or_above_local_zero,894

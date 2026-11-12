@@ -1,0 +1,19 @@
+{
+  "scene_count": 11,
+  "NDTI_support": "Strict intersection of 50,128 persistent-water pixels valid in all 11 selected scenes.",
+  "wave_and_current_source": "Copernicus Marine IBI regional model values matched to the nearest grid point/hour as recorded in project outputs.",
+  "tide_source": "GOT5.6 modeled astronomical tide anomaly relative to UTC-day mean; no local gauge validation or port-zero tie.",
+  "association_method": "Spearman rank correlation coefficient; coefficients shown descriptively; p-values not computed.",
+  "limitations": [
+    "Only 11 temporally irregular Sentinel-2 scenes are paired; time and season can confound associations.",
+    "IBI grid values are regional context and do not resolve the surf zone or nearshore circulation at the study scale.",
+    "NDTI is unitless and uncalibrated to suspended-sediment concentration; it is affected by water optics, glint, foam, and atmosphere.",
+    "GOT5.6 anomaly is modeled, not validated by a local tide gauge and not tied to the local hydrographic zero.",
+    "No p-values, causal effects, sediment fluxes, or transport rates are estimated."
+  ],
+  "outputs": [
+    "ndti_same_pixel_wave_tide_matchups.csv",
+    "ndti_wave_tide_descriptive_associations.csv",
+    "Figure_NDTI_hydrodynamic_context.png/.pdf"
+  ]
+}

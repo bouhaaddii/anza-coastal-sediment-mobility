@@ -1,0 +1,39 @@
+{
+  "status": "plan-confirmed horizontal CRS; registered transformation applied; local control residual not assessed",
+  "source_file": "E:\\Agadir_Sediment_Hydrodynamics_Study\\Data\\Local_Bathymetry\\Anza_Agadir\\Anza_Agadir_bathy_points_normalized.csv",
+  "candidate_points_file": "E:\\Agadir_Sediment_Hydrodynamics_Study\\Data\\Local_Bathymetry\\Anza_Agadir\\Anza_Agadir_bathy_points_candidate_utm29.csv",
+  "source_crs": "EPSG:26192 — Merchich / Sud Maroc; confirmed from the Anza survey plan",
+  "target_crs": "EPSG:32629 — WGS 84 / UTM zone 29N",
+  "point_count": 24508,
+  "source_x_range_m": [
+    88860.249,
+    90710.249
+  ],
+  "source_y_range_m": [
+    390327.239,
+    392207.239
+  ],
+  "candidate_longitude_range_deg": [
+    -9.681605897643713,
+    -9.661782585475144
+  ],
+  "candidate_latitude_range_deg": [
+    30.44423290612454,
+    30.461364530276974
+  ],
+  "points_inside_approximate_project_bbox": 24508,
+  "bbox_point_fraction": 1.0,
+  "median_distance_to_bbox_center_km": 0.7736410846676331,
+  "candidate_transformer_description": "Inverse of Sud Maroc + Merchich to WGS 84 (1) (with axis order normalized for visualization)",
+  "candidate_transformer_reported_accuracy_m": 7.0,
+  "vertical_values": "Z copied unchanged; retained in metres relative to the local hydrographic zero of Port of Agadir",
+  "vertical_translation_applied": false,
+  "plan_translation_note": "The user confirmed the Anza plan's Lambert Zone 2 / Clarke 1880 reference, X/easting then Y/northing order, and translation direction. The registered EPSG:26192-to-WGS84 operation applies +31,+146,+47 m in geocentric space, inverse to the plan's listed negative direction. These datum translations are not applied to the survey's local hydrographic Z values.",
+  "horizontal_operation_confirmation": "Confirmed by the user from the Anza DWG; EPSG:26192 to WGS 84 operation used with always_xy=True.",
+  "limitations": [
+    "The registered horizontal operation reports 7 m accuracy; this is not a local survey control-point residual.",
+    "Check alignment against DWG control points before claiming sub-10 m absolute co-registration with satellite pixels.",
+    "The approximate working box is not a surveyed marine polygon.",
+    "No vertical datum conversion, gridding, open-bathymetry fusion, mesh, or hydrodynamic simulation is performed."
+  ]
+}

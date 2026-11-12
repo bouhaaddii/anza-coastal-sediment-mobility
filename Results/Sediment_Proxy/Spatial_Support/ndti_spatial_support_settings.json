@@ -1,0 +1,20 @@
+{
+  "selected_scene_count": 11,
+  "persistent_water_core_definition": "SCL water occurrence stability class 3 from Script 14 (>=80% occurrence and >=5 clear observations)",
+  "common_support_definition": "valid NDTI in at least 8 of 11 selected scenes",
+  "stable_water_core_pixel_count": 437140,
+  "common_support_pixel_count": 429404,
+  "common_support_fraction_of_persistent_water_core": 0.982303152308185,
+  "interpretation": [
+    "Different per-scene NDTI medians can reflect changing valid-pixel geography as well as optical conditions.",
+    "The persistent-water core is a fixed spatial domain, but individual dates still have missing pixels within it.",
+    "The common-support mask restricts summaries to locations observed in at least the configured number of scenes; it does not correct remaining missingness.",
+    "NDTI remains a unitless, uncalibrated optical proxy; no suspended-sediment concentration, transport rate, causality, or statistical significance is inferred."
+  ],
+  "outputs": [
+    "ndti_spatial_support_by_scene.csv",
+    "S2_valid_NDTI_observation_count_10m.tif",
+    "S2_common_support_min_8_of_11_10m.tif",
+    "Figure_NDTI_spatial_support_audit.png/.pdf"
+  ]
+}

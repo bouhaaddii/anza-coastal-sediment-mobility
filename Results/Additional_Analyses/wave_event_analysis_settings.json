@@ -1,0 +1,14 @@
+{
+  "period_start_utc": "2022-10-01T00:00:00+00:00",
+  "period_end_utc": "2023-03-31T23:00:00+00:00",
+  "target_box_center_lon": -9.67552085,
+  "target_box_center_lat": 30.45,
+  "selected_wave_grid_lon": -9.666379928588867,
+  "selected_wave_grid_lat": 30.444580078125,
+  "selected_wave_grid_distance_km": 1.0646755770387957,
+  "valid_hour_count": 4368,
+  "season_q90_hs_m": 1.7199999615550041,
+  "season_q95_hs_m": 1.966499956045296,
+  "event_definition": "hourly VHM0 >= this six-month period's Q95; exceedance segments separated by no more than 6 below-threshold hours are grouped",
+  "interpretation_limit": "These are seasonal upper-tail wave episodes, not climatological extreme storms and not nearshore wave simulations."
+}

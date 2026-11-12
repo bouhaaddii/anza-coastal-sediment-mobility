@@ -1,0 +1,27 @@
+{
+    "product_id":  "IBI_MULTIYEAR_PHY_005_002",
+    "dataset_id":  "cmems_mod_ibi_phy-cur_my_0.027deg_P1D-m",
+    "doi":  "10.48670/moi-00029",
+    "variables":  [
+                      "uo",
+                      "vo"
+                  ],
+    "start_datetime_utc":  "2022-10-01T00:00:00",
+    "end_datetime_utc":  "2023-03-31T23:00:00",
+    "requested_depth_m":  [
+                              0,
+                              30
+                          ],
+    "bbox_wgs84_approximate":  [
+                                   -9.7104167,
+                                   30.4104167,
+                                   -9.640625,
+                                   30.4895833
+                               ],
+    "temporal_resolution":  "daily mean",
+    "nominal_horizontal_resolution_degrees":  0.028,
+    "limitation":  "Regional reanalysis; does not resolve surf-zone and rip currents. Current profiles must be audited against model bathymetry and local survey depths before any bed-stress calculation.",
+    "downloaded_at_utc":  "2026-11-12T02:17:58.2769303Z",
+    "file":  "IBI_currents_3D_daily_Anza_0_30m_20221001_20230331.nc",
+    "file_size_bytes":  160980
+}

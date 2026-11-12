@@ -1,0 +1,47 @@
+{
+  "project": "Agadir sediment hydrodynamics study",
+  "site": "Anza / Agadir Bay, Morocco",
+  "created_utc": "2026-11-12T16:16:56.578333+00:00",
+  "python": "3.13.17 (tags/v3.13.17:64e080d, Oct 21 2026, 14:08:53) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "software_versions": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "matplotlib": "3.11.2",
+    "rasterio": "1.5.2",
+    "xarray": "2026.9.0",
+    "pyTMD": "3.1.0",
+    "scikit-learn": null,
+    "pyproj": "3.8.0",
+    "copernicusmarine": "2.5.1",
+    "scipy": "1.18.1",
+    "netCDF4": "1.7.5.1.post1"
+  },
+  "key_inputs": [
+    "Config/project_config.json",
+    "requirements.txt",
+    "Data/Local_Bathymetry/Anza_Agadir/Anza_Agadir_bathy_points.txt",
+    "Data/Local_Bathymetry/Anza_Agadir/Anza_Agadir_bathy_points_candidate_utm29.csv",
+    "Data/Local_Bathymetry/Anza_Agadir/Anza_Agadir_survey_plan.dwg",
+    "Data/Copernicus_Marine/IBI_wave_Anza_subset.nc",
+    "Data/Copernicus_Marine/Currents_3D/IBI_currents_3D_daily_Anza_0_30m_20221001_20230331.nc",
+    "Data/Copernicus_Marine/Ocean_Colour_HR/Anza_CMEMS_HR_OC_SPM_TUR_L3_20221101_20230331.nc",
+    "Results/Currents_3D_QC/IBI_3D_current_support_audit.json",
+    "Results/scene_forcing_and_quality.csv",
+    "Results/Sediment_Proxy/Spatial_Support/ndti_spatial_support_by_scene.csv",
+    "Results/CMEMS_Ocean_Colour_Audit/cmems_hr_oc_water_support_by_date.csv",
+    "Results/Sediment_Mobility_Scenarios/mobility_daily_by_depth_grain_datum_scenario.csv.gz"
+  ],
+  "required_key_inputs_missing": [],
+  "hash_policy": "SHA-256 recorded for files up to 16777216 bytes; larger files are listed with size and modification time only.",
+  "inventory_csv": "Results/Final_Pipeline/final_file_inventory.csv",
+  "scientific_scope": "Anza open-data optical-product comparison and model-conditional bed-mobility screening; not an in-situ SSC validation, sediment-flux model, or validated morphodynamic simulation.",
+  "known_data_limits": [
+    "The local soundings retain the Port of Agadir hydrographic zero; the vertical tie to external bathymetry is unverified.",
+    "D50 values are scenarios; no grain-size measurements from the 2022 survey are present.",
+    "Copernicus IBI currents are regional daily means and do not resolve the surf zone.",
+    "The HR-OC product is satellite-derived and is not independent in-situ validation.",
+    "Product cloud cover is tile-level; it is not a water-only cloud fraction for the study polygon.",
+    "The 11 processed scene subset is small and temporally uneven; month composition explains most of its difference from the full period in the model-conditional mobility indicator."
+  ]
+}

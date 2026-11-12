@@ -1,0 +1,5 @@
+water_class_code,water_class_label,survey_points,share_of_sampled_points,median_local_z_m,z_p10_m,z_p90_m,points_below_local_zero,share_below_local_zero,points_at_or_above_local_zero,median_water_occurrence
+0,Insufficient observations,100,0.004080300310102824,0.64,-0.771,1.6310000000000011,40,0.4,60,1.0
+1,Stable non-water,32,0.0013056960992329036,2.3600000000000003,1.814,2.603,0,0.0,32,0.0
+2,Variable water fringe,357,0.01456667210706708,1.41,0.516,2.188000000000001,5,0.014005602240896359,352,0.699999988079071
+3,Stable water,24019,0.9800473314835972,-12.95,-20.23,-1.8,23125,0.9627794662558807,894,1.0

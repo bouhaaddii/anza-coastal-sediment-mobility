@@ -1,0 +1,26 @@
+{
+  "product_id": "OCEANCOLOUR_IBI_BGC_HR_L3_NRT_009_204",
+  "dataset_id": "cmems_obs_oc_ibi_bgc_tur-spm-chl_nrt_l3-hr-mosaic_P1D-m",
+  "doi": "10.48670/moi-00107",
+  "variables_requested": [
+    "SPM",
+    "TUR"
+  ],
+  "start_datetime_utc": "2022-11-01T00:00:00",
+  "end_datetime_utc": "2023-03-31T23:59:59",
+  "bbox_wgs84_approximate": [
+    -9.7104167,
+    30.4104167,
+    -9.640625,
+    30.4895833
+  ],
+  "nominal_resolution_m": 100,
+  "temporal_product": "Daily Level-3 Sentinel-2/MSI ocean-colour retrieval",
+  "limitation": "Satellite-derived TUR/SPM; not independent local in-situ validation.",
+  "downloaded_at_utc": "2026-11-11T23:34:29.2057272Z",
+  "file": "Anza_CMEMS_HR_OC_SPM_TUR_L3_20221101_20230331.nc",
+  "file_size_bytes": 5532834,
+  "dataset_version_observed": "202107",
+  "dataset_part_observed": "default",
+  "transfer_size_reported_mb": 30.52
+}

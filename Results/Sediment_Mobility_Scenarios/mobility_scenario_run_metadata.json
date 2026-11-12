@@ -1,0 +1,90 @@
+{
+  "study": "Anza / Agadir, Morocco",
+  "survey_depth_reference": "local hydrographic zero of Port of Agadir; source Z unchanged",
+  "current_product": "Copernicus Marine IBI multi-year physics reanalysis, daily mean uo/vo, 0.027-degree dataset",
+  "current_node": {
+    "nearest_wet_node_lon_lat": [
+      -9.69366455078125,
+      30.443265914916992
+    ],
+    "nearest_wet_node_distance_km": 2.3298667246672906,
+    "vertical_levels_m_positive_down": [
+      0.4940253794193268,
+      1.5413753986358643,
+      2.6456685066223145,
+      3.8194947242736816,
+      5.078223705291748,
+      6.440614223480225,
+      7.92956018447876,
+      9.572997093200684,
+      11.40500259399414,
+      13.467138290405273,
+      15.810072898864746,
+      18.495559692382812,
+      21.59881591796875,
+      25.211408615112305,
+      29.44472885131836
+    ],
+    "current_product_temporal_resolution": "daily mean"
+  },
+  "wave_product": "existing IBI hourly VHM0/VTPK/VMDR fields sampled at the nearest grid node",
+  "wave_node_lon_lat": [
+    -9.666379928588867,
+    30.444580078125
+  ],
+  "wave_node_distance_from_survey_median_km": 1.037793013043688,
+  "wave_records": 4368,
+  "wave_time_range_utc": [
+    "2022-10-01 00:00:00+00:00",
+    "2023-03-31 23:00:00+00:00"
+  ],
+  "tide_model": "GOT5.6",
+  "tide_signal": "GOT5.6 prediction demeaned over this forcing period; relative water-depth sensitivity only, not gauge validated and not a port datum tie",
+  "datum_cases": [
+    {
+      "name": "ZH_unadjusted",
+      "offset_m": 0.0,
+      "meaning": "sensitivity only; +2.159 m is a candidate IHO 2024 relation and is not applied as verified survey-datum correction"
+    },
+    {
+      "name": "IHO_2024_candidate_offset_sensitivity",
+      "offset_m": 2.159,
+      "meaning": "sensitivity only; +2.159 m is a candidate IHO 2024 relation and is not applied as verified survey-datum correction"
+    }
+  ],
+  "D50_scenarios_mm": [
+    0.063,
+    0.1,
+    0.125,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "D50_note": "All D50 values remain unmeasured scenarios. The 0.10 mm case is a literature-informed historical near-bottom benchmark reported for Agadir Bay by Aouiche et al. (2016), based on LCHF (1972); it is not a measurement from the 2022 Anza survey. The 0.25 mm case is a historical beach value and is not treated as subtidal grain size. See D50_scenario_provenance.csv.",
+  "D50_provenance_table": "E:\\Agadir_Sediment_Hydrodynamics_Study\\Results\\Sediment_Mobility_Scenarios\\D50_scenario_provenance.csv",
+  "equations": [
+    "linear dispersion and near-bed orbital velocity",
+    "Swart wave friction factor with ks=2.5 D50",
+    "Soulsby combined wave-current maximum stress",
+    "Soulsby-Whitehouse critical Shields threshold"
+  ],
+  "current_stress_method": "log-law extrapolation from interpolated regional-model velocity at 0.5 m above scenario seabed; daily mean currents and horizontal grid node 2.33 km from survey median",
+  "screening": "Records with Hs/h > 0.78 are excluded from linear-wave stress calculation as breaker-likely; no local wave transformation, refraction, setup, or surf-zone current model is included.",
+  "interpretation": "M>=1 is modeled incipient-motion threshold exceedance for noncohesive grains under the stated scenarios. Not a probability, measured mobility, sediment concentration, transport direction/rate, bed change, or causal validation.",
+  "source_inputs_modified": false,
+  "current_variables": [
+    "uo",
+    "vo"
+  ],
+  "wave_doi": "10.48670/moi-00030",
+  "secondary_ocean_colour_product_id": "OCEANCOLOUR_IBI_BGC_HR_L3_NRT_009_204",
+  "secondary_ocean_colour_dataset_id": "cmems_obs_oc_ibi_bgc_tur-spm-chl_nrt_l3-hr-mosaic_P1D-m",
+  "current_dataset_id": "cmems_mod_ibi_phy-cur_my_0.027deg_P1D-m",
+  "wave_product_id": "IBI_MULTIYEAR_WAV_005_006",
+  "wave_dataset_id": "cmems_mod_ibi_wav_my_0.027deg_PT1H-i",
+  "tide_software": "pyTMD 3.1.0",
+  "current_doi": "10.48670/moi-00029",
+  "secondary_ocean_colour_dataset_version_observed": "202107",
+  "current_product_id": "IBI_MULTIYEAR_PHY_005_002",
+  "tide_model_reference": "GOT5.6; NASA/TM-20250002085"
+}

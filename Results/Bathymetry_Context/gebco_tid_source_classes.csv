@@ -1,0 +1,6 @@
+class_code,source_class,cells_in_downloaded_subset,distinct_cells_intersecting_survey
+0,Land,86,5
+16,Optical depth,146,15
+17,Combined direct methods,68,0
+40,Predicted from satellite-derived gravity,9,2
+44,Bathymetric sounding constrained; gravity-guided grid,11,3

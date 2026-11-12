@@ -1,0 +1,13 @@
+datum_case,D50_scenario_mm_not_measured,panel_rows,matched_rows,dates_n,cells_n,min_wave_valid_hours,min_combined_valid_hours,rows_retained_at_12h_common_support
+ZH_unadjusted,0.063,5530,5530,33,174,21,21,5530
+ZH_unadjusted,0.1,5530,5530,33,174,21,21,5530
+ZH_unadjusted,0.125,5530,5530,33,174,21,21,5530
+ZH_unadjusted,0.25,5530,5530,33,174,21,21,5530
+ZH_unadjusted,0.5,5530,5530,33,174,21,21,5530
+ZH_unadjusted,1,5530,5530,33,174,21,21,5530
+IHO_2024_candidate_offset_sensitivity,0.063,5530,5530,33,174,24,24,5530
+IHO_2024_candidate_offset_sensitivity,0.1,5530,5530,33,174,24,24,5530
+IHO_2024_candidate_offset_sensitivity,0.125,5530,5530,33,174,24,24,5530
+IHO_2024_candidate_offset_sensitivity,0.25,5530,5530,33,174,24,24,5530
+IHO_2024_candidate_offset_sensitivity,0.5,5530,5530,33,174,24,24,5530
+IHO_2024_candidate_offset_sensitivity,1,5530,5530,33,174,24,24,5530
