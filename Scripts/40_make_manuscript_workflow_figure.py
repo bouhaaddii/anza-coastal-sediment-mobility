@@ -1,4 +1,4 @@
-"""Create the publication workflow schematic from the executed Anza study design."""
+"""Create a staged input-to-processing-to-analysis workflow figure."""
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -9,115 +9,129 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "Results" / "Manuscript_Figures"
 
 
-def card(ax, x, y, w, h, title, body, face, edge="#42647A", title_color="#173B52"):
-    box = FancyBboxPatch(
-        (x, y), w, h,
-        boxstyle="round,pad=0.012,rounding_size=0.018",
-        linewidth=1.25, edgecolor=edge, facecolor=face,
-    )
+def card(ax, x, y, w, h, title, body, face, edge="#577789"):
+    box = FancyBboxPatch((x, y), w, h,
+        boxstyle="round,pad=0.008,rounding_size=0.014",
+        linewidth=1.05, edgecolor=edge, facecolor=face)
     ax.add_patch(box)
-    ax.text(x + 0.018, y + h - 0.032, title, ha="left", va="top",
-            fontsize=12.3, fontweight="bold", color=title_color)
-    ax.text(x + 0.018, y + h - 0.067, body, ha="left", va="top",
-            fontsize=11.2, color="#243746", linespacing=1.18)
+    ax.text(x + 0.014, y + h - 0.023, title, ha="left", va="top",
+            fontsize=9.5, fontweight="bold", color="#153B51")
+    ax.text(x + 0.014, y + h - 0.050, body, ha="left", va="top",
+            fontsize=8.0, color="#263C48", linespacing=1.15)
 
 
-def arrow(ax, start, end, color="#557386", lw=1.35):
-    ax.add_patch(FancyArrowPatch(
-        start, end, arrowstyle="-|>", mutation_scale=11, linewidth=lw,
-        color=color, connectionstyle="arc3,rad=0", shrinkA=2, shrinkB=3,
-    ))
+def group(ax, xywh, label, edge="#A6B8C2"):
+    x, y, w, h = xywh
+    box = FancyBboxPatch((x, y), w, h,
+        boxstyle="round,pad=0.006,rounding_size=0.012",
+        linewidth=0.85, edgecolor=edge, facecolor="#FBFCFD",
+        linestyle=(0, (3, 2)))
+    ax.add_patch(box)
+    ax.text(x + 0.012, y + h - 0.010, label, ha="left", va="top",
+            fontsize=8.7, fontweight="bold", color="#3E6478")
+
+
+def arrow(ax, start, end, color="#557386"):
+    ax.add_patch(FancyArrowPatch(start, end, arrowstyle="-|>",
+        mutation_scale=9.5, linewidth=1.05, color=color,
+        connectionstyle="arc3,rad=0", shrinkA=1, shrinkB=2))
 
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     plt.rcParams.update({"font.family": "DejaVu Sans", "text.color": "#203442"})
-    # A wide canvas preserves enough physical card width for legible labels when
-    # the journal page embeds this four-lane workflow at single-column width.
-    fig, ax = plt.subplots(figsize=(11.0, 8.3))
-    ax.set_xlim(0, 1)
-    ax.set_ylim(0, 1)
-    ax.axis("off")
-    fig.patch.set_facecolor("white")
+    fig, ax = plt.subplots(figsize=(11.8, 8.1), facecolor="white")
+    ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis("off")
 
-    xs = [0.035, 0.2825, 0.53, 0.7775]
-    w = 0.205
-    source_y, source_h = 0.78, 0.18
-    proc_y, proc_h = 0.52, 0.18
-    source_cards = [
-        ("Satellite optical data",
-         "Sentinel-2 L2A\n73 catalog dates\n11 ROI-QA scenes\nNDTI + cloud cover",
+    # The stage headings are inside their group borders; every card is self-contained.
+    input_box = (0.025, 0.735, 0.95, 0.235)
+    process_box = (0.025, 0.475, 0.95, 0.225)
+    analysis_box = (0.025, 0.175, 0.95, 0.265)
+    limit_box = (0.025, 0.025, 0.95, 0.115)
+    group(ax, input_box, "INPUT DATA")
+    group(ax, process_box, "PREPROCESSING AND HARMONISATION")
+    group(ax, analysis_box, "ANALYSES")
+    group(ax, limit_box, "INTERPRETATION BOUNDARY")
+
+    xs = [0.045, 0.285, 0.525, 0.765]
+    w = 0.19
+    input_cards = [
+        ("Sentinel-2 L2A",
+         "73 catalog dates\n11 ROI-QA scenes\nB02/B03/B04/B08; SCL masks",
          "#E8F2F7"),
         ("Local bathymetry",
-         "24,508 XYZ points\n22,986 submerged\nPort of Agadir\nhydrographic zero",
+         "24,508 XYZ soundings\n22,986 supported submerged points\nPort of Agadir hydrographic zero",
          "#E8F3F0"),
         ("Regional forcing",
-         "IBI-WAV 4,368 hourly\nIBI currents: daily\nGOT5.6 tide anomaly",
+         "IBI-WAV: 4,368 hourly records\nIBI currents: daily profiles\nGOT5.6: relative tide anomaly",
          "#F2F0FA"),
-        ("Ocean-colour data",
-         "Copernicus HR-OC\nSPM and TUR fields\n151 daily dates\nVariable water support",
+        ("Ocean-colour product",
+         "Copernicus HR-OC L3\nSPM and TUR; 151 daily dates\nWater support varies by date",
          "#FBF3E6"),
     ]
-    for x, (title, body, face) in zip(xs, source_cards):
-        card(ax, x, source_y, w, source_h, title, body, face)
+    for x, (title, body, face) in zip(xs, input_cards):
+        card(ax, x, 0.765, w, 0.155, title, body, face)
 
-    proc_cards = [
-        ("Optical quality",
-         "ROI-QA and cloud filters\nNDTI and matched dates",
-         "#F5F8FA"),
-        ("Depth harmonisation",
-         "Survey coordinates\n0.5 m depth bins\nLocal zero retained",
-         "#F3F8F6"),
-        ("Forcing alignment",
-         "Depth-matched waves\nCombined bed stress\nAssumed D50 cases",
-         "#F7F6FA"),
-        ("HR-OC screening",
-         "Daily water audit\nPair usable dates\nNo field calibration",
-         "#FCF8F1"),
+    process_cards = [
+        ("Optical screening",
+         "SCL cloud/shadow QA\nReflectance and NDTI\nUnique acquisition dates",
+         "#F3F7FA"),
+        ("Depth support",
+         "Horizontal coordinate audit\n0.5 m depth bins\nLocal vertical zero retained",
+         "#F1F7F5"),
+        ("Forcing and mobility",
+         "Depth-matched wave/current\nSwart–Soulsby stress screen\nSix unmeasured D50 scenarios",
+         "#F5F4FA"),
+        ("HR-OC matching",
+         "Daily water-support audit\nSame-date product pairing\nNo field calibration",
+         "#FCF7EF"),
     ]
-    for x, (title, body, face) in zip(xs, proc_cards):
-        card(ax, x, proc_y, w, proc_h, title, body, face)
-        arrow(ax, (x + w/2, source_y - 0.008), (x + w/2, proc_y + proc_h + 0.008),
-              color="#557386")
+    for x, (title, body, face) in zip(xs, process_cards):
+        card(ax, x, 0.505, w, 0.135, title, body, face)
+        arrow(ax, (x + w / 2, 0.755), (x + w / 2, 0.651))
 
-    # Each source stream is processed in its own lane, then enters the integrated analysis block.
-    analysis_box = (0.055, 0.20, 0.89, 0.17)
-    card(ax, *analysis_box,
-         "Integrated analyses",
-         "PRIMARY · 73 catalog dates, cloud thresholds, and 11 ROI-QA scenes versus the 182-day forcing baseline.\n"
-         "40 fixed depths (3.5–23 m); binary and continuous mobility metrics; monthly decomposition.\n"
-         "SECONDARY · Same-day NDTI–HR-OC, depth/spatial controls, repeated-cell wave association.",
-         "#E8F2F7", edge="#247BA0", title_color="#155B79")
+    # Stage boundary arrows show the flow into the analysis block without crossing.
     for x in xs:
-        arrow(ax, (x + w/2, proc_y - 0.008), (x + w/2, analysis_box[1] + analysis_box[3] + 0.008),
-              color="#247BA0")
+        arrow(ax, (x + w / 2, 0.495), (x + w / 2, 0.447), color="#247BA0")
 
-    final_box = (0.08, 0.035, 0.84, 0.12)
-    card(ax, *final_box,
-         "Interpretation limits",
-         "Model-conditional mobility only · No measured SSC/flux, transport direction, or validated surf-zone simulation",
-         "#F2F4F6", edge="#788B98", title_color="#334B5B")
-    arrow(ax, (0.5, analysis_box[1] - 0.008), (0.5, final_box[1] + final_box[3] + 0.008),
-          color="#788B98")
+    card(ax, 0.05, 0.215, 0.565, 0.16,
+         "PRIMARY ANALYSIS  |  acquisition-date representativeness",
+         "Compare 73 catalog dates, cloud-metadata thresholds, and 11 ROI-QA scenes with the 182-day forcing record.\n"
+         "Hold 40 supported depth classes (3.5–23 m) fixed; report binary and continuous mobility scores and\n"
+         "separate month composition from within-month contrasts.",
+         "#E9F2F7", edge="#247BA0")
+    card(ax, 0.645, 0.215, 0.305, 0.16,
+         "SECONDARY ANALYSES  |  product associations",
+         "Same-date NDTI–HR-OC with depth/spatial controls.\n"
+         "Repeated-cell wave association; support, lag,\n"
+         "and block-size sensitivity.",
+         "#F7F3EA", edge="#BD8A45")
 
-    fig.subplots_adjust(left=0.025, right=0.975, top=0.99, bottom=0.025)
+    ax.text(0.045, 0.094,
+        "Modeled, scenario-conditional bed-mobility indicator only. No measured SSC or sediment flux, "
+        "transport direction, or validated surf-zone simulation.",
+        ha="left", va="center", fontsize=8.7, color="#334B5B", wrap=True)
+    ax.text(0.955, 0.047, "Data layers are not vertically fused.",
+            ha="right", va="bottom", fontsize=7.4, color="#607784")
+
+    fig.subplots_adjust(left=0.02, right=0.98, top=0.99, bottom=0.015)
     png = OUT / "Figure_Anza_analysis_workflow.png"
     pdf = OUT / "Figure_Anza_analysis_workflow.pdf"
-    fig.savefig(png, dpi=350, bbox_inches="tight", facecolor="white")
+    fig.savefig(png, dpi=400, bbox_inches="tight", facecolor="white")
     fig.savefig(pdf, bbox_inches="tight", facecolor="white")
     plt.close(fig)
     caption = (
-        "Figure 2. Workflow of the Anza study. Sentinel-2 scenes, local soundings, regional wave/current forcing, "
-        "modelled tide anomalies, and the satellite-derived HR-OC product are screened and harmonised for separate "
-        "primary and secondary analyses. The primary analysis compares acquisition-date groups against the 182-day "
-        "forcing reference on 40 fixed depth classes, using binary and continuous model-conditional mobility metrics. "
-        "The secondary branch evaluates optical-product associations and their sensitivity to depth and spatial structure. "
-        "Neither branch is an in-situ sediment-concentration or sediment-flux validation."
+        "Figure 2. Staged workflow for the Anza analysis. Inputs are grouped above their preprocessing and "
+        "harmonisation steps. The primary analysis compares satellite acquisition-date groups with the full "
+        "182-day forcing record over a fixed bathymetric support. Secondary analyses evaluate satellite-product "
+        "associations and repeated-cell wave response. All mobility results are model-conditional; the workflow "
+        "does not represent field-calibrated suspended sediment concentration, sediment flux, transport direction, "
+        "or a validated surf-zone simulation."
     )
     (OUT / "Figure_Anza_analysis_workflow_caption_EN.txt").write_text(caption + "\n", encoding="utf-8")
     print(f"Workflow figure saved: {png}")
     print(f"Vector PDF saved: {pdf}")
-    print("Caption saved. The schematic represents executed analyses and their interpretation limits.")
+    print("Inputs, preprocessing, analyses, and interpretation limits are separated in labelled groups.")
 
 
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-"""Build the manuscript locator map with local survey points over an open bathymetry layer."""
+"""Create a layered 3D figure and nested Morocco-to-Anza locators."""
 from __future__ import annotations
 
 import csv
@@ -8,28 +8,35 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 import rasterio
-from matplotlib.patches import Polygon
-from matplotlib.ticker import FuncFormatter
+from matplotlib.patches import Polygon, Rectangle
+from matplotlib.lines import Line2D
+from rasterio.enums import Resampling
+from rasterio.windows import from_bounds, Window
 
 
 ROOT = Path(__file__).resolve().parents[1]
-RASTER = ROOT / "Data" / "Open_Bathymetry" / "Anza_Agadir" / "EMODnet_2022_mean_depth_Anza.tif"
+RGB = ROOT / "Data" / "Sentinel2" / "Processed" / "S2B_MSIL2A_20221110T112209_N0510_R037_T29RMP_20240801T233757_reflectance_10m.tif"
+QA = ROOT / "Data" / "Sentinel2" / "Processed" / "S2B_MSIL2A_20221110T112209_N0510_R037_T29RMP_20240801T233757_qa_10m.tif"
 SURVEY = ROOT / "Data" / "Local_Bathymetry" / "Anza_Agadir" / "Anza_Agadir_bathy_points_candidate_utm29.csv"
 COUNTRIES = ROOT / "Data" / "Cartographic" / "ne_110m_admin_0_countries.geojson"
 OUT = ROOT / "Results" / "Manuscript_Figures"
 
 
-def survey_arrays():
+def read_survey():
     rows = []
     with SURVEY.open(newline="", encoding="utf-8-sig") as f:
         for row in csv.DictReader(f):
-            rows.append((float(row["longitude_wgs84_candidate_deg"]),
-                         float(row["latitude_wgs84_candidate_deg"]),
-                         float(row["z_source_m"])))
+            z = float(row["z_source_m"])
+            if z < 0:
+                depth = -z
+                depth_bin = round(depth * 2.0) / 2.0
+                if 0.5 <= depth_bin <= 29.0:
+                    rows.append((float(row["easting_utm29n_candidate_m"]),
+                                 float(row["northing_utm29n_candidate_m"]), depth))
     a = np.asarray(rows, dtype=float)
-    if a.ndim != 2 or a.shape[1] != 3:
-        raise ValueError("Expected survey longitude, latitude, and local-Z columns.")
-    return a[:, 0], a[:, 1], a[:, 2]
+    if len(a) == 0:
+        raise ValueError("The survey file contains no submerged points.")
+    return a
 
 
 def polygon_parts(geometry):
@@ -46,122 +53,170 @@ def draw_country(ax, coordinates, face, edge, linewidth=0.35):
                              edgecolor=edge, linewidth=linewidth, zorder=1))
 
 
+def read_rgb_crop(bounds, output_shape=(150, 150)):
+    xmin, ymin, xmax, ymax = bounds
+    with rasterio.open(RGB) as src, rasterio.open(QA) as qa:
+        window = from_bounds(xmin, ymin, xmax, ymax, transform=src.transform)
+        window = window.round_offsets().round_lengths()
+        window = window.intersection(Window(0, 0, src.width, src.height))
+        if window.width < 2 or window.height < 2:
+            raise ValueError("The survey footprint lies outside the Sentinel-2 image.")
+        h, w = output_shape
+        raw = src.read((3, 2, 1), window=window, out_shape=(3, h, w),
+                       resampling=Resampling.bilinear).astype(np.float32)
+        qa_arr = qa.read(1, window=window, out_shape=(h, w),
+                         resampling=Resampling.nearest)
+        clear = (qa_arr == 1) & np.isfinite(raw).all(axis=0)
+        if clear.sum() < 20:
+            clear = np.isfinite(raw).all(axis=0)
+        rgb = np.zeros((h, w, 4), dtype=np.float32)
+        for band in range(3):
+            vals = raw[band][clear]
+            lo, hi = np.nanpercentile(vals, (2, 98))
+            if hi <= lo:
+                hi = lo + 1e-6
+            # A mild display gamma reveals the dark-water texture without
+            # changing reflectance inputs or implying bathymetric information.
+            stretched = np.clip((raw[band] - lo) / (hi - lo), 0, 1)
+            rgb[:, :, band] = np.power(stretched, 0.72)
+        rgb[:, :, 3] = clear.astype(np.float32)
+        crop_transform = src.window_transform(window)
+        extent = (crop_transform.c,
+                  crop_transform.c + crop_transform.a * window.width,
+                  crop_transform.f + crop_transform.e * window.height,
+                  crop_transform.f)
+    return rgb, extent
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
-    lon, lat, z_local = survey_arrays()
-    submerged = z_local <= 0
-    lon, lat, z_local = lon[submerged], lat[submerged], z_local[submerged]
-
-    with rasterio.open(RASTER) as src:
-        bathy = src.read(1, masked=True)
-        extent = (src.bounds.left, src.bounds.right, src.bounds.bottom, src.bounds.top)
+    points = read_survey()
+    e, n, depth = points.T
+    center_e, center_n = float(np.median(e)), float(np.median(n))
+    pad = 220.0
+    bounds = (float(e.min() - pad), float(n.min() - pad),
+              float(e.max() + pad), float(n.max() + pad))
+    rgb, rgb_extent = read_rgb_crop(bounds)
 
     with COUNTRIES.open(encoding="utf-8") as f:
         world = json.load(f)
-    morocco = next(feat for feat in world["features"]
-                   if feat.get("properties", {}).get("ADMIN") == "Morocco")
 
     plt.rcParams.update({
-        "font.family": "DejaVu Sans", "font.size": 8.5,
+        "font.family": "DejaVu Sans", "font.size": 8.2,
         "axes.labelcolor": "#243746", "xtick.color": "#425466",
         "ytick.color": "#425466", "axes.edgecolor": "#6B7C88",
-        "axes.linewidth": 0.75,
+        "axes.linewidth": 0.7,
     })
-    fig = plt.figure(figsize=(11.4, 7.2), facecolor="white")
-    ax = fig.add_axes([0.085, 0.105, 0.655, 0.82])
-    ax.set_facecolor("#F5F8FA")
-    image = ax.imshow(bathy, extent=extent, origin="upper", cmap="Blues_r",
-                      vmin=-45, vmax=0, interpolation="nearest", zorder=0,
-                      rasterized=True)
-    xx = np.linspace(extent[0], extent[1], bathy.shape[1])
-    yy = np.linspace(extent[3], extent[2], bathy.shape[0])
-    X, Y = np.meshgrid(xx, yy)
-    layer = np.ma.masked_where(np.ma.getdata(bathy) >= 0, bathy)
-    ax.contour(X, Y, layer, levels=[-40, -30, -20, -10, -5],
-               colors="#23485D", linewidths=0.42, alpha=0.62, zorder=2)
+    fig = plt.figure(figsize=(12.4, 7.0), facecolor="white")
+    ax3d = fig.add_axes([0.025, 0.12, 0.625, 0.82], projection="3d")
+    ax3d.set_facecolor("white")
+    height, width = rgb.shape[:2]
+    x = np.linspace(rgb_extent[0], rgb_extent[1], width)
+    y = np.linspace(rgb_extent[3], rgb_extent[2], height)
+    X, Y = np.meshgrid((x - center_e) / 1000.0, (y - center_n) / 1000.0)
+    z_image = np.full_like(X, 26.0)
+    ax3d.plot_surface(X, Y, z_image, facecolors=rgb, shade=False,
+                      linewidth=0, antialiased=False, rstride=1, cstride=1)
+    scatter = ax3d.scatter((e - center_e) / 1000.0,
+                           (n - center_n) / 1000.0,
+                           depth, c=depth, cmap="viridis",
+                           vmin=0, vmax=23, s=1.35, alpha=0.82,
+                           linewidths=0, depthshade=False, rasterized=True)
+    ax3d.set_xlim((bounds[0] - center_e) / 1000, (bounds[2] - center_e) / 1000)
+    ax3d.set_ylim((bounds[1] - center_n) / 1000, (bounds[3] - center_n) / 1000)
+    ax3d.set_zlim(26.2, 0)
+    ax3d.set_xlabel("Easting X offset (km)", labelpad=7)
+    ax3d.set_ylabel("Northing Y offset (km)", labelpad=7)
+    ax3d.set_zlabel("Depth below local Port of Agadir ZH (m)", labelpad=6)
+    ax3d.set_zticks([0, 5, 10, 15, 20, 25])
+    ax3d.view_init(elev=28, azim=-57)
+    ax3d.set_box_aspect((1.35, 1.05, 0.68))
+    ax3d.grid(True, alpha=0.24)
+    ax3d.text2D(0.015, 0.98, "A", transform=ax3d.transAxes,
+                fontsize=12, fontweight="bold", color="#142F43",
+                va="top", bbox={"boxstyle": "round,pad=0.18", "fc": "white",
+                                "ec": "#D2DCE2", "alpha": 0.95})
+    cax = fig.add_axes([0.653, 0.38, 0.016, 0.36])
+    cb = fig.colorbar(scatter, cax=cax)
+    cb.set_label("Measured sounding depth (m; positive downward)", fontsize=8)
+    cb.ax.tick_params(labelsize=7)
 
-    # Local depths are plotted as a distinct point layer: they are not vertically
-    # shifted to EMODnet's LAT datum and are not fused into its raster.
-    scatter = ax.scatter(lon, lat, c=-z_local, s=1.4, cmap="magma_r",
-                         vmin=0, vmax=25, alpha=0.78, linewidths=0,
-                         rasterized=True, zorder=4)
-
-    ax.set_xlim(-9.6835, -9.6600)
-    ax.set_ylim(30.4430, 30.4628)
-    ax.set_aspect(1 / np.cos(np.deg2rad(30.45)))
-    ax.set_xlabel("Longitude (°W)", labelpad=5)
-    ax.set_ylabel("Latitude (°N)", labelpad=5)
-    ax.xaxis.set_major_formatter(FuncFormatter(lambda x, _: f"{abs(x):.3f}°W"))
-    ax.yaxis.set_major_formatter(FuncFormatter(lambda y, _: f"{y:.3f}°N"))
-    ax.grid(color="white", linewidth=0.6, alpha=0.75, zorder=3)
-    ax.text(0.018, 0.974, "A", transform=ax.transAxes, va="top", ha="left",
-            fontsize=12, fontweight="bold", color="#122B3A",
-            bbox={"boxstyle": "round,pad=0.22", "fc": "white", "ec": "#CBD5DC", "alpha": 0.95}, zorder=10)
-
-    cax1 = fig.add_axes([0.785, 0.405, 0.025, 0.27])
-    cax2 = fig.add_axes([0.885, 0.405, 0.025, 0.27])
-    cbar1 = fig.colorbar(image, cax=cax1)
-    cbar1.set_label("EMODnet 2022 elevation (m; LAT)", fontsize=8.2, labelpad=7)
-    cbar1.ax.tick_params(labelsize=7.5)
-    cbar2 = fig.colorbar(scatter, cax=cax2)
-    cbar2.set_label("Survey depth (m below Port of Agadir ZH)", fontsize=8.2, labelpad=7)
-    cbar2.ax.tick_params(labelsize=7.5)
-
-    # Scale bar in approximate local metres at 30.45°N.
-    center_lat = 30.452
-    lon_per_km = 1 / (111.32 * np.cos(np.deg2rad(center_lat)))
-    x0, y0, w = -9.6818, 30.4440, 1.0 * lon_per_km
-    ax.plot([x0, x0 + w], [y0, y0], color="#152B38", linewidth=3.2, solid_capstyle="butt", zorder=8)
-    ax.plot([x0, x0], [y0 - 0.00018, y0 + 0.00018], color="#152B38", linewidth=1.0, zorder=8)
-    ax.plot([x0 + w, x0 + w], [y0 - 0.00018, y0 + 0.00018], color="#152B38", linewidth=1.0, zorder=8)
-    ax.text(x0 + w / 2, y0 + 0.00034, "1 km", ha="center", va="bottom", fontsize=7.5, color="#152B38",
-            bbox={"fc": "white", "ec": "none", "alpha": 0.85, "pad": 1.2}, zorder=8)
-
-    # A conventional compass rose, not a bare north arrow.
-    cx, cy = 0.94, 0.12
-    ax.annotate("", xy=(cx, cy + 0.09), xytext=(cx, cy - 0.015), xycoords="axes fraction",
-                arrowprops={"arrowstyle": "simple", "facecolor": "#183B50", "edgecolor": "#183B50", "lw": 0.5}, zorder=9)
-    ax.annotate("N", (cx, cy + 0.101), xycoords="axes fraction", ha="center", va="bottom",
-                fontsize=8.5, fontweight="bold", color="#183B50", zorder=9)
-
-    # Locator inset integrated into the main map layout.
-    inset = fig.add_axes([0.765, 0.735, 0.225, 0.205], facecolor="white", zorder=12)
+    ax_morocco = fig.add_axes([0.715, 0.555, 0.265, 0.37], facecolor="white")
     for feat in world["features"]:
-        props = feat.get("properties", {})
-        if props.get("ADMIN") == "Morocco":
-            draw_country(inset, feat["geometry"], "#2A7F83", "#244B5A", 0.48)
-        elif props.get("ADMIN") in {"Algeria", "Western Sahara", "Mauritania", "Spain", "Portugal"}:
-            draw_country(inset, feat["geometry"], "#E6ECEF", "#98A8B1", 0.28)
-    inset.scatter([-9.67], [30.45], s=18, c="#F28E2B", edgecolors="white", linewidths=0.7, zorder=5)
-    inset.annotate("Anza / Agadir", xy=(-9.67, 30.45), xytext=(-6.5, 32.5),
-                   fontsize=6.2, color="#183B50", ha="center",
-                   arrowprops={"arrowstyle": "-", "color": "#E87524", "lw": 0.8}, zorder=6)
-    inset.set_xlim(-14.5, -0.5)
-    inset.set_ylim(20.5, 36.5)
-    inset.set_aspect(1 / np.cos(np.deg2rad(29)))
-    inset.set_xticks([]); inset.set_yticks([])
-    for spine in inset.spines.values():
-        spine.set_edgecolor("#617987"); spine.set_linewidth(0.8)
-    inset.text(0.025, 0.97, "B  MOROCCO", transform=inset.transAxes, ha="left", va="top",
-               fontsize=7.2, fontweight="bold", color="#163C50",
-               bbox={"boxstyle": "round,pad=0.18", "fc": "white", "ec": "#D5DEE3", "alpha": 0.95})
+        admin = feat.get("properties", {}).get("ADMIN", "")
+        if admin == "Morocco":
+            draw_country(ax_morocco, feat["geometry"], "#4E9BA0", "#315C68", 0.55)
+        elif admin in {"Algeria", "Western Sahara", "Mauritania", "Spain", "Portugal"}:
+            draw_country(ax_morocco, feat["geometry"], "#E8EDF0", "#AAB7BE", 0.35)
+    ax_morocco.scatter([-9.67], [30.45], s=35, marker="*", c="#D55E00",
+                       edgecolors="white", linewidths=0.65, zorder=5)
+    ax_morocco.annotate("Anza / Agadir", xy=(-9.67, 30.45), xytext=(-5.1, 32.3),
+                        fontsize=7.1, color="#193B4D", ha="center",
+                        arrowprops={"arrowstyle": "-", "color": "#D55E00", "lw": 0.9},
+                        zorder=6)
+    ax_morocco.set_xlim(-13.5, -0.5)
+    ax_morocco.set_ylim(20.5, 36.5)
+    ax_morocco.set_aspect(1 / np.cos(np.deg2rad(29)))
+    ax_morocco.set_xticks([]); ax_morocco.set_yticks([])
+    for spine in ax_morocco.spines.values():
+        spine.set_edgecolor("#758995"); spine.set_linewidth(0.8)
+    ax_morocco.text(0.03, 0.97, "B  MOROCCO", transform=ax_morocco.transAxes,
+                    ha="left", va="top", fontsize=8, fontweight="bold",
+                    color="#183B50",
+                    bbox={"boxstyle": "round,pad=0.18", "fc": "white",
+                          "ec": "#D5DEE3", "alpha": 0.95})
 
+    ax_local = fig.add_axes([0.715, 0.105, 0.265, 0.36], facecolor="white")
+    local_extent = tuple(v / 1000.0 for v in (rgb_extent[0] - center_e,
+                     rgb_extent[1] - center_e, rgb_extent[2] - center_n,
+                     rgb_extent[3] - center_n))
+    ax_local.imshow(rgb, extent=local_extent, origin="upper", interpolation="nearest")
+    xmin, ymin, xmax, ymax = bounds
+    footprint = Rectangle(((xmin - center_e) / 1000, (ymin - center_n) / 1000),
+                          (xmax - xmin) / 1000, (ymax - ymin) / 1000,
+                          fill=False, edgecolor="#D55E00", linewidth=1.1)
+    ax_local.add_patch(footprint)
+    ax_local.set_xlim((bounds[0] - center_e) / 1000, (bounds[2] - center_e) / 1000)
+    ax_local.set_ylim((bounds[1] - center_n) / 1000, (bounds[3] - center_n) / 1000)
+    ax_local.set_xlabel("Easting X offset (km)", labelpad=2, fontsize=7)
+    ax_local.set_ylabel("Northing Y offset (km)", labelpad=2, fontsize=7)
+    ax_local.tick_params(labelsize=6.5)
+    ax_local.set_aspect("equal", adjustable="box")
+    ax_local.grid(color="white", linewidth=0.55, alpha=0.65)
+    ax_local.text(0.025, 0.97, "C  ANZA / AGADIR", transform=ax_local.transAxes,
+                  ha="left", va="top", fontsize=7.8, fontweight="bold",
+                  color="#183B50",
+                  bbox={"boxstyle": "round,pad=0.18", "fc": "white",
+                        "ec": "#D5DEE3", "alpha": 0.95})
+
+    proxies = [
+        Line2D([0], [0], color="#647E89", lw=7,
+               label="Sentinel-2 L2A RGB layer (display offset only)"),
+        Line2D([0], [0], marker="o", color="none", markerfacecolor="#4B6B8A",
+               markeredgecolor="white", markersize=5,
+               label="Measured survey soundings; colour encodes local-ZH depth"),
+    ]
+    fig.legend(handles=proxies, loc="lower left", bbox_to_anchor=(0.055, 0.025),
+               frameon=False, ncol=1, fontsize=7.5, handlelength=1.8, labelspacing=0.35)
     png = OUT / "Figure_1_study_area_overlay.png"
     pdf = OUT / "Figure_1_study_area_overlay.pdf"
     fig.savefig(png, dpi=400, bbox_inches="tight", facecolor="white")
     fig.savefig(pdf, bbox_inches="tight", facecolor="white")
     plt.close(fig)
     caption = (
-        "Figure 1. Study-area location and overlaid bathymetric inputs. (A) Anza survey soundings, colored by "
-        "depth below the local hydrographic zero of the Port of Agadir, plotted over the EMODnet DTM 2022 "
-        "elevation layer (LAT) with native-grid contours. (B) Natural Earth locator showing Anza on the Atlantic "
-        "coast of Morocco. The local sounding elevations and EMODnet elevations retain their distinct vertical "
-        "references; the layers are overlaid for geographic context only and were not datum-transformed or fused. "
-        "Natural Earth country outlines are shown for cartographic location."
+        "Figure 1. Nested location and layered observation support for Anza, Morocco. (A) Three-dimensional "
+        "view of the Sentinel-2 L2A RGB composite (bands B04/B03/B02; acquisition 10 November 2022) and the "
+        "22,986 submerged soundings from the local survey. Sounding depth is plotted positive downward from "
+        "the hydrographic zero (ZH) of the Port of Agadir and encoded by colour. The RGB image plane is placed "
+        "at an artificial depth of 26 m solely to separate the layers visually; it is not a bathymetric surface "
+        "or a vertical-datum transformation. (B) Morocco locator with Anza/Agadir highlighted. (C) Local RGB "
+        "view with the survey footprint outlined. The satellite and survey layers are co-located horizontally "
+        "for context but were not vertically fused."
     )
     (OUT / "Figure_1_study_area_overlay_caption_EN.txt").write_text(caption + "\n", encoding="utf-8")
     print(f"Wrote {png}")
     print(f"Wrote {pdf}")
+    print(f"Submerged soundings plotted: {len(points):,}")
 
 
 if __name__ == "__main__":
