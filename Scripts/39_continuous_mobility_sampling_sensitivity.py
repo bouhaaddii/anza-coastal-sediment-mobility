@@ -254,7 +254,7 @@ def make_figure(summary: pd.DataFrame, out: Path) -> Path:
     axes[1, 0].set_ylabel("Sentinel-2 sampling set")
     handles, labels = axes[0, 0].get_legend_handles_labels()
     fig.legend(handles, labels, loc="lower center", ncol=2, frameon=False, bbox_to_anchor=(0.5, 0.055))
-    fig.suptitle("Continuous model-based mobility intensity across optical sampling sets", fontsize=13, weight="bold", y=0.98)
+    fig.subplots_adjust(top=0.95)
     fig.text(
         0.5, 0.018,
         "Daily p95 M is a scenario metric; grain size is unmeasured, and regional forcing does not resolve the surf zone.",

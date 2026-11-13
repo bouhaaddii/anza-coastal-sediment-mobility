@@ -1,0 +1,9 @@
+Anza bathymetric-confounding diagnostic for the 10 November 2022 same-day Sentinel-2 / CMEMS product matchup.
+Primary cell inclusion: at least 5 submerged survey soundings assigned to the CMEMS cell.
+Primary paired cells: 179; blocks of 500 m: 13.
+Survey Z is retained in metres relative to the local hydrographic zero of Port of Agadir; depth below that local zero is -Z for submerged soundings.
+No vertical datum conversion was applied. Candidate horizontal coordinates carry the previously reported 7 m transformation accuracy; local control residuals are unavailable.
+Partial Spearman estimates correlate rank-transformed residuals after linear regression on ranked covariates.
+The depth+XY estimate controls a linear spatial trend only; unresolved nonlinear spatial structure may remain.
+The daily HR-OC record may not use the exact local Sentinel-2 granule. The analysis is product correspondence, not independent validation.
+Do not interpret the estimates as calibrated suspended sediment concentration, causal effect, or sediment-transport rate.

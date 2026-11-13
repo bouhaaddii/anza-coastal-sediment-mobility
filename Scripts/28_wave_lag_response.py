@@ -186,7 +186,6 @@ def main() -> None:
     labels = [f"{row.model} | {row.lag_window}" for row in plot.itertuples()]
     ax.set_yticks(positions, labels)
     ax.set_xlabel("Within-cell change in log(HR-OC SPM) per 1-SD increase in mean Hs")
-    ax.set_title("Exploratory lag-window response of HR-OC SPM at Anza", loc="left", weight="bold")
     ax.grid(axis="x", color="#CBD5E1", alpha=.6, linewidth=.7)
     ax.text(.01, -.13, "Intervals: two-axis block bootstrap (500 m spatial blocks; 3 consecutive eligible acquisitions).", transform=ax.transAxes, fontsize=8)
     ax.margins(y=.08)

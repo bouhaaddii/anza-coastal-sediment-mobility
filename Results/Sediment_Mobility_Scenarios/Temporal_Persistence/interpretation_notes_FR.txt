@@ -1,0 +1,25 @@
+INTERPRÉTATION DE LA PERSISTANCE TEMPORELLE DE LA MOBILITÉ MODÉLISÉE
+Période : 2022-10-01 au 2023-03-31 (182 dates UTC).
+Support journalier : au moins 12 heures valides. Les cellules mensuelles avec moins de 10 jours supportés sont masquées dans la figure.
+Les moyennes globales ci-dessous sont des moyennes non pondérées entre classes de profondeur; elles ne sont pas pondérées par la superficie du fond.
+
+1. Résumé global par scénario, pour le zéro hydrographique local non ajusté
+D50 scénario 0.1 mm, vagues seules : moyenne entre classes=0.952; médiane=0.973; étendue=0.834–1.000; largeur médiane des IC95 temporels, blocs 3 j=0.045 et 7 j=0.048.
+D50 scénario 0.1 mm, vagues + courants journaliers : moyenne entre classes=0.954; médiane=0.974; étendue=0.843–1.000; largeur médiane des IC95 temporels, blocs 3 j=0.045 et 7 j=0.045.
+D50 scénario 0.25 mm, vagues seules : moyenne entre classes=0.949; médiane=0.971; étendue=0.823–1.000; largeur médiane des IC95 temporels, blocs 3 j=0.045 et 7 j=0.048.
+D50 scénario 0.25 mm, vagues + courants journaliers : moyenne entre classes=0.951; médiane=0.971; étendue=0.829–1.000; largeur médiane des IC95 temporels, blocs 3 j=0.047 et 7 j=0.051.
+D50 scénario 1 mm, vagues seules : moyenne entre classes=0.846; médiane=0.882; étendue=0.566–1.000; largeur médiane des IC95 temporels, blocs 3 j=0.123 et 7 j=0.149.
+D50 scénario 1 mm, vagues + courants journaliers : moyenne entre classes=0.846; médiane=0.880; étendue=0.569–1.000; largeur médiane des IC95 temporels, blocs 3 j=0.115 et 7 j=0.146.
+
+2. Moyenne mensuelle entre classes de profondeur (zéro local non ajusté)
+D50 0.1 mm, vagues seules — fraction moyenne : oct. 2022 : 0.866; nov. 2022 : 0.991; déc. 2022 : 0.987; janv. 2023 : 0.962; févr. 2023 : 0.901; mars 2023 : 1.000.
+D50 0.1 mm, vagues + courants journaliers — fraction moyenne : oct. 2022 : 0.870; nov. 2022 : 0.991; déc. 2022 : 0.989; janv. 2023 : 0.965; févr. 2023 : 0.906; mars 2023 : 1.000.
+D50 1 mm, vagues seules — fraction moyenne : oct. 2022 : 0.695; nov. 2022 : 0.950; déc. 2022 : 0.927; janv. 2023 : 0.805; févr. 2023 : 0.720; mars 2023 : 0.963.
+D50 1 mm, vagues + courants journaliers — fraction moyenne : oct. 2022 : 0.695; nov. 2022 : 0.951; déc. 2022 : 0.928; janv. 2023 : 0.808; févr. 2023 : 0.720; mars 2023 : 0.964.
+
+3. Lecture et limites
+Le scénario D50 = 0,10 mm est informé par une valeur historique rapportée pour le fond de la baie d’Agadir; il ne s’agit pas d’une mesure du levé d’Anza de 2022. Le scénario 0,25 mm est également un contexte historique de plage, et 1,00 mm est une sensibilité grossière.
+Les intervalles par blocs mobiles de 3 et 7 jours quantifient seulement la variabilité temporelle conditionnelle à cette série de forçage et aux hypothèses du modèle. Ils ne couvrent ni l’incertitude structurelle des équations, ni la granulométrie non mesurée, ni l’incertitude de datum, ni la résolution insuffisante des champs près du rivage.
+Les fréquences de M ≥ 1 sont des sorties de scénario. Elles ne sont ni des probabilités d’érosion, ni des taux de transport, ni des observations de remise en suspension. La carte de mobilité et les différences profondeur–mois sont fortement conditionnées par le profil bathymétrique, car le forçage régional n’est pas résolu spatialement sur le levé.
+Combinaisons sans jour respectant le seuil de support (≥ 12 heures valides par jour) : 3. Elles ont une fraction et des intervalles non estimables; ne pas les interpréter comme une mobilité nulle.
+Cellules mensuelles de faible support masquées dans la figure (< 10 jours supportés) : 57 sur 3312.

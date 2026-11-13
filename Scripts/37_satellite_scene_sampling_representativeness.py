@@ -296,8 +296,8 @@ def make_figure(scenes: pd.DataFrame, summary: pd.DataFrame, out: Path) -> None:
         "text.color": "#243447", "axes.edgecolor": "#9AA8B5",
         "axes.spines.top": False, "axes.spines.right": False,
     })
-    fig = plt.figure(figsize=(13.2, 8.1), facecolor="white")
-    grid = fig.add_gridspec(2, 4, height_ratios=[0.94, 1.2], hspace=0.42, wspace=0.42)
+    fig = plt.figure(figsize=(7.0, 5.8), facecolor="white")
+    grid = fig.add_gridspec(3, 2, height_ratios=[0.82, 1.0, 1.0], hspace=0.62, wspace=0.23)
     ax_scatter = fig.add_subplot(grid[0, :])
     valid = scenes.dropna(subset=["cloud_cover_product_pct", "ibi_vhm0_m"])
     regular = valid[~valid["processed_roi_qa"]]
@@ -316,13 +316,13 @@ def make_figure(scenes: pd.DataFrame, summary: pd.DataFrame, out: Path) -> None:
         ax_scatter.axvline(threshold, color="#9AA8B5", lw=0.8, ls=(0, (3, 3)), zorder=1)
     ax_scatter.set_xlim(left=0)
     ax_scatter.set_xlabel("Sentinel-2 product tile cloud cover (%)")
-    ax_scatter.set_ylabel("Regional model significant wave height at overpass (m)")
+    ax_scatter.set_ylabel("Hs at overpass (m)")
     ax_scatter.set_title("A  Optical acquisition sample and modeled wave conditions", loc="left", pad=9)
     ax_scatter.grid(color="#E8EDF1", lw=0.65)
-    ax_scatter.legend(frameon=False, ncol=2, loc="upper right")
+    ax_scatter.legend(frameon=False, ncol=2, loc="upper right", fontsize=7.6)
     ax_scatter.text(
         0.01, 0.02, "Tile-level cloud metadata; the 11-scene subset is the set with processed image QA.",
-        transform=ax_scatter.transAxes, color="#5F6B76", fontsize=8.1,
+        transform=ax_scatter.transAxes, color="#5F6B76", fontsize=7.1,
     )
 
     panels = [
@@ -336,7 +336,8 @@ def make_figure(scenes: pd.DataFrame, summary: pd.DataFrame, out: Path) -> None:
         "Cloud cover <= 20%", "Cloud cover <= 10%", "Processed ROI-QA scenes",
     ]
     for i, (d50, forcing, title) in enumerate(panels):
-        ax = fig.add_subplot(grid[1, i])
+        row, col = 1 + i // 2, i % 2
+        ax = fig.add_subplot(grid[row, col])
         subset = summary[
             np.isclose(summary["D50_scenario_mm_not_measured"], d50)
             & summary["forcing_case"].eq(forcing)
@@ -349,26 +350,19 @@ def make_figure(scenes: pd.DataFrame, summary: pd.DataFrame, out: Path) -> None:
         for yi, value in zip(y, x):
             if np.isfinite(value):
                 ax.text(value + (0.55 if value >= 0 else -0.55), yi, f"{value:+.1f}",
-                        va="center", ha="left" if value >= 0 else "right", fontsize=7.7, color="#263442")
+                        va="center", ha="left" if value >= 0 else "right", fontsize=8.0, color="#263442")
         ax.set_yticks(y, labels=(
             ["All scenes", "Cloud ≤50%", "Cloud ≤20%", "Cloud ≤10%", "Processed 11"]
-            if i == 0 else ["", "", "", "", ""]
+            if col == 0 else ["", "", "", "", ""]
         ))
         ax.invert_yaxis()
-        ax.set_title(title, loc="left", fontsize=8.8, pad=7)
-        ax.set_xlabel("Δ vs baseline (pp)", fontsize=7.8)
-        ax.tick_params(axis="x", labelsize=7.2)
-        ax.tick_params(axis="y", labelsize=7.5, length=0)
+        ax.set_title(title, loc="left", fontsize=8.7, pad=5)
+        ax.set_xlabel("Δ vs baseline (pp)", fontsize=8.0, labelpad=3)
+        ax.tick_params(axis="x", labelsize=7.7)
+        ax.tick_params(axis="y", labelsize=7.7, length=0)
         ax.grid(axis="x", color="#E8EDF1", lw=0.6)
         ax.set_axisbelow(True)
-    fig.suptitle("How well do optical acquisition dates sample modeled mobility conditions?", fontsize=14, y=0.99)
-    fig.text(
-        0.5, 0.015,
-        "Mobility differences use fixed depth support and are conditional on the existing forcing and unmeasured grain-size scenarios. "
-        "They are not observed SSC bias, sediment flux, or causal effects.",
-        ha="center", fontsize=8.0, color="#596775",
-    )
-    fig.subplots_adjust(top=0.94, bottom=0.13, left=0.095, right=0.985)
+    fig.subplots_adjust(top=0.975, bottom=0.12, left=0.15, right=0.985)
     fig.savefig(out / "Figure_scene_sampling_representativeness.png", dpi=350, bbox_inches="tight")
     fig.savefig(out / "Figure_scene_sampling_representativeness.pdf", bbox_inches="tight")
     plt.close(fig)
@@ -421,7 +415,7 @@ def make_seasonality_figure(summary: pd.DataFrame, out: Path) -> None:
                  Patch(facecolor=within_color, label="Within-month sampling")],
         frameon=False, ncol=2, loc="upper center", bbox_to_anchor=(0.5, 0.98),
     )
-    fig.suptitle("Why does the processed 11-scene subset differ from the full period?", y=1.05, fontsize=13)
+    fig.subplots_adjust(top=0.95)
     fig.text(
         0.5, 0.015,
         "Month composition weights each month's all-weather mean by the share of selected dates in that month. "

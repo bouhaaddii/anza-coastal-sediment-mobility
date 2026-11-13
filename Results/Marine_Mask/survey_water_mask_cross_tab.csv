@@ -1,4 +1,4 @@
-water_class_code,water_class_label,z_sign_group,point_count
+﻿water_class_code,water_class_label,z_sign_group,point_count
 0,Insufficient observations,below_local_zero,40
 0,Insufficient observations,at_or_above_local_zero,60
 1,Stable non-water,below_local_zero,0

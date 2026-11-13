@@ -145,7 +145,6 @@ def main() -> None:
     z = np.asarray([float(row["z_source_m_local_port_zero"]) for row in sampled])
 
     fig, axes = plt.subplots(1, 2, figsize=(13.6, 6.0), constrained_layout=True)
-    fig.suptitle("Survey soundings overlaid on multi-scene Sentinel-2 water classes", fontsize=14, fontweight="bold")
 
     ax = axes[0]
     occurrence_cmap = plt.get_cmap("viridis").copy()

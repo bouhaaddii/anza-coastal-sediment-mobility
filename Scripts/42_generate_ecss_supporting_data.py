@@ -62,7 +62,7 @@ ax2.set_xticks(x, [p.strftime("%b %Y") for p in periods]); ax2.set_ylabel("Uniqu
 ax2.set_title("B  Monthly distribution of catalog and ROI-QA dates", loc="left", fontweight="bold")
 ax2.grid(axis="y", color="#DCE3E8", lw=0.7); ax2.spines[["top", "right"]].set_visible(False)
 ax2.legend(frameon=False, loc="center left", bbox_to_anchor=(1.02, 0.5), ncol=1)
-fig.suptitle("Sentinel-2 temporal support and conditional seabed-mobility context at Anza", fontsize=14, fontweight="bold", y=0.99)
+fig.subplots_adjust(top=0.95)
 fig.text(0.5, 0.01, "Unmeasured D50 = 0.25 mm; unadjusted local hydrographic zero. The score is not observed sediment transport.",
          ha="center", fontsize=8.4, color="#4C5965")
 fig.tight_layout(rect=[0.035, 0.045, 0.78, 0.95])

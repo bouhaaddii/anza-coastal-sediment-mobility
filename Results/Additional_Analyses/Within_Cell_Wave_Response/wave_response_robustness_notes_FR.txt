@@ -1,0 +1,7 @@
+Robustness checks for the within-cell wave association at Anza.
+All fits use the saved repeated-cell panel from Script 26; no new satellite or bathymetric data are generated.
+Checks compare 24-h maximum and mean Hs proxies, temporal moving-block lengths of 2, 3, and 5 acquisitions, a tide-adjusted specification, and leave-one-date-out influence.
+Spatial blocks remain 500 m; the moving-block resampling is exploratory and does not create independent observations.
+Leave-one-date-out primary wave coefficient range: 0.072 to 0.191; positive in 33 of 33 omissions.
+Do not select a specification because its interval excludes zero. Interpret the complete pre-specified sensitivity set and retain the primary model as reported in Script 26.
+HR-OC remains a satellite-derived product; the exact source granule is unverified, IBI does not resolve the surf zone, and these associations are not causal or a sediment-transport estimate.

@@ -16,10 +16,10 @@ def card(ax, x, y, w, h, title, body, face, edge="#42647A", title_color="#173B52
         linewidth=1.25, edgecolor=edge, facecolor=face,
     )
     ax.add_patch(box)
-    ax.text(x + 0.018, y + h - 0.038, title, ha="left", va="top",
-            fontsize=10.2, fontweight="bold", color=title_color, wrap=True)
-    ax.text(x + 0.018, y + h - 0.082, body, ha="left", va="top",
-            fontsize=8.7, color="#243746", linespacing=1.3, wrap=True)
+    ax.text(x + 0.018, y + h - 0.032, title, ha="left", va="top",
+            fontsize=12.3, fontweight="bold", color=title_color)
+    ax.text(x + 0.018, y + h - 0.067, body, ha="left", va="top",
+            fontsize=11.2, color="#243746", linespacing=1.18)
 
 
 def arrow(ax, start, end, color="#557386", lw=1.35):
@@ -32,51 +32,47 @@ def arrow(ax, start, end, color="#557386", lw=1.35):
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     plt.rcParams.update({"font.family": "DejaVu Sans", "text.color": "#203442"})
-    fig, ax = plt.subplots(figsize=(13.0, 8.0))
+    # A wide canvas preserves enough physical card width for legible labels when
+    # the journal page embeds this four-lane workflow at single-column width.
+    fig, ax = plt.subplots(figsize=(11.0, 8.3))
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
     ax.axis("off")
     fig.patch.set_facecolor("white")
 
-    card(ax, 0.05, 0.88, 0.90, 0.10,
-         "Data streams and analytical sequence at Anza",
-         "Temporal sampling audit of a bathymetry-conditioned, modelled seabed-mobility indicator",
-         "#F2F5F7", edge="#A6B5BE", title_color="#173B52")
-
     xs = [0.035, 0.2825, 0.53, 0.7775]
     w = 0.205
-    # Keep the source cards clear of the title/subtitle card above.
-    source_y, source_h = 0.675, 0.155
-    proc_y, proc_h = 0.425, 0.16
+    source_y, source_h = 0.78, 0.18
+    proc_y, proc_h = 0.52, 0.18
     source_cards = [
         ("Satellite optical data",
-         "Sentinel-2 L2A\n73 catalogue dates; 11 ROI-QA scenes\nRed/green NDTI; tile cloud metadata",
+         "Sentinel-2 L2A\n73 catalog dates\n11 ROI-QA scenes\nNDTI + cloud cover",
          "#E8F2F7"),
-        ("Local bathymetric survey",
-         "24,508 XYZ soundings\n22,986 submerged points\nDepth retained below Port of Agadir ZH",
+        ("Local bathymetry",
+         "24,508 XYZ points\n22,986 submerged\nPort of Agadir\nhydrographic zero",
          "#E8F3F0"),
-        ("Regional marine forcing",
-         "IBI-WAV hourly; 4,368 records\nIBI currents: daily regional means\nGOT5.6: modelled tide anomalies",
+        ("Regional forcing",
+         "IBI-WAV 4,368 hourly\nIBI currents: daily\nGOT5.6 tide anomaly",
          "#F2F0FA"),
-        ("Ocean-colour product",
-         "Copernicus HR-OC daily SPM/TUR\n151 dates; variable water support\nSatellite-derived, not field validation",
+        ("Ocean-colour data",
+         "Copernicus HR-OC\nSPM and TUR fields\n151 daily dates\nVariable water support",
          "#FBF3E6"),
     ]
     for x, (title, body, face) in zip(xs, source_cards):
         card(ax, x, source_y, w, source_h, title, body, face)
 
     proc_cards = [
-        ("Optical quality and support",
-         "Scene catalogue and ROI-QA subset\nCloud-threshold groups\nNDTI and common-date support",
+        ("Optical quality",
+         "ROI-QA and cloud filters\nNDTI and matched dates",
          "#F5F8FA"),
         ("Depth harmonisation",
-         "Project survey coordinates\nAssign 0.5-m depth classes\nPreserve local hydrographic zero",
+         "Survey coordinates\n0.5 m depth bins\nLocal zero retained",
          "#F3F8F6"),
-        ("Forcing and mobility calculation",
-         "Match wave/current forcing to depth\nWave and combined bed stress\nSix unmeasured D50 scenarios",
+        ("Forcing alignment",
+         "Depth-matched waves\nCombined bed stress\nAssumed D50 cases",
          "#F7F6FA"),
-        ("HR-OC product screening",
-         "Daily water-cell support audit\nPair eligible S2/HR-OC dates\nNo independent in-situ calibration",
+        ("HR-OC screening",
+         "Daily water audit\nPair usable dates\nNo field calibration",
          "#FCF8F1"),
     ]
     for x, (title, body, face) in zip(xs, proc_cards):
@@ -85,23 +81,21 @@ def main():
               color="#557386")
 
     # Each source stream is processed in its own lane, then enters the integrated analysis block.
-    analysis_box = (0.055, 0.145, 0.89, 0.235)
+    analysis_box = (0.055, 0.20, 0.89, 0.17)
     card(ax, *analysis_box,
          "Integrated analyses",
-         "PRIMARY · Scene-date representativeness: compare 73 catalogue dates, cloud thresholds, and 11 ROI-QA scenes "
-         "against the 182-day baseline on 40 fixed depth classes (3.5–23 m); evaluate binary M ≥ 1 and continuous "
-         "mean log10(P95(M)), with month and within-month decomposition.\n"
-         "SECONDARY · Optical-product association: same-day NDTI–HR-OC comparison, depth/spatial-trend confounding "
-         "checks, and repeated-cell wave-association sensitivity.",
+         "PRIMARY · 73 catalog dates, cloud thresholds, and 11 ROI-QA scenes versus the 182-day forcing baseline.\n"
+         "40 fixed depths (3.5–23 m); binary and continuous mobility metrics; monthly decomposition.\n"
+         "SECONDARY · Same-day NDTI–HR-OC, depth/spatial controls, repeated-cell wave association.",
          "#E8F2F7", edge="#247BA0", title_color="#155B79")
     for x in xs:
         arrow(ax, (x + w/2, proc_y - 0.008), (x + w/2, analysis_box[1] + analysis_box[3] + 0.008),
               color="#247BA0")
 
-    final_box = (0.08, 0.025, 0.84, 0.095)
+    final_box = (0.08, 0.035, 0.84, 0.12)
     card(ax, *final_box,
-         "Interpretation boundary",
-         "Model-conditional sampling diagnostics only  ·  No measured SSC, sediment flux, transport direction, or validated surf-zone simulation",
+         "Interpretation limits",
+         "Model-conditional mobility only · No measured SSC/flux, transport direction, or validated surf-zone simulation",
          "#F2F4F6", edge="#788B98", title_color="#334B5B")
     arrow(ax, (0.5, analysis_box[1] - 0.008), (0.5, final_box[1] + final_box[3] + 0.008),
           color="#788B98")

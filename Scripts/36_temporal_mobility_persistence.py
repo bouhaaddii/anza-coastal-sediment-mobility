@@ -225,7 +225,6 @@ def main() -> None:
         ax.set_xticks(np.arange(len(months)) + 0.5, labels=labels, rotation=25, ha="right")
     fig.supylabel("Survey depth below local port zero (m; positive down)", x=0.035)
     fig.supxlabel("Forcing month (UTC)", y=0.075)
-    fig.suptitle("Seasonal pattern of modeled threshold exceedance", fontsize=13.0, y=0.97)
     fig.subplots_adjust(left=0.12, right=0.87, top=0.90, bottom=0.18, hspace=0.28, wspace=0.15)
     cax = fig.add_axes([0.90, 0.21, 0.018, 0.64])
     cbar = fig.colorbar(mesh, cax=cax)

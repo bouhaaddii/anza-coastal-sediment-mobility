@@ -256,7 +256,6 @@ def main() -> None:
     axes[2].set_xlabel("NDTI rank residual (depth + XY-adjusted)")
     axes[2].set_ylabel("SPM rank residual (depth + XY-adjusted)")
     axes[2].set_title(f"Controlling for depth and XY trend\npartial ρ = {rho_space:.2f}")
-    fig.suptitle("Does the same-day NDTI–SPM pattern persist after bathymetric control?", fontsize=13, weight="bold")
     fig.text(0.5, -0.005,
              "One local survey (10 Nov 2022); cell Z is the median of submerged soundings and remains relative to the Agadir port zero. "
              "XY detrending is a sensitivity check, not a hydrodynamic model. Intervals and correlations are spatial diagnostics.",

@@ -1,4 +1,4 @@
-model,lag_window,predictor,standardized_beta_log_spm_per_1sd_wave,effect_percent_per_1sd_wave,block_bootstrap_95ci_low,block_bootstrap_95ci_high,valid_bootstrap_replicates,observations_n,cells_n,dates_n,spatial_blocks_500m_n,within_r2,ibi_wave_grid_distance_km
+﻿model,lag_window,predictor,standardized_beta_log_spm_per_1sd_wave,effect_percent_per_1sd_wave,block_bootstrap_95ci_low,block_bootstrap_95ci_high,valid_bootstrap_replicates,observations_n,cells_n,dates_n,spatial_blocks_500m_n,within_r2,ibi_wave_grid_distance_km
 Separate lag 0–24 h + trend,0–24 h,lag_0_24_logmean_hs_z,0.10264353175405258,10.809633750718417,-0.0647437297221585,0.33380274357836703,500,5530,174,33,15,0.05163332137094734,1.0646755770387957
 Separate lag 24–48 h + trend,24–48 h,lag_24_48_logmean_hs_z,0.061442974181472,6.336985526336276,-0.12472233375774336,0.22853923210566096,500,5530,174,33,15,0.023165168371859224,1.0646755770387957
 Separate lag 48–72 h + trend,48–72 h,lag_48_72_logmean_hs_z,-0.006858000177147326,-0.6834537759658645,-0.1452182133285478,0.2891335199625463,500,5530,174,33,15,0.006115299294716547,1.0646755770387957

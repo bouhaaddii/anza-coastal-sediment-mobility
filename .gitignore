@@ -10,3 +10,6 @@ Data/Sentinel2/SAFE/
 Data/Tide_Model/GOT5.5/
 Data/Tide_Model/GOT5.5_testdata.zip
 *.bak
+/References/
+/Submission/
+/Results/ECSS_Submission_Package/

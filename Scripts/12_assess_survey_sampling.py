@@ -143,7 +143,6 @@ def main() -> None:
     ax.grid(axis="y", color="#D9E0E3", linewidth=0.6)
     ax.legend(frameon=False)
 
-    fig.suptitle("Anza bathymetric survey coverage and sampling geometry", fontsize=14, fontweight="bold")
     fig.savefig(FIGURE_PNG, dpi=350, bbox_inches="tight")
     fig.savefig(FIGURE_PDF, bbox_inches="tight")
     plt.close(fig)

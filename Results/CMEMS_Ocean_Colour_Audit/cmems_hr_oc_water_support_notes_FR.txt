@@ -1,0 +1,11 @@
+CMEMS HR-OC stable-water support audit
+Primary water-cell definition: at least 50% of the CMEMS grid-cell area overlaps the exploratory Sentinel-2 stable-water class.
+Sensitivity thresholds: 25%, 50%, and 75%; all are reported in cmems_hr_oc_water_support_by_date.csv.
+Class 3 is an SCL-derived persistent-water screening mask, not a surveyed shoreline or authoritative marine boundary.
+The NetCDF subset contains SPM and TUR only; it contains no separate pixel-level quality flag variable.
+Do not interpret the absence of a returned flag variable as absence of processor quality screening. Consult the official HR-OC QUID and product documentation.
+SPM and TUR are satellite-derived products and are not independent in-situ validation of the Sentinel-2 NDTI proxy.
+Selected dates represent same-calendar-day comparisons only; they do not establish that HR-OC used the identical MSI granule.
+Selected S2 dates with at least 2000 finite SPM cells over primary water mask: 6 / 11.
+Median/IQR summaries use a date-varying valid footprint; they are descriptive and should not be treated as fixed-pixel temporal change.
+No calibration, regression, significance test, resampling of source rasters, or sediment-transport rate was calculated.

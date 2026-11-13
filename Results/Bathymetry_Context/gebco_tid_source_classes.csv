@@ -1,4 +1,4 @@
-class_code,source_class,cells_in_downloaded_subset,distinct_cells_intersecting_survey
+﻿class_code,source_class,cells_in_downloaded_subset,distinct_cells_intersecting_survey
 0,Land,86,5
 16,Optical depth,146,15
 17,Combined direct methods,68,0

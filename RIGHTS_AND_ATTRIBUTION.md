@@ -20,6 +20,10 @@ The EMODnet bathymetry products are provided under the EMODnet terms of use; ret
 
 GEBCO bathymetry is included for regional context. Follow the GEBCO terms and cite the specific grid release: https://www.gebco.net/data-products/gridded-bathymetry/terms-of-use
 
+## Natural Earth cartographic outlines
+
+The country outlines used in the study-area locator are from Natural Earth, 1:110m Admin 0 countries, version 5.1.1 (`Data/Cartographic/ne_110m_admin_0_countries.geojson`). Natural Earth vector data are public domain; retain source attribution in derivative figures: https://www.naturalearthdata.com/downloads/110m-cultural-vectors/110m-admin-0-countries/
+
 ## GOT5.6 tide model
 
 GOT5.6 constituent grids are distributed by NASA's Earth Sciences Division. Preserve and consult the accompanying `#README.Pub` file in `Data/Tide_Model/GOT5.6/`; cite the model and its source publication as specified there. Model predictions are not local tide-gauge observations.

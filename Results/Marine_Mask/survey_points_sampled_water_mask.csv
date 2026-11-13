@@ -1,4 +1,4 @@
-point_id,easting_utm29n_candidate_m,northing_utm29n_candidate_m,z_source_m_local_port_zero,z_sign_group,water_class_code,water_class_label,water_occurrence_fraction,clear_observation_count
+﻿point_id,easting_utm29n_candidate_m,northing_utm29n_candidate_m,z_source_m_local_port_zero,z_sign_group,water_class_code,water_class_label,water_occurrence_fraction,clear_observation_count
 P.1,436100.884,3368313.572,-8.1,below_local_zero,3,Stable water,1.0,10
 P.10,436099.644,3368353.551,-7.03,below_local_zero,3,Stable water,1.0,10
 P.100,434989.079,3368679.267,-21.27,below_local_zero,3,Stable water,1.0,9

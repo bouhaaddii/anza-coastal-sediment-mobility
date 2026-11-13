@@ -144,7 +144,6 @@ def main() -> None:
     ax.axvline(0, color="#475569", linestyle="--", linewidth=1)
     ax.set_yticks(y, plot["specification"])
     ax.set_xlabel("Within-cell change in log(HR-OC SPM) per 1-SD wave proxy")
-    ax.set_title("Sensitivity of the Anza wave coefficient to wave summary and time-block length", loc="left", weight="bold")
     ax.grid(axis="x", color="#CBD5E1", alpha=.6, linewidth=.7)
     fig.savefig(OUT / "Figure_wave_response_robustness.png", dpi=350, bbox_inches="tight")
     fig.savefig(OUT / "Figure_wave_response_robustness.pdf", bbox_inches="tight")

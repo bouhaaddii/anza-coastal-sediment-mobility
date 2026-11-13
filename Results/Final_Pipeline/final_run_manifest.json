@@ -1,7 +1,7 @@
 {
   "project": "Agadir sediment hydrodynamics study",
   "site": "Anza / Agadir Bay, Morocco",
-  "created_utc": "2026-11-12T16:16:56.578333+00:00",
+  "created_utc": "2026-11-13T00:29:28.590171+00:00",
   "python": "3.13.17 (tags/v3.13.17:64e080d, Oct 21 2026, 14:08:53) [MSC v.1944 64 bit (AMD64)]",
   "platform": "Windows-11-10.0.26300-SP0",
   "software_versions": {
@@ -22,7 +22,6 @@
     "requirements.txt",
     "Data/Local_Bathymetry/Anza_Agadir/Anza_Agadir_bathy_points.txt",
     "Data/Local_Bathymetry/Anza_Agadir/Anza_Agadir_bathy_points_candidate_utm29.csv",
-    "Data/Local_Bathymetry/Anza_Agadir/Anza_Agadir_survey_plan.dwg",
     "Data/Copernicus_Marine/IBI_wave_Anza_subset.nc",
     "Data/Copernicus_Marine/Currents_3D/IBI_currents_3D_daily_Anza_0_30m_20221001_20230331.nc",
     "Data/Copernicus_Marine/Ocean_Colour_HR/Anza_CMEMS_HR_OC_SPM_TUR_L3_20221101_20230331.nc",

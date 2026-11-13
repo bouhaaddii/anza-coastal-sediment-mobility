@@ -244,7 +244,6 @@ def main() -> None:
     lines1, labels1 = ax2.get_legend_handles_labels()
     lines2, labels2 = ax2b.get_legend_handles_labels()
     ax2.legend(lines1 + lines2, labels1 + labels2, frameon=False, loc="upper left", ncol=2)
-    fig.suptitle("CMEMS HR-OC availability over the Sentinel-2 stable-water core", fontsize=13, weight="bold")
     fig.text(0.5, -0.005,
              "Water cells require ≥50% stable-water fraction. Shading is the spatial IQR, not a confidence interval. "
              "Daily valid footprints vary; same-date CMEMS and MSI records are not assumed to be the same granule.",

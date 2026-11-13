@@ -1,4 +1,4 @@
-month_utc,datum_case,survey_depth_bin_below_local_ZH_m,D50_scenario_mm_not_measured,forcing_case,valid_dates_ge_12h_n,valid_hours_total,hour_weighted_exceedance_fraction_M_ge_1,display_support_flag
+﻿month_utc,datum_case,survey_depth_bin_below_local_ZH_m,D50_scenario_mm_not_measured,forcing_case,valid_dates_ge_12h_n,valid_hours_total,hour_weighted_exceedance_fraction_M_ge_1,display_support_flag
 2022-10,IHO_2024_candidate_offset_sensitivity,0.5,0.1,wave_only,31,723,1,supported
 2022-11,IHO_2024_candidate_offset_sensitivity,0.5,0.1,wave_only,30,656,1,supported
 2022-12,IHO_2024_candidate_offset_sensitivity,0.5,0.1,wave_only,26,536,1,supported

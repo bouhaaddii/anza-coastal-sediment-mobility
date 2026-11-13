@@ -1,0 +1,35 @@
+AUDIT DE REPRÉSENTATIVITÉ TEMPORELLE DES SCÈNES SENTINEL-2
+
+Le catalogue contient 73 produits sur 73 dates uniques. Le sous-ensemble traité avec contrôle image dans la zone d'étude contient 11 produits sur 11 dates.
+0 produit(s) hors de la période de forçage ont été exclus du test de représentativité (73 produit(s) dans le fichier d'entrée avant filtrage).
+La couverture nuageuse moyenne indiquée au niveau du produit/tuile est 20.9 %. La hauteur significative moyenne de houle modélisée aux passages est 1.09 m pour le catalogue et 1.41 m pour le sous-ensemble traité.
+
+Les résultats de mobilité sont calculés à profondeur fixe : seules les classes ayant au moins 12 heures de forçage valide pour chaque jour des 182 jours entrent dans la comparaison principale. Cette règle évite que les groupes de dates reçoivent des poids différents parce que leur composition en profondeur varie.
+
+DÉCOMPOSITION DE L'ÉCART POUR LES 11 SCÈNES TRAITÉES (points de pourcentage)
+Écart total = composition des mois échantillonnés + différence de sélection à l'intérieur de ces mois. La référence mensuelle est la moyenne de tous les jours modélisés du mois, pondérée par le nombre de dates satellitaires retenues dans ce mois.
+D50 0.10 mm, wave_only : total +5.50; composition mensuelle +4.61; différence intra-mensuelle +0.90; 11 dates appariées sur 11.
+D50 0.10 mm, waves_plus_daily_currents : total +5.18; composition mensuelle +4.33; différence intra-mensuelle +0.85; 11 dates appariées sur 11.
+D50 1.00 mm, wave_only : total +16.82; composition mensuelle +11.87; différence intra-mensuelle +4.95; 11 dates appariées sur 11.
+D50 1.00 mm, waves_plus_daily_currents : total +16.50; composition mensuelle +11.61; différence intra-mensuelle +4.88; 11 dates appariées sur 11.
+
+INTERPRÉTATION SCIENTIFIQUE
+Les différences en points de pourcentage indiquent si les dates d'acquisition disponibles échantillonnent un niveau moyen différent de mobilité modélisée par rapport à l'ensemble de la période de forçage. Une différence positive suggère un sur-échantillonnage de conditions où le modèle dépasse plus souvent le seuil de mise en mouvement; une différence négative indique l'inverse. La composante intra-mensuelle isole descriptivement l'écart après contrôle de la distribution des dates par mois. Aucune de ces composantes ne mesure un biais réel de concentration en sédiments en suspension.
+
+LIMITES À GARDER DANS LE MANUSCRIT
+1. La couverture nuageuse du catalogue est une métadonnée de produit/tuile, pas une fraction nuageuse validée sur l'AOI marine.
+2. Le sous-ensemble traité est petit et sélectionné pour l'analyse; cette comparaison décrit sa représentativité, sans inférence causale.
+3. Aucun capteur continu local de SSC/turbidité n'est disponible ici pour calculer un biais d'observation réel.
+4. La fréquence de dépassement dépend des hypothèses du modèle de mobilité, de la taille de grain non mesurée, du forçage régional et du support bathymétrique.
+5. Les classes granulométriques sont des scénarios; la valeur historique de 0.10 mm pour le fond d'Agadir est un contexte régional, pas une mesure du levé Anza 2022.
+6. Les résultats ne représentent ni un flux sédimentaire ni une prédiction universelle pour d'autres côtes.
+
+SOURCES ET POSITIONNEMENT DE LA LACUNE
+Lin et al. (2026) montrent que la disponibilité optique non aléatoire peut biaiser les estimations côtières de SSC, mais leur quantification du biais s'appuie sur des séries in situ fréquentes de turbidité et de houle. Notre jeu de données ne permet pas cette validation directe; il permet un test plus limité de la représentativité des dates optiques vis-à-vis d'un indicateur de mobilité conditionnel au modèle.
+Nmiss et al. (2025) ont mesuré des flux par pièges à sable sur cinq plages au sud d'Agadir. Leur étude rappelle que des mesures locales de flux existent dans la région et qu'elles ne doivent pas être confondues avec notre diagnostic satellite/modèle, réalisé à Anza et sans mesure directe de flux.
+
+Classes de profondeur retenues (table fixed_depth_support.csv) : 40 à 40 selon scénario; limites verticales communes de 3.5–23.0 m.
+
+Références cliquables :
+- Lin, H., Fichot, C. G., Wang, Y., Yu, Q., Wang, A., & Gao, S. (2026). Global Fair-Weather Bias in Remotely Sensed Coastal Suspended Sediment Concentration. Geophysical Research Letters, 53, e2026GL122332. https://doi.org/10.1029/2026GL122332
+- Nmiss, M., Amyay, M., Atiki, N., Benbih, M., & Nait-Si, H. (2025). Quantifying sediment flux under moderate wave energy on beaches south of Agadir, Morocco. Ecological Engineering & Environmental Technology, 26(1), 78–91. https://doi.org/10.12912/27197050/195526

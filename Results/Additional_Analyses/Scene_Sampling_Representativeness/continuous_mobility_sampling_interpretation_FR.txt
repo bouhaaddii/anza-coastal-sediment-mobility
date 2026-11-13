@@ -1,0 +1,18 @@
+INTERPRÉTATION — SENSIBILITÉ CONTINUE DE LA MOBILITÉ AUX DATES SENTINEL-2
+
+Le score est la moyenne, sur les classes fixes de profondeur, de log10 du p95 journalier du rapport de mobilité M.
+Il réduit la saturation des fréquences binaires M >= 1, mais demeure entièrement conditionnel aux équations,
+aux forçages régionaux et aux scénarios de D50 du Script 32. Il ne mesure pas un transport sédimentaire.
+
+Résultats pour les 11 scènes avec contrôle image ROI :
+- D50 scénario 0.1 mm; wave_only: différence totale=+0.2112 log10; composition mensuelle=+0.1344; écart intra-mensuel=+0.0768; profondeurs fixes=40 (3.5–23 m).
+- D50 scénario 0.1 mm; waves_plus_daily_currents: différence totale=+0.2092 log10; composition mensuelle=+0.1326; écart intra-mensuel=+0.0766; profondeurs fixes=40 (3.5–23 m).
+- D50 scénario 0.25 mm; wave_only: différence totale=+0.2052 log10; composition mensuelle=+0.1300; écart intra-mensuel=+0.0752; profondeurs fixes=40 (3.5–23 m).
+- D50 scénario 0.25 mm; waves_plus_daily_currents: différence totale=+0.2034 log10; composition mensuelle=+0.1284; écart intra-mensuel=+0.0750; profondeurs fixes=40 (3.5–23 m).
+- D50 scénario 1 mm; wave_only: différence totale=+0.1938 log10; composition mensuelle=+0.1216; écart intra-mensuel=+0.0721; profondeurs fixes=40 (3.5–23 m).
+- D50 scénario 1 mm; waves_plus_daily_currents: différence totale=+0.1922 log10; composition mensuelle=+0.1203; écart intra-mensuel=+0.0719; profondeurs fixes=40 (3.5–23 m).
+
+La décomposition conserve les mois représentés dans le sous-échantillon et compare leur moyenne pondérée à la
+référence toutes conditions. Elle ne transforme pas les acquisitions en échantillon aléatoire et ne corrige pas
+la couverture nuageuse. N’utiliser ni les intervalles ni le langage d’un biais de SSC; aucune concentration
+in situ, granulométrie locale ou mesure de flux n’est disponible.

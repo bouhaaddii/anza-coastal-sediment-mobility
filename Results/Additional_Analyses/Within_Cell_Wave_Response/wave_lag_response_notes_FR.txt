@@ -1,0 +1,9 @@
+Exploratory, bathymetry-conditioned wave-lag analysis at Anza.
+Common complete support: 33 dates, 174 cells, 15 spatial blocks of 500 m.
+Three non-overlapping 24-h forcing windows were defined relative to the local Sentinel-2 overpass time as a proxy: 0–24 h, 24–48 h, and 48–72 h.
+Critical timing limit: HR-OC L3 is a daily aggregation that may merge multiple Sentinel-2 tile mosaics/overpasses; the source acquisition time for each SPM pixel is not identified in this subset. These are nominal calendar-day forcing windows, not verified physical SPM response lags.
+Wave exposure is the standardized log(1 + mean IBI Hs) in each window. Separate models estimate each lag individually; joint distributed-lag models estimate conditional lag contributions when their design matrices are estimable.
+The joint lag terms may be collinear because wave conditions persist across days. Report rank/fit warnings and intervals; do not interpret separate-window associations as independent effects.
+The two-axis block bootstrap uses 500 m spatial blocks and moving blocks of three consecutive eligible acquisitions (500 replicates). It is exploratory, not an exact coverage guarantee for every dependence structure.
+Calendar-day HR-OC / local Sentinel-2 source-granule identity is unverified. The outcome is satellite-derived SPM, not in-situ concentration. IBI is regional and does not resolve the surf zone; GOT5.6 is modeled, not gauge-validated.
+This analysis tests response timing in this Anza data set. Lagged remote-sensing analyses already exist in the literature; do not claim the general method is unprecedented or infer causal sediment transport.

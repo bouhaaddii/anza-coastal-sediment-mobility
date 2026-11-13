@@ -1,4 +1,4 @@
-date_utc,product_count,cloud_cover_product_pct,ibi_vhm0_m,processed_roi_qa
+﻿date_utc,product_count,cloud_cover_product_pct,ibi_vhm0_m,processed_roi_qa
 2022-10-01,1,25.550103,0.8399999812245369,False
 2022-10-03,1,0.322322,0.41999999061226845,False
 2022-10-06,1,27.045262000000005,0.4899999890476465,False

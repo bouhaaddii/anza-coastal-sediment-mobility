@@ -154,11 +154,6 @@ def make_figure(points: dict[str, np.ndarray], rasters: dict[str, tuple[np.ndarr
         cbar = fig.colorbar(mesh, ax=ax, shrink=0.78, pad=0.02)
         cbar.set_label("Grid elevation (m; product-specific datum)")
 
-    fig.suptitle(
-        "Local bathymetric survey and open-grid context\n"
-        "Different vertical references and grid scales; values are not directly merged",
-        fontsize=13, fontweight="bold",
-    )
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     fig.savefig(OUT_DIR / "Figure_bathymetry_context_audit.png", dpi=350, bbox_inches="tight")
     fig.savefig(OUT_DIR / "Figure_bathymetry_context_audit.pdf", bbox_inches="tight")
@@ -280,7 +275,6 @@ def compare_emodnet_editions(points: dict[str, np.ndarray]) -> dict:
     ax.set_ylim(bounds.bottom, bounds.top)
     ax.set_xlabel("Longitude (°E)")
     ax.set_ylabel("Latitude (°N)")
-    ax.set_title("EMODnet current − 2022 edition\nProduct revision diagnostic; not seabed change", fontweight="bold")
     ax.legend(loc="lower right", fontsize=8, frameon=True)
     cbar = fig.colorbar(mesh, ax=ax, pad=0.02, shrink=0.82)
     cbar.set_label("Current minus 2022 elevation (m; both products referenced to LAT)")

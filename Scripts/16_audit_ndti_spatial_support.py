@@ -197,7 +197,6 @@ def main() -> None:
     left, bottom, right, top = bounds.left, bounds.bottom, bounds.right, bounds.top
     extent = (left, right, bottom, top)
     fig, axes = plt.subplots(1, 2, figsize=(14.0, 6.0), constrained_layout=True)
-    fig.suptitle("Sentinel-2 NDTI spatial-support audit", fontsize=14, fontweight="bold")
 
     ax = axes[0]
     image = ax.imshow(support_count, extent=extent, origin="upper", cmap=count_colors, norm=count_norm, interpolation="nearest")

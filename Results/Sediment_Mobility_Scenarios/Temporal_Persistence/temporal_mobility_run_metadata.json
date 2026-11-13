@@ -1,5 +1,5 @@
 {
-  "input": "E:\\Agadir_Sediment_Hydrodynamics_Study\\Results\\Sediment_Mobility_Scenarios\\mobility_daily_by_depth_grain_datum_scenario.csv.gz",
+  "input": "E:\\Agadir_Sediment_Hydrodynamics_Study\\GitHub_Release\\Results\\Sediment_Mobility_Scenarios\\mobility_daily_by_depth_grain_datum_scenario.csv.gz",
   "output_period_utc": [
     "2022-10-01",
     "2023-03-31"

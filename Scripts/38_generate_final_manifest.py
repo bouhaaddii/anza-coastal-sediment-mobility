@@ -30,7 +30,6 @@ KEY_INPUTS = (
     "requirements.txt",
     "Data/Local_Bathymetry/Anza_Agadir/Anza_Agadir_bathy_points.txt",
     "Data/Local_Bathymetry/Anza_Agadir/Anza_Agadir_bathy_points_candidate_utm29.csv",
-    "Data/Local_Bathymetry/Anza_Agadir/Anza_Agadir_survey_plan.dwg",
     "Data/Copernicus_Marine/IBI_wave_Anza_subset.nc",
     "Data/Copernicus_Marine/Currents_3D/IBI_currents_3D_daily_Anza_0_30m_20221001_20230331.nc",
     "Data/Copernicus_Marine/Ocean_Colour_HR/Anza_CMEMS_HR_OC_SPM_TUR_L3_20221101_20230331.nc",
@@ -98,17 +97,12 @@ def main() -> None:
             records.append(file_record(path, "analysis_code"))
             seen.add(path.resolve())
 
-    for folder_name in ("Config", "Data", "Results", "References"):
+    for folder_name in ("Config", "Data", "Results"):
         folder = ROOT / folder_name
         if not folder.exists():
             continue
         for path in sorted(folder.rglob("*")):
             if not path.is_file() or OUT in path.parents or path.resolve() in seen:
-                continue
-            # Keep the reference PDF/Word corpus out of this project-data
-            # inventory. Large inputs are still listed, but file_record skips
-            # content hashing automatically above HASH_LIMIT_BYTES.
-            if folder_name == "References" and path.suffix.lower() in {".pdf", ".docx", ".html"}:
                 continue
             records.append(file_record(path, "project_result_or_metadata"))
             seen.add(path.resolve())

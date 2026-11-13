@@ -1,4 +1,4 @@
-minimum_soundings_per_cell,variable,method,method_label,paired_cells,spatial_blocks_500m,association_estimate
+﻿minimum_soundings_per_cell,variable,method,method_label,paired_cells,spatial_blocks_500m,association_estimate
 1,SPM,spatial_spearman_unadjusted,Unadjusted spatial Spearman,182,13,-0.8692744625178281
 1,SPM,partial_spearman_depth,Partial Spearman controlling local depth,182,13,-0.3050068651857653
 1,SPM,partial_spearman_depth_and_linear_xy,Partial Spearman controlling depth and linear XY trend,182,13,-0.1970118775445503

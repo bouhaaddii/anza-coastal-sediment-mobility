@@ -1,4 +1,4 @@
-specification,wave_metric,wave_beta_log_spm_per_1sd,wave_effect_percent_per_1sd,block_bootstrap_95ci_low,block_bootstrap_95ci_high,valid_bootstrap_replicates,temporal_block_length_acquisitions,observations_n,cells_n,dates_n,spatial_blocks_500m_n,within_r2
+﻿specification,wave_metric,wave_beta_log_spm_per_1sd,wave_effect_percent_per_1sd,block_bootstrap_95ci_low,block_bootstrap_95ci_high,valid_bootstrap_replicates,temporal_block_length_acquisitions,observations_n,cells_n,dates_n,spatial_blocks_500m_n,within_r2
 Maximum Hs + trend; temporal block 2,24-h maximum Hs,0.12559750546958448,13.38257177799208,-0.05199046395191112,0.3029223928228531,500,2,5530,174,33,15,0.0745393064078449
 Maximum Hs + trend; temporal block 3,24-h maximum Hs,0.12559750546958448,13.38257177799208,-0.032213480612663874,0.3256753007297604,500,3,5530,174,33,15,0.0745393064078449
 Maximum Hs + trend; temporal block 5,24-h maximum Hs,0.12559750546958448,13.38257177799208,-0.032485499185512905,0.3101975329795555,500,5,5530,174,33,15,0.0745393064078449

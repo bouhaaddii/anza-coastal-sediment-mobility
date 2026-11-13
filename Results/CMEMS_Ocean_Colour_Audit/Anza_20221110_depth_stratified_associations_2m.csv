@@ -1,4 +1,4 @@
-depth_bin_m,paired_cells,spatial_blocks_500m,ndti_median,depth_median_below_local_zero,spm_median,spm_ndti_spearman_rho,tur_median,tur_ndti_spearman_rho
+﻿depth_bin_m,paired_cells,spatial_blocks_500m,ndti_median,depth_median_below_local_zero,spm_median,spm_ndti_spearman_rho,tur_median,tur_ndti_spearman_rho
 2–4,6,3,-0.431184321641922,3.1100000000000003,5.023091554641724,,8.409595012664795,
 4–6,12,5,-0.4842853248119354,4.8525,3.630916953086853,,6.134875059127808,
 6–8,15,5,-0.4986068308353424,7.085,2.5263166427612305,,4.291265487670898,

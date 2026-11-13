@@ -397,7 +397,6 @@ def main() -> None:
     ax.set_xlabel("Easting (UTM 29N; m)")
     ax.set_ylabel("Northing (UTM 29N; m)")
     ax.set_aspect("equal", adjustable="box")
-    ax.set_title("Bathymetry-conditioned mobility screening\nD50 = 0.10 mm (literature-informed scenario), local Agadir port ZH")
     ax.text(0.02, 0.02, "Regional forcing held spatially constant; pattern mainly follows depth. No local wave transformation.",
             transform=ax.transAxes, fontsize=8, va="bottom", ha="left",
             bbox={"facecolor": "white", "edgecolor": "none", "alpha": 0.88, "pad": 3})
@@ -432,7 +431,7 @@ def main() -> None:
     fig.text(0.56, 0.115, "Fraction of valid hourly records with M ≥ 1 (axis shown from 0.45)",
              ha="center", va="center", fontsize=9)
     axes[0, 1].legend(title="Assumed D50", frameon=True, fontsize=8, title_fontsize=8, loc="lower right")
-    fig.suptitle("Modeled threshold-exceedance frequency across depth and grain-size scenarios", fontsize=12, y=0.97)
+    fig.subplots_adjust(top=0.95)
     fig.text(0.55, 0.035,
              "Valid-hour support varies by depth; see Figure C. Scenario frequencies are not probabilities or transport rates.",
              ha="center", fontsize=8)
@@ -460,7 +459,6 @@ def main() -> None:
     ax.set_ylim(float(depth_bins.max()), float(depth_bins.min()))
     ax.set_xlabel("Fraction of the 4,368-hour record with valid forcing")
     ax.set_ylabel("Survey depth below local ZH (m; increasing downward)")
-    ax.set_title("Forcing support by depth (D50 = 0.10 mm scenario)")
     ax.grid(True, color="#D9E2E8", linewidth=0.55)
     ax.legend(frameon=True, fontsize=8, loc="lower right")
     fig.tight_layout()

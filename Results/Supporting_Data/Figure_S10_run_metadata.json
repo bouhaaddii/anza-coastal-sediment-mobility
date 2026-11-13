@@ -1,0 +1,9 @@
+{
+  "catalog_dates": 73,
+  "roi_qa_dates": 11,
+  "fixed_support_daily_scores": 182,
+  "depth_bins_per_score": 40,
+  "D50_mm_not_measured": 0.25,
+  "datum_case": "ZH_unadjusted",
+  "source_outputs_read_only": true
+}

@@ -1,4 +1,4 @@
-date_utc,is_selected_s2_acquisition_day,variable,units,stable_water_fraction_threshold,stable_water_cmems_cells,valid_water_cmems_cells,valid_fraction_within_water_cells,rectangular_grid_cells,valid_min_applied,valid_max_applied,median,p25,p75,p95,maximum
+﻿date_utc,is_selected_s2_acquisition_day,variable,units,stable_water_fraction_threshold,stable_water_cmems_cells,valid_water_cmems_cells,valid_fraction_within_water_cells,rectangular_grid_cells,valid_min_applied,valid_max_applied,median,p25,p75,p95,maximum
 2022-11-01,False,SPM,g m-3,0.25,3353,0,0.0,4558,0.0,,,,,,
 2022-11-01,False,TUR,FNU,0.25,3353,0,0.0,4558,0.0,,,,,,
 2022-11-01,False,SPM,g m-3,0.5,3331,0,0.0,4558,0.0,,,,,,

@@ -1,4 +1,4 @@
-product,file,grid_size,approx_resolution_m,vertical_reference,min_grid_value_m,median_grid_value_m,max_grid_value_m,interpretation
+﻿product,file,grid_size,approx_resolution_m,vertical_reference,min_grid_value_m,median_grid_value_m,max_grid_value_m,interpretation
 EMODnet 2022,EMODnet_2022_mean_depth_Anza.tif,67 × 76 cells,100 × 115,LAT (EMODnet DTM documentation; GeoTIFF tags do not identify the vertical reference),-45.059,-23.276,276.362,Regional context/boundary support only; not a replacement for the local survey and not fused to it.
 EMODnet current,EMODnet_current_mean_depth_Anza.tif,67 × 76 cells,100 × 115,LAT (EMODnet DTM documentation; GeoTIFF tags do not identify the vertical reference),-44.875,-16.010,276.349,Regional context/boundary support only; not a replacement for the local survey and not fused to it.
 GEBCO 2026,GEBCO_2026_Anza.tif,16 × 20 cells,400 × 461,Nominal mean sea level (GEBCO CF metadata); GEBCO cautions some shallow-water source cells may use another reference,-42.000,-22.000,265.000,Regional context/boundary support only; not a replacement for the local survey and not fused to it.
